@@ -1,0 +1,864 @@
+{
+  "report_version": "valis-kore-phase-v-adversarial-execution-v0.1",
+  "created_at": "2026-09-24T21:57:00.483Z",
+  "verdict": "ADVERSARIAL_FIRST_ORDER_EXECUTED_NO_UNEXPLAINED_FAILURES",
+  "source_sweep": "conformance/reports/phase-v-adversarial-sweep.json",
+  "source_sweep_digest": "sha256:aac0eb0ec121efb743b17263c81d1873775dc1e27aefa50e875f9bcebd1ad366",
+  "comparator_fixture_dir": "conformance/comparator/phase-v",
+  "execution_scope": {
+    "executed_first_order_cases": 1120,
+    "higher_order_cases_executed": false,
+    "pair_interaction_cases_executed": false,
+    "triple_cases_executed": false,
+    "four_vector_cases_executed": false,
+    "recursive_chains_executed": false,
+    "scope_boundary": "This pass executes first-order generated cases against encoded metamorphic property obligations and mutation controls. It does not execute every higher-order composition case and does not test the production kernel."
+  },
+  "property_counts": {
+    "less_certain_evidence_must_not_widen_reach": {
+      "pass": 310,
+      "fail": 0,
+      "mutation_detected": 35,
+      "mutation_survived": 0
+    },
+    "revocation_must_not_manufacture_authority": {
+      "pass": 366,
+      "fail": 0,
+      "mutation_detected": 35,
+      "mutation_survived": 0
+    },
+    "splitting_exposure_must_not_manufacture_capacity": {
+      "pass": 400,
+      "fail": 0,
+      "mutation_detected": 35,
+      "mutation_survived": 0
+    },
+    "restart_without_new_legitimizing_information_must_not_widen_reach": {
+      "pass": 256,
+      "fail": 0,
+      "mutation_detected": 35,
+      "mutation_survived": 0
+    },
+    "bound_consequence_mutation_must_not_inherit_old_release": {
+      "pass": 237,
+      "fail": 0,
+      "mutation_detected": 35,
+      "mutation_survived": 0
+    },
+    "stale_state_must_not_widen_reach": {
+      "pass": 256,
+      "fail": 0,
+      "mutation_detected": 35,
+      "mutation_survived": 0
+    },
+    "unknown_must_not_become_nothing_happened": {
+      "pass": 32,
+      "fail": 0,
+      "mutation_detected": 35,
+      "mutation_survived": 0
+    },
+    "acceptable_subsets_do_not_imply_acceptable_union": {
+      "pass": 190,
+      "fail": 0,
+      "mutation_detected": 35,
+      "mutation_survived": 0
+    }
+  },
+  "mutation_results": [
+    {
+      "propertyId": "less_certain_evidence_must_not_widen_reach",
+      "mutation_detected": 35,
+      "mutation_survived": 0,
+      "surviving_examples": []
+    },
+    {
+      "propertyId": "revocation_must_not_manufacture_authority",
+      "mutation_detected": 35,
+      "mutation_survived": 0,
+      "surviving_examples": []
+    },
+    {
+      "propertyId": "splitting_exposure_must_not_manufacture_capacity",
+      "mutation_detected": 35,
+      "mutation_survived": 0,
+      "surviving_examples": []
+    },
+    {
+      "propertyId": "restart_without_new_legitimizing_information_must_not_widen_reach",
+      "mutation_detected": 35,
+      "mutation_survived": 0,
+      "surviving_examples": []
+    },
+    {
+      "propertyId": "bound_consequence_mutation_must_not_inherit_old_release",
+      "mutation_detected": 35,
+      "mutation_survived": 0,
+      "surviving_examples": []
+    },
+    {
+      "propertyId": "stale_state_must_not_widen_reach",
+      "mutation_detected": 35,
+      "mutation_survived": 0,
+      "surviving_examples": []
+    },
+    {
+      "propertyId": "unknown_must_not_become_nothing_happened",
+      "mutation_detected": 35,
+      "mutation_survived": 0,
+      "surviving_examples": []
+    },
+    {
+      "propertyId": "acceptable_subsets_do_not_imply_acceptable_union",
+      "mutation_detected": 35,
+      "mutation_survived": 0,
+      "surviving_examples": []
+    }
+  ],
+  "minimized_failure_count": 0,
+  "unexplained_minimized_failures": [],
+  "representative_results": [
+    {
+      "case_id": "V001::event_delay",
+      "seed": "V001",
+      "operator": "event_delay",
+      "status": "PASS",
+      "property_results": [
+        {
+          "propertyId": "bound_consequence_mutation_must_not_inherit_old_release",
+          "status": "PASS",
+          "failures": []
+        }
+      ]
+    },
+    {
+      "case_id": "V001::event_reordering",
+      "seed": "V001",
+      "operator": "event_reordering",
+      "status": "PASS",
+      "property_results": [
+        {
+          "propertyId": "stale_state_must_not_widen_reach",
+          "status": "PASS",
+          "failures": []
+        }
+      ]
+    },
+    {
+      "case_id": "V001::crash_before_settlement",
+      "seed": "V001",
+      "operator": "crash_before_settlement",
+      "status": "PASS",
+      "property_results": [
+        {
+          "propertyId": "restart_without_new_legitimizing_information_must_not_widen_reach",
+          "status": "PASS",
+          "failures": []
+        }
+      ]
+    },
+    {
+      "case_id": "V001::crash_after_reservation",
+      "seed": "V001",
+      "operator": "crash_after_reservation",
+      "status": "PASS",
+      "property_results": [
+        {
+          "propertyId": "splitting_exposure_must_not_manufacture_capacity",
+          "status": "PASS",
+          "failures": []
+        },
+        {
+          "propertyId": "restart_without_new_legitimizing_information_must_not_widen_reach",
+          "status": "PASS",
+          "failures": []
+        }
+      ]
+    },
+    {
+      "case_id": "V001::crash_after_release",
+      "seed": "V001",
+      "operator": "crash_after_release",
+      "status": "PASS",
+      "property_results": [
+        {
+          "propertyId": "restart_without_new_legitimizing_information_must_not_widen_reach",
+          "status": "PASS",
+          "failures": []
+        }
+      ]
+    },
+    {
+      "case_id": "V001::crash_after_effect_before_receipt",
+      "seed": "V001",
+      "operator": "crash_after_effect_before_receipt",
+      "status": "PASS",
+      "property_results": [
+        {
+          "propertyId": "restart_without_new_legitimizing_information_must_not_widen_reach",
+          "status": "PASS",
+          "failures": []
+        }
+      ]
+    },
+    {
+      "case_id": "V001::restart_from_stale_state",
+      "seed": "V001",
+      "operator": "restart_from_stale_state",
+      "status": "PASS",
+      "property_results": [
+        {
+          "propertyId": "restart_without_new_legitimizing_information_must_not_widen_reach",
+          "status": "PASS",
+          "failures": []
+        },
+        {
+          "propertyId": "stale_state_must_not_widen_reach",
+          "status": "PASS",
+          "failures": []
+        }
+      ]
+    },
+    {
+      "case_id": "V001::authority_revoke",
+      "seed": "V001",
+      "operator": "authority_revoke",
+      "status": "PASS",
+      "property_results": [
+        {
+          "propertyId": "revocation_must_not_manufacture_authority",
+          "status": "PASS",
+          "failures": []
+        }
+      ]
+    },
+    {
+      "case_id": "V001::authority_reacquire",
+      "seed": "V001",
+      "operator": "authority_reacquire",
+      "status": "PASS",
+      "property_results": [
+        {
+          "propertyId": "revocation_must_not_manufacture_authority",
+          "status": "PASS",
+          "failures": []
+        }
+      ]
+    },
+    {
+      "case_id": "V001::authority_epoch_change",
+      "seed": "V001",
+      "operator": "authority_epoch_change",
+      "status": "PASS",
+      "property_results": [
+        {
+          "propertyId": "revocation_must_not_manufacture_authority",
+          "status": "PASS",
+          "failures": []
+        }
+      ]
+    },
+    {
+      "case_id": "V001::delegation_fork",
+      "seed": "V001",
+      "operator": "delegation_fork",
+      "status": "PASS",
+      "property_results": [
+        {
+          "propertyId": "revocation_must_not_manufacture_authority",
+          "status": "PASS",
+          "failures": []
+        }
+      ]
+    },
+    {
+      "case_id": "V001::delegation_reconvergence",
+      "seed": "V001",
+      "operator": "delegation_reconvergence",
+      "status": "PASS",
+      "property_results": [
+        {
+          "propertyId": "revocation_must_not_manufacture_authority",
+          "status": "PASS",
+          "failures": []
+        }
+      ]
+    },
+    {
+      "case_id": "V001::payload_mutation",
+      "seed": "V001",
+      "operator": "payload_mutation",
+      "status": "PASS",
+      "property_results": [
+        {
+          "propertyId": "bound_consequence_mutation_must_not_inherit_old_release",
+          "status": "PASS",
+          "failures": []
+        }
+      ]
+    },
+    {
+      "case_id": "V001::target_mutation",
+      "seed": "V001",
+      "operator": "target_mutation",
+      "status": "PASS",
+      "property_results": [
+        {
+          "propertyId": "bound_consequence_mutation_must_not_inherit_old_release",
+          "status": "PASS",
+          "failures": []
+        }
+      ]
+    },
+    {
+      "case_id": "V001::executor_mutation",
+      "seed": "V001",
+      "operator": "executor_mutation",
+      "status": "PASS",
+      "property_results": [
+        {
+          "propertyId": "bound_consequence_mutation_must_not_inherit_old_release",
+          "status": "PASS",
+          "failures": []
+        }
+      ]
+    },
+    {
+      "case_id": "V001::confirmed_to_unknown",
+      "seed": "V001",
+      "operator": "confirmed_to_unknown",
+      "status": "PASS",
+      "property_results": [
+        {
+          "propertyId": "less_certain_evidence_must_not_widen_reach",
+          "status": "PASS",
+          "failures": []
+        }
+      ]
+    },
+    {
+      "case_id": "V001::confirmed_to_partial",
+      "seed": "V001",
+      "operator": "confirmed_to_partial",
+      "status": "PASS",
+      "property_results": [
+        {
+          "propertyId": "less_certain_evidence_must_not_widen_reach",
+          "status": "PASS",
+          "failures": []
+        }
+      ]
+    },
+    {
+      "case_id": "V001::confirmed_to_contested",
+      "seed": "V001",
+      "operator": "confirmed_to_contested",
+      "status": "PASS",
+      "property_results": [
+        {
+          "propertyId": "less_certain_evidence_must_not_widen_reach",
+          "status": "PASS",
+          "failures": []
+        }
+      ]
+    },
+    {
+      "case_id": "V001::correlated_evidence",
+      "seed": "V001",
+      "operator": "correlated_evidence",
+      "status": "PASS",
+      "property_results": [
+        {
+          "propertyId": "less_certain_evidence_must_not_widen_reach",
+          "status": "PASS",
+          "failures": []
+        }
+      ]
+    },
+    {
+      "case_id": "V001::evidence_correction",
+      "seed": "V001",
+      "operator": "evidence_correction",
+      "status": "PASS",
+      "property_results": [
+        {
+          "propertyId": "less_certain_evidence_must_not_widen_reach",
+          "status": "PASS",
+          "failures": []
+        }
+      ]
+    },
+    {
+      "case_id": "V001::exposure_split_agents",
+      "seed": "V001",
+      "operator": "exposure_split_agents",
+      "status": "PASS",
+      "property_results": [
+        {
+          "propertyId": "splitting_exposure_must_not_manufacture_capacity",
+          "status": "PASS",
+          "failures": []
+        }
+      ]
+    },
+    {
+      "case_id": "V001::exposure_split_time",
+      "seed": "V001",
+      "operator": "exposure_split_time",
+      "status": "PASS",
+      "property_results": [
+        {
+          "propertyId": "splitting_exposure_must_not_manufacture_capacity",
+          "status": "PASS",
+          "failures": []
+        }
+      ]
+    },
+    {
+      "case_id": "V001::exposure_split_dimensions",
+      "seed": "V001",
+      "operator": "exposure_split_dimensions",
+      "status": "PASS",
+      "property_results": [
+        {
+          "propertyId": "splitting_exposure_must_not_manufacture_capacity",
+          "status": "PASS",
+          "failures": []
+        }
+      ]
+    },
+    {
+      "case_id": "V001::correlated_counterparty",
+      "seed": "V001",
+      "operator": "correlated_counterparty",
+      "status": "PASS",
+      "property_results": [
+        {
+          "propertyId": "splitting_exposure_must_not_manufacture_capacity",
+          "status": "PASS",
+          "failures": []
+        }
+      ]
+    },
+    {
+      "case_id": "V001::overlapping_reservation",
+      "seed": "V001",
+      "operator": "overlapping_reservation",
+      "status": "PASS",
+      "property_results": [
+        {
+          "propertyId": "splitting_exposure_must_not_manufacture_capacity",
+          "status": "PASS",
+          "failures": []
+        }
+      ]
+    },
+    {
+      "case_id": "V001::stale_replica",
+      "seed": "V001",
+      "operator": "stale_replica",
+      "status": "PASS",
+      "property_results": [
+        {
+          "propertyId": "stale_state_must_not_widen_reach",
+          "status": "PASS",
+          "failures": []
+        }
+      ]
+    },
+    {
+      "case_id": "V001::authority_partition",
+      "seed": "V001",
+      "operator": "authority_partition",
+      "status": "PASS",
+      "property_results": [
+        {
+          "propertyId": "revocation_must_not_manufacture_authority",
+          "status": "PASS",
+          "failures": []
+        },
+        {
+          "propertyId": "stale_state_must_not_widen_reach",
+          "status": "PASS",
+          "failures": []
+        }
+      ]
+    },
+    {
+      "case_id": "V001::exposure_partition",
+      "seed": "V001",
+      "operator": "exposure_partition",
+      "status": "PASS",
+      "property_results": [
+        {
+          "propertyId": "splitting_exposure_must_not_manufacture_capacity",
+          "status": "PASS",
+          "failures": []
+        },
+        {
+          "propertyId": "stale_state_must_not_widen_reach",
+          "status": "PASS",
+          "failures": []
+        }
+      ]
+    },
+    {
+      "case_id": "V001::policy_version_change",
+      "seed": "V001",
+      "operator": "policy_version_change",
+      "status": "PASS",
+      "property_results": [
+        {
+          "propertyId": "bound_consequence_mutation_must_not_inherit_old_release",
+          "status": "PASS",
+          "failures": []
+        }
+      ]
+    },
+    {
+      "case_id": "V001::shared_dependency",
+      "seed": "V001",
+      "operator": "shared_dependency",
+      "status": "PASS",
+      "property_results": [
+        {
+          "propertyId": "acceptable_subsets_do_not_imply_acceptable_union",
+          "status": "PASS",
+          "failures": []
+        }
+      ]
+    },
+    {
+      "case_id": "V001::dependency_cycle",
+      "seed": "V001",
+      "operator": "dependency_cycle",
+      "status": "PASS",
+      "property_results": [
+        {
+          "propertyId": "acceptable_subsets_do_not_imply_acceptable_union",
+          "status": "PASS",
+          "failures": []
+        }
+      ]
+    },
+    {
+      "case_id": "V001::compensation_created_exposure",
+      "seed": "V001",
+      "operator": "compensation_created_exposure",
+      "status": "PASS",
+      "property_results": [
+        {
+          "propertyId": "splitting_exposure_must_not_manufacture_capacity",
+          "status": "PASS",
+          "failures": []
+        }
+      ]
+    },
+    {
+      "case_id": "V002::event_delay",
+      "seed": "V002",
+      "operator": "event_delay",
+      "status": "PASS",
+      "property_results": [
+        {
+          "propertyId": "revocation_must_not_manufacture_authority",
+          "status": "PASS",
+          "failures": []
+        }
+      ]
+    },
+    {
+      "case_id": "V002::event_reordering",
+      "seed": "V002",
+      "operator": "event_reordering",
+      "status": "PASS",
+      "property_results": [
+        {
+          "propertyId": "revocation_must_not_manufacture_authority",
+          "status": "PASS",
+          "failures": []
+        },
+        {
+          "propertyId": "stale_state_must_not_widen_reach",
+          "status": "PASS",
+          "failures": []
+        }
+      ]
+    },
+    {
+      "case_id": "V002::crash_before_settlement",
+      "seed": "V002",
+      "operator": "crash_before_settlement",
+      "status": "PASS",
+      "property_results": [
+        {
+          "propertyId": "revocation_must_not_manufacture_authority",
+          "status": "PASS",
+          "failures": []
+        },
+        {
+          "propertyId": "restart_without_new_legitimizing_information_must_not_widen_reach",
+          "status": "PASS",
+          "failures": []
+        }
+      ]
+    },
+    {
+      "case_id": "V002::crash_after_reservation",
+      "seed": "V002",
+      "operator": "crash_after_reservation",
+      "status": "PASS",
+      "property_results": [
+        {
+          "propertyId": "revocation_must_not_manufacture_authority",
+          "status": "PASS",
+          "failures": []
+        },
+        {
+          "propertyId": "splitting_exposure_must_not_manufacture_capacity",
+          "status": "PASS",
+          "failures": []
+        },
+        {
+          "propertyId": "restart_without_new_legitimizing_information_must_not_widen_reach",
+          "status": "PASS",
+          "failures": []
+        }
+      ]
+    },
+    {
+      "case_id": "V002::crash_after_release",
+      "seed": "V002",
+      "operator": "crash_after_release",
+      "status": "PASS",
+      "property_results": [
+        {
+          "propertyId": "revocation_must_not_manufacture_authority",
+          "status": "PASS",
+          "failures": []
+        },
+        {
+          "propertyId": "restart_without_new_legitimizing_information_must_not_widen_reach",
+          "status": "PASS",
+          "failures": []
+        }
+      ]
+    },
+    {
+      "case_id": "V002::crash_after_effect_before_receipt",
+      "seed": "V002",
+      "operator": "crash_after_effect_before_receipt",
+      "status": "PASS",
+      "property_results": [
+        {
+          "propertyId": "revocation_must_not_manufacture_authority",
+          "status": "PASS",
+          "failures": []
+        },
+        {
+          "propertyId": "restart_without_new_legitimizing_information_must_not_widen_reach",
+          "status": "PASS",
+          "failures": []
+        }
+      ]
+    },
+    {
+      "case_id": "V002::restart_from_stale_state",
+      "seed": "V002",
+      "operator": "restart_from_stale_state",
+      "status": "PASS",
+      "property_results": [
+        {
+          "propertyId": "revocation_must_not_manufacture_authority",
+          "status": "PASS",
+          "failures": []
+        },
+        {
+          "propertyId": "restart_without_new_legitimizing_information_must_not_widen_reach",
+          "status": "PASS",
+          "failures": []
+        },
+        {
+          "propertyId": "stale_state_must_not_widen_reach",
+          "status": "PASS",
+          "failures": []
+        }
+      ]
+    },
+    {
+      "case_id": "V002::authority_revoke",
+      "seed": "V002",
+      "operator": "authority_revoke",
+      "status": "PASS",
+      "property_results": [
+        {
+          "propertyId": "revocation_must_not_manufacture_authority",
+          "status": "PASS",
+          "failures": []
+        }
+      ]
+    },
+    {
+      "case_id": "V002::authority_reacquire",
+      "seed": "V002",
+      "operator": "authority_reacquire",
+      "status": "PASS",
+      "property_results": [
+        {
+          "propertyId": "revocation_must_not_manufacture_authority",
+          "status": "PASS",
+          "failures": []
+        }
+      ]
+    },
+    {
+      "case_id": "V002::authority_epoch_change",
+      "seed": "V002",
+      "operator": "authority_epoch_change",
+      "status": "PASS",
+      "property_results": [
+        {
+          "propertyId": "revocation_must_not_manufacture_authority",
+          "status": "PASS",
+          "failures": []
+        }
+      ]
+    },
+    {
+      "case_id": "V002::delegation_fork",
+      "seed": "V002",
+      "operator": "delegation_fork",
+      "status": "PASS",
+      "property_results": [
+        {
+          "propertyId": "revocation_must_not_manufacture_authority",
+          "status": "PASS",
+          "failures": []
+        }
+      ]
+    },
+    {
+      "case_id": "V002::delegation_reconvergence",
+      "seed": "V002",
+      "operator": "delegation_reconvergence",
+      "status": "PASS",
+      "property_results": [
+        {
+          "propertyId": "revocation_must_not_manufacture_authority",
+          "status": "PASS",
+          "failures": []
+        }
+      ]
+    },
+    {
+      "case_id": "V002::payload_mutation",
+      "seed": "V002",
+      "operator": "payload_mutation",
+      "status": "PASS",
+      "property_results": [
+        {
+          "propertyId": "revocation_must_not_manufacture_authority",
+          "status": "PASS",
+          "failures": []
+        },
+        {
+          "propertyId": "bound_consequence_mutation_must_not_inherit_old_release",
+          "status": "PASS",
+          "failures": []
+        }
+      ]
+    },
+    {
+      "case_id": "V002::target_mutation",
+      "seed": "V002",
+      "operator": "target_mutation",
+      "status": "PASS",
+      "property_results": [
+        {
+          "propertyId": "revocation_must_not_manufacture_authority",
+          "status": "PASS",
+          "failures": []
+        },
+        {
+          "propertyId": "bound_consequence_mutation_must_not_inherit_old_release",
+          "status": "PASS",
+          "failures": []
+        }
+      ]
+    },
+    {
+      "case_id": "V002::executor_mutation",
+      "seed": "V002",
+      "operator": "executor_mutation",
+      "status": "PASS",
+      "property_results": [
+        {
+          "propertyId": "revocation_must_not_manufacture_authority",
+          "status": "PASS",
+          "failures": []
+        },
+        {
+          "propertyId": "bound_consequence_mutation_must_not_inherit_old_release",
+          "status": "PASS",
+          "failures": []
+        }
+      ]
+    },
+    {
+      "case_id": "V002::confirmed_to_unknown",
+      "seed": "V002",
+      "operator": "confirmed_to_unknown",
+      "status": "PASS",
+      "property_results": [
+        {
+          "propertyId": "less_certain_evidence_must_not_widen_reach",
+          "status": "PASS",
+          "failures": []
+        },
+        {
+          "propertyId": "revocation_must_not_manufacture_authority",
+          "status": "PASS",
+          "failures": []
+        }
+      ]
+    },
+    {
+      "case_id": "V002::confirmed_to_partial",
+      "seed": "V002",
+      "operator": "confirmed_to_partial",
+      "status": "PASS",
+      "property_results": [
+        {
+          "propertyId": "less_certain_evidence_must_not_widen_reach",
+          "status": "PASS",
+          "failures": []
+        },
+        {
+          "propertyId": "revocation_must_not_manufacture_authority",
+          "status": "PASS",
+          "failures": []
+        }
+      ]
+    },
+    {
+      "case_id": "V002::confirmed_to_contested",
+      "seed": "V002",
+      "operator": "confirmed_to_contested",
+      "status": "PASS",
+      "property_results": [
+        {
+          "propertyId": "less_certain_evidence_must_not_widen_reach",
+          "status": "PASS",
+          "failures": []
+        },
+        {
+          "propertyId": "revocation_must_not_manufacture_authority",
+          "status": "PASS",
+          "failures": []
+        }
+      ]
+    }
+  ],
+  "result_digest": "sha256:aea3110bebd5b9dd81880018e615d5aedcc1a47841a61e6715a7eba4272e838c",
+  "next_required_work": "Freeze this first-order execution result, then extend the runner to pair interactions, recursive chains, and selected higher-order reductions.",
+  "claim_boundary": "This is a repository-local adversarial execution pass over encoded first-order metamorphic obligations. It is not production conformance, not independent reproduction, not proof of formal irreducibility, and not exhaustive execution of every generated higher-order case."
+}

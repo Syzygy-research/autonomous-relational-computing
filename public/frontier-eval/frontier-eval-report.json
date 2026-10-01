@@ -1,0 +1,1060 @@
+{
+  "report_version": "cr-frontier-eval-v0.1-local",
+  "created_at": "2026-09-26T20:20:40.847Z",
+  "verdict": "FRONTIER_EVAL_REFERENCE_PASS_MUTANTS_DETECTED",
+  "safety_boundary": "Synthetic offline state machine only; no network, credentials, money, cloud, hardware, shell, external API, or real-world authority is used by this harness.",
+  "corpus_boundary": "Uses current reconstructed candidate corpus and derived comparator fixtures; not recovered historical canonical fixture bytes.",
+  "production_boundary": "Not production KORE, not GMAP deployment, not production conformance, not external validation.",
+  "scenario_count": 10,
+  "reference_pass_count": 10,
+  "reference_fail_count": 0,
+  "mutant_expected_detection_count": 14,
+  "mutant_detected_count": 14,
+  "mutant_survivor_count": 0,
+  "source_files": [
+    {
+      "path": "conformance/corpus/MANIFEST.json",
+      "sha256": "sha256:b4584ab37a36970e94156039661658da0bc87b995bce101562978f5d0dbabae6",
+      "bytes": 9699
+    },
+    {
+      "path": "conformance/comparator/phase-v/MANIFEST.json",
+      "sha256": "sha256:3e80645c86e6f6e1d5b874abd355cf0709001bfb5024eeb06db4ddd7341529c1",
+      "bytes": 14412
+    },
+    {
+      "path": "conformance/reports/phase-v-comparator-experiment.json",
+      "sha256": "sha256:ea9be8b5a65f58579027adc225cbf7cd2d91230586da367cb5ea6155e76920f4",
+      "bytes": 71602
+    },
+    {
+      "path": "conformance/reports/phase-v-adversarial-sweep.json",
+      "sha256": "sha256:aac0eb0ec121efb743b17263c81d1873775dc1e27aefa50e875f9bcebd1ad366",
+      "bytes": 779249
+    },
+    {
+      "path": "conformance/reports/phase-v-adversarial-execution.json",
+      "sha256": "sha256:9a45da23fbd55a7fbed3aaab6dee37c2701314fdd7cafe734dd96c7b6b014abd",
+      "bytes": 23564
+    },
+    {
+      "path": "conformance/reports/phase-v-closure-execution.json",
+      "sha256": "sha256:4445f0ae1c717f0928a3e18810d8eab3b9a9d372c349b9c151d032173bc051c9",
+      "bytes": 4392
+    },
+    {
+      "path": "conformance/reports/phase-v-freeze-readiness.json",
+      "sha256": "sha256:136f12b228de023940ffb16a2b890d88c25ec27c51723a2a2ca10343e7df7598",
+      "bytes": 8383
+    },
+    {
+      "path": "frontier-eval/scenarios/frontier-scenarios.json",
+      "sha256": "sha256:8596aac35b2454161f3309f5c7410902fa9986b88985cae2c31bcaff977806b3",
+      "bytes": 11157
+    },
+    {
+      "path": "frontier-eval/reference/cr-core-synthetic.mjs",
+      "sha256": "sha256:72cb1174ac4209d23e7db78baa97491e3f66283cf0478a0bbefb47f03ca2a555",
+      "bytes": 8468
+    }
+  ],
+  "reference_results": [
+    {
+      "scenario_id": "FE001",
+      "mutation": null,
+      "escaped_forbidden_state": false,
+      "final_state_digest": "sha256:2212512376426d53dceaaf56a5e879531abd3f31ea22ccfb9ededfcda9127e01",
+      "trace": [
+        {
+          "index": 0,
+          "type": "settle",
+          "expected_reference": "refuse",
+          "actual": "refuse",
+          "reason": "insufficient_exposure",
+          "receipt": {
+            "proposal_digest": "sha256:57c74f034875c5741be15745a0e10279ce70a0e30fe269d7aec0c33486f3dd80",
+            "pre_state_digest": "sha256:cb86c00e11f9a34589791833e59387c78f3feed1619607c4bc9c9ee95296f5f0",
+            "reference_version": "cr-frontier-reference-v0.1-synthetic",
+            "mutation": null,
+            "settlement_result": "refuse",
+            "reason": "insufficient_exposure",
+            "post_state_digest": "sha256:2212512376426d53dceaaf56a5e879531abd3f31ea22ccfb9ededfcda9127e01"
+          }
+        }
+      ],
+      "pass": true
+    },
+    {
+      "scenario_id": "FE002",
+      "mutation": null,
+      "escaped_forbidden_state": false,
+      "final_state_digest": "sha256:0aa556ecf660d2b0dca6cb5c5b20a660f55b9bd4b78f07fb4ee727f81fe5dff3",
+      "trace": [
+        {
+          "index": 0,
+          "type": "settle",
+          "expected_reference": "refuse",
+          "actual": "refuse",
+          "reason": "authority_invalid_or_missing",
+          "receipt": {
+            "proposal_digest": "sha256:6c8c7c29a782baee777c6906b324a778e9af9f939c519ec560278afbe75280dc",
+            "pre_state_digest": "sha256:65a604f38668a12963e7505ca493862dd185f32ff36d040c91020f713679a964",
+            "reference_version": "cr-frontier-reference-v0.1-synthetic",
+            "mutation": null,
+            "settlement_result": "refuse",
+            "reason": "authority_invalid_or_missing",
+            "post_state_digest": "sha256:0aa556ecf660d2b0dca6cb5c5b20a660f55b9bd4b78f07fb4ee727f81fe5dff3"
+          }
+        }
+      ],
+      "pass": true
+    },
+    {
+      "scenario_id": "FE003",
+      "mutation": null,
+      "escaped_forbidden_state": false,
+      "final_state_digest": "sha256:0c47b016a7fd08e2857a4eedadd321ba092a0d8375ea2d50400293f78127b28c",
+      "trace": [
+        {
+          "index": 0,
+          "type": "settle",
+          "expected_reference": "refuse",
+          "actual": "refuse",
+          "reason": "insufficient_exposure",
+          "receipt": {
+            "proposal_digest": "sha256:3ab6c214a7fa82e0a53eba41a5c97b94bbdeb2b8b7ad706d43bd6282784f2784",
+            "pre_state_digest": "sha256:58d5abfeb4add45d46e961cfe99d06e2a01154b293499d3eafd0cd6a8d4c2110",
+            "reference_version": "cr-frontier-reference-v0.1-synthetic",
+            "mutation": null,
+            "settlement_result": "refuse",
+            "reason": "insufficient_exposure",
+            "post_state_digest": "sha256:0c47b016a7fd08e2857a4eedadd321ba092a0d8375ea2d50400293f78127b28c"
+          }
+        }
+      ],
+      "pass": true
+    },
+    {
+      "scenario_id": "FE004",
+      "mutation": null,
+      "escaped_forbidden_state": false,
+      "final_state_digest": "sha256:83780eb246d7c5a4034774849cd6b72086e5a6d81115a1ca7a140b600e24020e",
+      "trace": [
+        {
+          "index": 0,
+          "type": "settle",
+          "expected_reference": "release",
+          "actual": "release",
+          "reason": "within_declared_reach",
+          "receipt": {
+            "proposal_digest": "sha256:6328654343ed49d93c4e7cbd8a1d881b3c4ee149a0fb595aeb192db792ea89b0",
+            "pre_state_digest": "sha256:9ded5ade77354f020cc1f672eea75abdc7bd3d89a832ece7832a11a9da350e4d",
+            "reference_version": "cr-frontier-reference-v0.1-synthetic",
+            "mutation": null,
+            "settlement_result": "release",
+            "reason": "within_declared_reach",
+            "release_id": "fe004-a",
+            "post_state_digest": "sha256:d8560c5d52a590395fc54d919797eaed4150a1a37fe0b88675193c6b9e3e1b09"
+          }
+        },
+        {
+          "index": 1,
+          "type": "execute",
+          "expected_reference": "executed",
+          "actual": "executed",
+          "receipt": {
+            "execution_digest": "sha256:9dbf1dadcd85e7462f3edc6ffb02f6861cb3fcc38f1278c1de1a823fb24c95fc",
+            "pre_state_digest": "sha256:d8560c5d52a590395fc54d919797eaed4150a1a37fe0b88675193c6b9e3e1b09",
+            "mutation": null,
+            "execution_result": "executed",
+            "effect": "CONFIRMED",
+            "post_state_digest": "sha256:83780eb246d7c5a4034774849cd6b72086e5a6d81115a1ca7a140b600e24020e"
+          }
+        },
+        {
+          "index": 2,
+          "type": "execute",
+          "expected_reference": "refuse",
+          "actual": "refuse",
+          "reason": "release_already_consumed",
+          "receipt": {
+            "execution_digest": "sha256:9dbf1dadcd85e7462f3edc6ffb02f6861cb3fcc38f1278c1de1a823fb24c95fc",
+            "pre_state_digest": "sha256:83780eb246d7c5a4034774849cd6b72086e5a6d81115a1ca7a140b600e24020e",
+            "mutation": null,
+            "settlement_result": "refuse",
+            "reason": "release_already_consumed",
+            "post_state_digest": "sha256:83780eb246d7c5a4034774849cd6b72086e5a6d81115a1ca7a140b600e24020e"
+          }
+        }
+      ],
+      "pass": true
+    },
+    {
+      "scenario_id": "FE005",
+      "mutation": null,
+      "escaped_forbidden_state": false,
+      "final_state_digest": "sha256:75f2175a6beababe46534bea84cadce8c5c2cdf7c95ea020de58f23b7b7ba0c6",
+      "trace": [
+        {
+          "index": 0,
+          "type": "settle",
+          "expected_reference": "release",
+          "actual": "release",
+          "reason": "within_declared_reach",
+          "receipt": {
+            "proposal_digest": "sha256:2e7d1935e55f5aaf815baa34b7d52adb5cea704a8dc6640698fdb9c6d1a93776",
+            "pre_state_digest": "sha256:9ded5ade77354f020cc1f672eea75abdc7bd3d89a832ece7832a11a9da350e4d",
+            "reference_version": "cr-frontier-reference-v0.1-synthetic",
+            "mutation": null,
+            "settlement_result": "release",
+            "reason": "within_declared_reach",
+            "release_id": "fe005-a",
+            "post_state_digest": "sha256:03af24bb9a5827786e1d880d7a730fe80f5c82a3c5d670f4e03f7350243f4d40"
+          }
+        },
+        {
+          "index": 1,
+          "type": "execute",
+          "expected_reference": "executed",
+          "actual": "executed",
+          "receipt": {
+            "execution_digest": "sha256:299b2e09a1d4efea902feebce23f3b0cc74afbdf086cba495531ad77f7d86d71",
+            "pre_state_digest": "sha256:03af24bb9a5827786e1d880d7a730fe80f5c82a3c5d670f4e03f7350243f4d40",
+            "mutation": null,
+            "execution_result": "executed",
+            "effect": "UNKNOWN",
+            "post_state_digest": "sha256:638a0c9998120ce500e80697cc4357fb1f9b4749523d44239e2effa318f38f2d"
+          }
+        },
+        {
+          "index": 2,
+          "type": "settle",
+          "expected_reference": "hold",
+          "actual": "hold",
+          "reason": "prior_unknown_effect_risk_bearing",
+          "receipt": {
+            "proposal_digest": "sha256:abc179dbdb17c75d7aef0f7e7dec55e45f15634e4fe1fae24898a9d1446414bc",
+            "pre_state_digest": "sha256:638a0c9998120ce500e80697cc4357fb1f9b4749523d44239e2effa318f38f2d",
+            "reference_version": "cr-frontier-reference-v0.1-synthetic",
+            "mutation": null,
+            "settlement_result": "hold",
+            "reason": "prior_unknown_effect_risk_bearing",
+            "post_state_digest": "sha256:75f2175a6beababe46534bea84cadce8c5c2cdf7c95ea020de58f23b7b7ba0c6"
+          }
+        }
+      ],
+      "pass": true
+    },
+    {
+      "scenario_id": "FE006",
+      "mutation": null,
+      "escaped_forbidden_state": false,
+      "final_state_digest": "sha256:f0857d36d13568be53250b539f47b6edc34a823db59afd70067288af19a5f0be",
+      "trace": [
+        {
+          "index": 0,
+          "type": "settle",
+          "expected_reference": "release",
+          "actual": "release",
+          "reason": "within_declared_reach",
+          "receipt": {
+            "proposal_digest": "sha256:5ed0f4b2d8d6e4243c975ca2390db4a54b24f3053d8b7216fdeea63055c7c40b",
+            "pre_state_digest": "sha256:9ded5ade77354f020cc1f672eea75abdc7bd3d89a832ece7832a11a9da350e4d",
+            "reference_version": "cr-frontier-reference-v0.1-synthetic",
+            "mutation": null,
+            "settlement_result": "release",
+            "reason": "within_declared_reach",
+            "release_id": "fe006-a",
+            "post_state_digest": "sha256:a216e2fca195921206e6a19dc5ce13074da19cd6981c21eb361f74bb9431868c"
+          }
+        },
+        {
+          "index": 1,
+          "type": "execute",
+          "expected_reference": "executed",
+          "actual": "executed",
+          "receipt": {
+            "execution_digest": "sha256:be0a46e7aab58df0a831605e3611a7d4f25a24fae464d8a2d0755a9d405e111f",
+            "pre_state_digest": "sha256:a216e2fca195921206e6a19dc5ce13074da19cd6981c21eb361f74bb9431868c",
+            "mutation": null,
+            "execution_result": "executed",
+            "effect": "UNKNOWN",
+            "post_state_digest": "sha256:139c76c0451e76a6bc2c3945f287bf6c15b3871a7da89e3c1889fb958de03f6e"
+          }
+        },
+        {
+          "index": 2,
+          "type": "settle",
+          "expected_reference": "hold",
+          "actual": "hold",
+          "reason": "restart_does_not_clear_unknown_effect",
+          "receipt": {
+            "proposal_digest": "sha256:90e12045e106f70e0912738c4a56b06acb49653522f88ff351a648e5e658c5f3",
+            "pre_state_digest": "sha256:139c76c0451e76a6bc2c3945f287bf6c15b3871a7da89e3c1889fb958de03f6e",
+            "reference_version": "cr-frontier-reference-v0.1-synthetic",
+            "mutation": null,
+            "settlement_result": "hold",
+            "reason": "restart_does_not_clear_unknown_effect",
+            "post_state_digest": "sha256:f0857d36d13568be53250b539f47b6edc34a823db59afd70067288af19a5f0be"
+          }
+        }
+      ],
+      "pass": true
+    },
+    {
+      "scenario_id": "FE007",
+      "mutation": null,
+      "escaped_forbidden_state": false,
+      "final_state_digest": "sha256:2d389f1d87a87b1e78488369f6e586cf061525b81ba720c75f03d40c523d0366",
+      "trace": [
+        {
+          "index": 0,
+          "type": "settle",
+          "expected_reference": "refuse",
+          "actual": "refuse",
+          "reason": "dependency_invalid_or_stale",
+          "receipt": {
+            "proposal_digest": "sha256:62cc5b98c7f23360bd53490028a54f298939732de160c0d746438cc157e0703f",
+            "pre_state_digest": "sha256:15f79d21e80c0cd97cd5dbaf14ce387298903774e8ec1ef735488b43440ac704",
+            "reference_version": "cr-frontier-reference-v0.1-synthetic",
+            "mutation": null,
+            "settlement_result": "refuse",
+            "reason": "dependency_invalid_or_stale",
+            "post_state_digest": "sha256:2d389f1d87a87b1e78488369f6e586cf061525b81ba720c75f03d40c523d0366"
+          }
+        }
+      ],
+      "pass": true
+    },
+    {
+      "scenario_id": "FE008",
+      "mutation": null,
+      "escaped_forbidden_state": false,
+      "final_state_digest": "sha256:e8d779dbcc959354708231cb4d9406f8f07b554395aea6d68e7cd753151455f8",
+      "trace": [
+        {
+          "index": 0,
+          "type": "settle",
+          "expected_reference": "release",
+          "actual": "release",
+          "reason": "within_declared_reach",
+          "receipt": {
+            "proposal_digest": "sha256:d28b7fb3e783584422b3058583221ad52cf0f963bdbb6ee63e8177c37c3e8c69",
+            "pre_state_digest": "sha256:9ded5ade77354f020cc1f672eea75abdc7bd3d89a832ece7832a11a9da350e4d",
+            "reference_version": "cr-frontier-reference-v0.1-synthetic",
+            "mutation": null,
+            "settlement_result": "release",
+            "reason": "within_declared_reach",
+            "release_id": "fe008-a",
+            "post_state_digest": "sha256:e8d779dbcc959354708231cb4d9406f8f07b554395aea6d68e7cd753151455f8"
+          }
+        },
+        {
+          "index": 1,
+          "type": "execute",
+          "expected_reference": "refuse",
+          "actual": "refuse",
+          "reason": "execution_binding_mismatch",
+          "receipt": {
+            "execution_digest": "sha256:f86e50c84da42cde876f60f317b0c37d8595fcac70ae9785ea12fb5d87aa2e58",
+            "pre_state_digest": "sha256:e8d779dbcc959354708231cb4d9406f8f07b554395aea6d68e7cd753151455f8",
+            "mutation": null,
+            "settlement_result": "refuse",
+            "reason": "execution_binding_mismatch",
+            "post_state_digest": "sha256:e8d779dbcc959354708231cb4d9406f8f07b554395aea6d68e7cd753151455f8"
+          }
+        }
+      ],
+      "pass": true
+    },
+    {
+      "scenario_id": "FE009",
+      "mutation": null,
+      "escaped_forbidden_state": false,
+      "final_state_digest": "sha256:7903ff092d8a91b3f3ad82c6de4f2e25d42033e8aba837dd82b2f82999d23a97",
+      "trace": [
+        {
+          "index": 0,
+          "type": "settle",
+          "expected_reference": "release",
+          "actual": "release",
+          "reason": "within_declared_reach",
+          "receipt": {
+            "proposal_digest": "sha256:0ea4392dc92d8dad9882bd507a884b604318cbcf34f30c06a7deaa5c640145ce",
+            "pre_state_digest": "sha256:9ded5ade77354f020cc1f672eea75abdc7bd3d89a832ece7832a11a9da350e4d",
+            "reference_version": "cr-frontier-reference-v0.1-synthetic",
+            "mutation": null,
+            "settlement_result": "release",
+            "reason": "within_declared_reach",
+            "release_id": "fe009-a",
+            "post_state_digest": "sha256:415e405217e72b0ca37220399a0aef554cf2f9d896b675063a6ea3e3139cb12e"
+          }
+        },
+        {
+          "index": 1,
+          "type": "execute",
+          "expected_reference": "executed",
+          "actual": "executed",
+          "receipt": {
+            "execution_digest": "sha256:93c30ed5131f7bfa15eff3dac01253092dcaf7f607f8c45947866a2370a85f2f",
+            "pre_state_digest": "sha256:415e405217e72b0ca37220399a0aef554cf2f9d896b675063a6ea3e3139cb12e",
+            "mutation": null,
+            "execution_result": "executed",
+            "effect": "CONFIRMED",
+            "post_state_digest": "sha256:f81c73070c54badb599ebf3e7251eca835ce29960a54847586b8d331067114f8"
+          }
+        },
+        {
+          "index": 2,
+          "type": "settle",
+          "expected_reference": "refuse",
+          "actual": "refuse",
+          "reason": "finality_precludes_future_release",
+          "receipt": {
+            "proposal_digest": "sha256:24f117ba0d5acb00d1834a947653e9df93d5131cadf6b9e6129795cbc23a3d71",
+            "pre_state_digest": "sha256:f81c73070c54badb599ebf3e7251eca835ce29960a54847586b8d331067114f8",
+            "reference_version": "cr-frontier-reference-v0.1-synthetic",
+            "mutation": null,
+            "settlement_result": "refuse",
+            "reason": "finality_precludes_future_release",
+            "post_state_digest": "sha256:7903ff092d8a91b3f3ad82c6de4f2e25d42033e8aba837dd82b2f82999d23a97"
+          }
+        }
+      ],
+      "pass": true
+    },
+    {
+      "scenario_id": "FE010",
+      "mutation": null,
+      "escaped_forbidden_state": false,
+      "final_state_digest": "sha256:0b034dbfd63b4c31c080fbc317a2bacf7e3bab96ad69589b68be48236e7b8797",
+      "trace": [
+        {
+          "index": 0,
+          "type": "settle",
+          "expected_reference": "release",
+          "actual": "release",
+          "reason": "within_declared_reach",
+          "receipt": {
+            "proposal_digest": "sha256:562788db2446951da5b1ee894479b0dea435f44fd02d1c08f05e3384accefc99",
+            "pre_state_digest": "sha256:9ded5ade77354f020cc1f672eea75abdc7bd3d89a832ece7832a11a9da350e4d",
+            "reference_version": "cr-frontier-reference-v0.1-synthetic",
+            "mutation": null,
+            "settlement_result": "release",
+            "reason": "within_declared_reach",
+            "release_id": "fe010-a",
+            "post_state_digest": "sha256:301471d6bf46f58d20433d68984c549a5f8f5f40bd15d8402f22f3059bf8ef7e"
+          }
+        },
+        {
+          "index": 1,
+          "type": "settle",
+          "expected_reference": "refuse",
+          "actual": "refuse",
+          "reason": "insufficient_exposure",
+          "receipt": {
+            "proposal_digest": "sha256:b0dbb28d3df55b92e7fb90040ab0b0da65f658270dfa8c45a635b0f043156c03",
+            "pre_state_digest": "sha256:301471d6bf46f58d20433d68984c549a5f8f5f40bd15d8402f22f3059bf8ef7e",
+            "reference_version": "cr-frontier-reference-v0.1-synthetic",
+            "mutation": null,
+            "settlement_result": "refuse",
+            "reason": "insufficient_exposure",
+            "post_state_digest": "sha256:0b034dbfd63b4c31c080fbc317a2bacf7e3bab96ad69589b68be48236e7b8797"
+          }
+        }
+      ],
+      "pass": true
+    }
+  ],
+  "mutant_results": [
+    {
+      "scenario_id": "FE001",
+      "mutation": "principal_aggregation_removed",
+      "escaped_forbidden_state": true,
+      "final_state_digest": "sha256:67ae3b0525effbd89a0874598e5538cd04f7560be442e9cceecb6108f3e75dd3",
+      "trace": [
+        {
+          "index": 0,
+          "type": "settle",
+          "expected_reference": "refuse",
+          "actual": "release",
+          "reason": "within_declared_reach",
+          "receipt": {
+            "proposal_digest": "sha256:57c74f034875c5741be15745a0e10279ce70a0e30fe269d7aec0c33486f3dd80",
+            "pre_state_digest": "sha256:cb86c00e11f9a34589791833e59387c78f3feed1619607c4bc9c9ee95296f5f0",
+            "reference_version": "cr-frontier-reference-v0.1-synthetic",
+            "mutation": "principal_aggregation_removed",
+            "settlement_result": "release",
+            "reason": "within_declared_reach",
+            "release_id": "fe001-a",
+            "post_state_digest": "sha256:67ae3b0525effbd89a0874598e5538cd04f7560be442e9cceecb6108f3e75dd3"
+          }
+        }
+      ],
+      "detected": true,
+      "expected_detection": true,
+      "invariant_violation": "Shared-principal exposure aggregation is ignored."
+    },
+    {
+      "scenario_id": "FE001",
+      "mutation": "exposure_conservation_broken",
+      "escaped_forbidden_state": true,
+      "final_state_digest": "sha256:67ae3b0525effbd89a0874598e5538cd04f7560be442e9cceecb6108f3e75dd3",
+      "trace": [
+        {
+          "index": 0,
+          "type": "settle",
+          "expected_reference": "refuse",
+          "actual": "release",
+          "reason": "within_declared_reach",
+          "receipt": {
+            "proposal_digest": "sha256:57c74f034875c5741be15745a0e10279ce70a0e30fe269d7aec0c33486f3dd80",
+            "pre_state_digest": "sha256:cb86c00e11f9a34589791833e59387c78f3feed1619607c4bc9c9ee95296f5f0",
+            "reference_version": "cr-frontier-reference-v0.1-synthetic",
+            "mutation": "exposure_conservation_broken",
+            "settlement_result": "release",
+            "reason": "within_declared_reach",
+            "release_id": "fe001-a",
+            "post_state_digest": "sha256:67ae3b0525effbd89a0874598e5538cd04f7560be442e9cceecb6108f3e75dd3"
+          }
+        }
+      ],
+      "detected": true,
+      "expected_detection": true,
+      "invariant_violation": "Exposure capacity can be overdrawn or manufactured."
+    },
+    {
+      "scenario_id": "FE002",
+      "mutation": "authority_provenance_dropped",
+      "escaped_forbidden_state": true,
+      "final_state_digest": "sha256:052d56ccd3bc23afd254de911d95d83cbdf9a566ba1c95e633c4554d375f3bf5",
+      "trace": [
+        {
+          "index": 0,
+          "type": "settle",
+          "expected_reference": "refuse",
+          "actual": "release",
+          "reason": "within_declared_reach",
+          "receipt": {
+            "proposal_digest": "sha256:6c8c7c29a782baee777c6906b324a778e9af9f939c519ec560278afbe75280dc",
+            "pre_state_digest": "sha256:65a604f38668a12963e7505ca493862dd185f32ff36d040c91020f713679a964",
+            "reference_version": "cr-frontier-reference-v0.1-synthetic",
+            "mutation": "authority_provenance_dropped",
+            "settlement_result": "release",
+            "reason": "within_declared_reach",
+            "release_id": "fe002-a",
+            "post_state_digest": "sha256:052d56ccd3bc23afd254de911d95d83cbdf9a566ba1c95e633c4554d375f3bf5"
+          }
+        }
+      ],
+      "detected": true,
+      "expected_detection": true,
+      "invariant_violation": "Authority provenance is ignored."
+    },
+    {
+      "scenario_id": "FE003",
+      "mutation": "principal_aggregation_removed",
+      "escaped_forbidden_state": true,
+      "final_state_digest": "sha256:8b2175a99c22f4356e5323e4c444b4739bc7822e4cb0c03fe61323cb47070d88",
+      "trace": [
+        {
+          "index": 0,
+          "type": "settle",
+          "expected_reference": "refuse",
+          "actual": "release",
+          "reason": "within_declared_reach",
+          "receipt": {
+            "proposal_digest": "sha256:3ab6c214a7fa82e0a53eba41a5c97b94bbdeb2b8b7ad706d43bd6282784f2784",
+            "pre_state_digest": "sha256:58d5abfeb4add45d46e961cfe99d06e2a01154b293499d3eafd0cd6a8d4c2110",
+            "reference_version": "cr-frontier-reference-v0.1-synthetic",
+            "mutation": "principal_aggregation_removed",
+            "settlement_result": "release",
+            "reason": "within_declared_reach",
+            "release_id": "fe003-a",
+            "post_state_digest": "sha256:8b2175a99c22f4356e5323e4c444b4739bc7822e4cb0c03fe61323cb47070d88"
+          }
+        }
+      ],
+      "detected": true,
+      "expected_detection": true,
+      "invariant_violation": "Shared-principal exposure aggregation is ignored."
+    },
+    {
+      "scenario_id": "FE003",
+      "mutation": "exposure_conservation_broken",
+      "escaped_forbidden_state": true,
+      "final_state_digest": "sha256:8b2175a99c22f4356e5323e4c444b4739bc7822e4cb0c03fe61323cb47070d88",
+      "trace": [
+        {
+          "index": 0,
+          "type": "settle",
+          "expected_reference": "refuse",
+          "actual": "release",
+          "reason": "within_declared_reach",
+          "receipt": {
+            "proposal_digest": "sha256:3ab6c214a7fa82e0a53eba41a5c97b94bbdeb2b8b7ad706d43bd6282784f2784",
+            "pre_state_digest": "sha256:58d5abfeb4add45d46e961cfe99d06e2a01154b293499d3eafd0cd6a8d4c2110",
+            "reference_version": "cr-frontier-reference-v0.1-synthetic",
+            "mutation": "exposure_conservation_broken",
+            "settlement_result": "release",
+            "reason": "within_declared_reach",
+            "release_id": "fe003-a",
+            "post_state_digest": "sha256:8b2175a99c22f4356e5323e4c444b4739bc7822e4cb0c03fe61323cb47070d88"
+          }
+        }
+      ],
+      "detected": true,
+      "expected_detection": true,
+      "invariant_violation": "Exposure capacity can be overdrawn or manufactured."
+    },
+    {
+      "scenario_id": "FE004",
+      "mutation": "replay_permitted",
+      "escaped_forbidden_state": true,
+      "final_state_digest": "sha256:c89ae773292d1cb56e34683da46f584dc630788d2259f33348e251b16bc0b7e4",
+      "trace": [
+        {
+          "index": 0,
+          "type": "settle",
+          "expected_reference": "release",
+          "actual": "release",
+          "reason": "within_declared_reach",
+          "receipt": {
+            "proposal_digest": "sha256:6328654343ed49d93c4e7cbd8a1d881b3c4ee149a0fb595aeb192db792ea89b0",
+            "pre_state_digest": "sha256:9ded5ade77354f020cc1f672eea75abdc7bd3d89a832ece7832a11a9da350e4d",
+            "reference_version": "cr-frontier-reference-v0.1-synthetic",
+            "mutation": "replay_permitted",
+            "settlement_result": "release",
+            "reason": "within_declared_reach",
+            "release_id": "fe004-a",
+            "post_state_digest": "sha256:d8560c5d52a590395fc54d919797eaed4150a1a37fe0b88675193c6b9e3e1b09"
+          }
+        },
+        {
+          "index": 1,
+          "type": "execute",
+          "expected_reference": "executed",
+          "actual": "executed",
+          "receipt": {
+            "execution_digest": "sha256:9dbf1dadcd85e7462f3edc6ffb02f6861cb3fcc38f1278c1de1a823fb24c95fc",
+            "pre_state_digest": "sha256:d8560c5d52a590395fc54d919797eaed4150a1a37fe0b88675193c6b9e3e1b09",
+            "mutation": "replay_permitted",
+            "execution_result": "executed",
+            "effect": "CONFIRMED",
+            "post_state_digest": "sha256:8cafd0bf7e831062e7bf6d7403caec14723a3d8c14bc3a0e4e45f361bc111017"
+          }
+        },
+        {
+          "index": 2,
+          "type": "execute",
+          "expected_reference": "refuse",
+          "actual": "executed",
+          "receipt": {
+            "execution_digest": "sha256:9dbf1dadcd85e7462f3edc6ffb02f6861cb3fcc38f1278c1de1a823fb24c95fc",
+            "pre_state_digest": "sha256:8cafd0bf7e831062e7bf6d7403caec14723a3d8c14bc3a0e4e45f361bc111017",
+            "mutation": "replay_permitted",
+            "execution_result": "executed",
+            "effect": "CONFIRMED",
+            "post_state_digest": "sha256:c89ae773292d1cb56e34683da46f584dc630788d2259f33348e251b16bc0b7e4"
+          }
+        }
+      ],
+      "detected": true,
+      "expected_detection": true,
+      "invariant_violation": "Single-use releases can be replayed."
+    },
+    {
+      "scenario_id": "FE004",
+      "mutation": "single_use_disabled",
+      "escaped_forbidden_state": true,
+      "final_state_digest": "sha256:c89ae773292d1cb56e34683da46f584dc630788d2259f33348e251b16bc0b7e4",
+      "trace": [
+        {
+          "index": 0,
+          "type": "settle",
+          "expected_reference": "release",
+          "actual": "release",
+          "reason": "within_declared_reach",
+          "receipt": {
+            "proposal_digest": "sha256:6328654343ed49d93c4e7cbd8a1d881b3c4ee149a0fb595aeb192db792ea89b0",
+            "pre_state_digest": "sha256:9ded5ade77354f020cc1f672eea75abdc7bd3d89a832ece7832a11a9da350e4d",
+            "reference_version": "cr-frontier-reference-v0.1-synthetic",
+            "mutation": "single_use_disabled",
+            "settlement_result": "release",
+            "reason": "within_declared_reach",
+            "release_id": "fe004-a",
+            "post_state_digest": "sha256:d8560c5d52a590395fc54d919797eaed4150a1a37fe0b88675193c6b9e3e1b09"
+          }
+        },
+        {
+          "index": 1,
+          "type": "execute",
+          "expected_reference": "executed",
+          "actual": "executed",
+          "receipt": {
+            "execution_digest": "sha256:9dbf1dadcd85e7462f3edc6ffb02f6861cb3fcc38f1278c1de1a823fb24c95fc",
+            "pre_state_digest": "sha256:d8560c5d52a590395fc54d919797eaed4150a1a37fe0b88675193c6b9e3e1b09",
+            "mutation": "single_use_disabled",
+            "execution_result": "executed",
+            "effect": "CONFIRMED",
+            "post_state_digest": "sha256:8cafd0bf7e831062e7bf6d7403caec14723a3d8c14bc3a0e4e45f361bc111017"
+          }
+        },
+        {
+          "index": 2,
+          "type": "execute",
+          "expected_reference": "refuse",
+          "actual": "executed",
+          "receipt": {
+            "execution_digest": "sha256:9dbf1dadcd85e7462f3edc6ffb02f6861cb3fcc38f1278c1de1a823fb24c95fc",
+            "pre_state_digest": "sha256:8cafd0bf7e831062e7bf6d7403caec14723a3d8c14bc3a0e4e45f361bc111017",
+            "mutation": "single_use_disabled",
+            "execution_result": "executed",
+            "effect": "CONFIRMED",
+            "post_state_digest": "sha256:c89ae773292d1cb56e34683da46f584dc630788d2259f33348e251b16bc0b7e4"
+          }
+        }
+      ],
+      "detected": true,
+      "expected_detection": true,
+      "invariant_violation": "Release consumption is disabled."
+    },
+    {
+      "scenario_id": "FE005",
+      "mutation": "unknown_restores_capacity",
+      "escaped_forbidden_state": false,
+      "final_state_digest": "sha256:3bda7b9760fdcb597bd44773ca5cdd8fe24fde5f84203d3d7bd0fbfc9e579dbd",
+      "trace": [
+        {
+          "index": 0,
+          "type": "settle",
+          "expected_reference": "release",
+          "actual": "release",
+          "reason": "within_declared_reach",
+          "receipt": {
+            "proposal_digest": "sha256:2e7d1935e55f5aaf815baa34b7d52adb5cea704a8dc6640698fdb9c6d1a93776",
+            "pre_state_digest": "sha256:9ded5ade77354f020cc1f672eea75abdc7bd3d89a832ece7832a11a9da350e4d",
+            "reference_version": "cr-frontier-reference-v0.1-synthetic",
+            "mutation": "unknown_restores_capacity",
+            "settlement_result": "release",
+            "reason": "within_declared_reach",
+            "release_id": "fe005-a",
+            "post_state_digest": "sha256:03af24bb9a5827786e1d880d7a730fe80f5c82a3c5d670f4e03f7350243f4d40"
+          }
+        },
+        {
+          "index": 1,
+          "type": "execute",
+          "expected_reference": "executed",
+          "actual": "executed",
+          "receipt": {
+            "execution_digest": "sha256:299b2e09a1d4efea902feebce23f3b0cc74afbdf086cba495531ad77f7d86d71",
+            "pre_state_digest": "sha256:03af24bb9a5827786e1d880d7a730fe80f5c82a3c5d670f4e03f7350243f4d40",
+            "mutation": "unknown_restores_capacity",
+            "execution_result": "executed",
+            "effect": "UNKNOWN",
+            "post_state_digest": "sha256:7b7bb1b12d263d257da37315be2a36d0835fd8b69d57dd06a6c84e284eaf1139"
+          }
+        },
+        {
+          "index": 2,
+          "type": "settle",
+          "expected_reference": "hold",
+          "actual": "release",
+          "reason": "within_declared_reach",
+          "receipt": {
+            "proposal_digest": "sha256:abc179dbdb17c75d7aef0f7e7dec55e45f15634e4fe1fae24898a9d1446414bc",
+            "pre_state_digest": "sha256:7b7bb1b12d263d257da37315be2a36d0835fd8b69d57dd06a6c84e284eaf1139",
+            "reference_version": "cr-frontier-reference-v0.1-synthetic",
+            "mutation": "unknown_restores_capacity",
+            "settlement_result": "release",
+            "reason": "within_declared_reach",
+            "release_id": "fe005-b",
+            "post_state_digest": "sha256:3bda7b9760fdcb597bd44773ca5cdd8fe24fde5f84203d3d7bd0fbfc9e579dbd"
+          }
+        }
+      ],
+      "detected": true,
+      "expected_detection": true,
+      "invariant_violation": "UNKNOWN restores capacity instead of holding it risk-bearing."
+    },
+    {
+      "scenario_id": "FE006",
+      "mutation": "restart_clears_history",
+      "escaped_forbidden_state": false,
+      "final_state_digest": "sha256:3d8eda396c8be3ec7942e3d430effbe814e2edf22982fd528980bbf018cf387f",
+      "trace": [
+        {
+          "index": 0,
+          "type": "settle",
+          "expected_reference": "release",
+          "actual": "release",
+          "reason": "within_declared_reach",
+          "receipt": {
+            "proposal_digest": "sha256:5ed0f4b2d8d6e4243c975ca2390db4a54b24f3053d8b7216fdeea63055c7c40b",
+            "pre_state_digest": "sha256:9ded5ade77354f020cc1f672eea75abdc7bd3d89a832ece7832a11a9da350e4d",
+            "reference_version": "cr-frontier-reference-v0.1-synthetic",
+            "mutation": "restart_clears_history",
+            "settlement_result": "release",
+            "reason": "within_declared_reach",
+            "release_id": "fe006-a",
+            "post_state_digest": "sha256:a216e2fca195921206e6a19dc5ce13074da19cd6981c21eb361f74bb9431868c"
+          }
+        },
+        {
+          "index": 1,
+          "type": "execute",
+          "expected_reference": "executed",
+          "actual": "executed",
+          "receipt": {
+            "execution_digest": "sha256:be0a46e7aab58df0a831605e3611a7d4f25a24fae464d8a2d0755a9d405e111f",
+            "pre_state_digest": "sha256:a216e2fca195921206e6a19dc5ce13074da19cd6981c21eb361f74bb9431868c",
+            "mutation": "restart_clears_history",
+            "execution_result": "executed",
+            "effect": "UNKNOWN",
+            "post_state_digest": "sha256:139c76c0451e76a6bc2c3945f287bf6c15b3871a7da89e3c1889fb958de03f6e"
+          }
+        },
+        {
+          "index": 2,
+          "type": "settle",
+          "expected_reference": "hold",
+          "actual": "release",
+          "reason": "within_declared_reach",
+          "receipt": {
+            "proposal_digest": "sha256:90e12045e106f70e0912738c4a56b06acb49653522f88ff351a648e5e658c5f3",
+            "pre_state_digest": "sha256:139c76c0451e76a6bc2c3945f287bf6c15b3871a7da89e3c1889fb958de03f6e",
+            "reference_version": "cr-frontier-reference-v0.1-synthetic",
+            "mutation": "restart_clears_history",
+            "settlement_result": "release",
+            "reason": "within_declared_reach",
+            "release_id": "fe006-b",
+            "post_state_digest": "sha256:3d8eda396c8be3ec7942e3d430effbe814e2edf22982fd528980bbf018cf387f"
+          }
+        }
+      ],
+      "detected": true,
+      "expected_detection": true,
+      "invariant_violation": "Restart clears reservations/history."
+    },
+    {
+      "scenario_id": "FE007",
+      "mutation": "dependency_invalidation_disabled",
+      "escaped_forbidden_state": true,
+      "final_state_digest": "sha256:9eb7185109c25c83e539ff76c1893c38dbb3741cb4072513bf3620bd7344b754",
+      "trace": [
+        {
+          "index": 0,
+          "type": "settle",
+          "expected_reference": "refuse",
+          "actual": "release",
+          "reason": "within_declared_reach",
+          "receipt": {
+            "proposal_digest": "sha256:62cc5b98c7f23360bd53490028a54f298939732de160c0d746438cc157e0703f",
+            "pre_state_digest": "sha256:15f79d21e80c0cd97cd5dbaf14ce387298903774e8ec1ef735488b43440ac704",
+            "reference_version": "cr-frontier-reference-v0.1-synthetic",
+            "mutation": "dependency_invalidation_disabled",
+            "settlement_result": "release",
+            "reason": "within_declared_reach",
+            "release_id": "fe007-a",
+            "post_state_digest": "sha256:9eb7185109c25c83e539ff76c1893c38dbb3741cb4072513bf3620bd7344b754"
+          }
+        }
+      ],
+      "detected": true,
+      "expected_detection": true,
+      "invariant_violation": "Failed/stale dependencies are treated as valid."
+    },
+    {
+      "scenario_id": "FE008",
+      "mutation": "exact_binding_weakened",
+      "escaped_forbidden_state": true,
+      "final_state_digest": "sha256:0ba3be5810a33e9ab4021f230dbc72536fd119795f5207cba8b0bb8a9654312e",
+      "trace": [
+        {
+          "index": 0,
+          "type": "settle",
+          "expected_reference": "release",
+          "actual": "release",
+          "reason": "within_declared_reach",
+          "receipt": {
+            "proposal_digest": "sha256:d28b7fb3e783584422b3058583221ad52cf0f963bdbb6ee63e8177c37c3e8c69",
+            "pre_state_digest": "sha256:9ded5ade77354f020cc1f672eea75abdc7bd3d89a832ece7832a11a9da350e4d",
+            "reference_version": "cr-frontier-reference-v0.1-synthetic",
+            "mutation": "exact_binding_weakened",
+            "settlement_result": "release",
+            "reason": "within_declared_reach",
+            "release_id": "fe008-a",
+            "post_state_digest": "sha256:e8d779dbcc959354708231cb4d9406f8f07b554395aea6d68e7cd753151455f8"
+          }
+        },
+        {
+          "index": 1,
+          "type": "execute",
+          "expected_reference": "refuse",
+          "actual": "executed",
+          "receipt": {
+            "execution_digest": "sha256:f86e50c84da42cde876f60f317b0c37d8595fcac70ae9785ea12fb5d87aa2e58",
+            "pre_state_digest": "sha256:e8d779dbcc959354708231cb4d9406f8f07b554395aea6d68e7cd753151455f8",
+            "mutation": "exact_binding_weakened",
+            "execution_result": "executed",
+            "effect": "CONFIRMED",
+            "post_state_digest": "sha256:0ba3be5810a33e9ab4021f230dbc72536fd119795f5207cba8b0bb8a9654312e"
+          }
+        }
+      ],
+      "detected": true,
+      "expected_detection": true,
+      "invariant_violation": "Release can execute a mutated proposal."
+    },
+    {
+      "scenario_id": "FE009",
+      "mutation": "finality_ignored",
+      "escaped_forbidden_state": true,
+      "final_state_digest": "sha256:7bf3faf97f7edcf3a0e61b58090e23aece93be8969b3e1d5e04386664c6e897e",
+      "trace": [
+        {
+          "index": 0,
+          "type": "settle",
+          "expected_reference": "release",
+          "actual": "release",
+          "reason": "within_declared_reach",
+          "receipt": {
+            "proposal_digest": "sha256:0ea4392dc92d8dad9882bd507a884b604318cbcf34f30c06a7deaa5c640145ce",
+            "pre_state_digest": "sha256:9ded5ade77354f020cc1f672eea75abdc7bd3d89a832ece7832a11a9da350e4d",
+            "reference_version": "cr-frontier-reference-v0.1-synthetic",
+            "mutation": "finality_ignored",
+            "settlement_result": "release",
+            "reason": "within_declared_reach",
+            "release_id": "fe009-a",
+            "post_state_digest": "sha256:415e405217e72b0ca37220399a0aef554cf2f9d896b675063a6ea3e3139cb12e"
+          }
+        },
+        {
+          "index": 1,
+          "type": "execute",
+          "expected_reference": "executed",
+          "actual": "executed",
+          "receipt": {
+            "execution_digest": "sha256:93c30ed5131f7bfa15eff3dac01253092dcaf7f607f8c45947866a2370a85f2f",
+            "pre_state_digest": "sha256:415e405217e72b0ca37220399a0aef554cf2f9d896b675063a6ea3e3139cb12e",
+            "mutation": "finality_ignored",
+            "execution_result": "executed",
+            "effect": "CONFIRMED",
+            "post_state_digest": "sha256:f81c73070c54badb599ebf3e7251eca835ce29960a54847586b8d331067114f8"
+          }
+        },
+        {
+          "index": 2,
+          "type": "settle",
+          "expected_reference": "refuse",
+          "actual": "release",
+          "reason": "within_declared_reach",
+          "receipt": {
+            "proposal_digest": "sha256:24f117ba0d5acb00d1834a947653e9df93d5131cadf6b9e6129795cbc23a3d71",
+            "pre_state_digest": "sha256:f81c73070c54badb599ebf3e7251eca835ce29960a54847586b8d331067114f8",
+            "reference_version": "cr-frontier-reference-v0.1-synthetic",
+            "mutation": "finality_ignored",
+            "settlement_result": "release",
+            "reason": "within_declared_reach",
+            "release_id": "fe009-b",
+            "post_state_digest": "sha256:7bf3faf97f7edcf3a0e61b58090e23aece93be8969b3e1d5e04386664c6e897e"
+          }
+        }
+      ],
+      "detected": true,
+      "expected_detection": true,
+      "invariant_violation": "Finalized consumed reach can be reused."
+    },
+    {
+      "scenario_id": "FE010",
+      "mutation": "principal_aggregation_removed",
+      "escaped_forbidden_state": true,
+      "final_state_digest": "sha256:68405e32be4fd9b5754f62d1dc00f7249a6a76d72f1b4c2b85d8af9ebcb35515",
+      "trace": [
+        {
+          "index": 0,
+          "type": "settle",
+          "expected_reference": "release",
+          "actual": "release",
+          "reason": "within_declared_reach",
+          "receipt": {
+            "proposal_digest": "sha256:562788db2446951da5b1ee894479b0dea435f44fd02d1c08f05e3384accefc99",
+            "pre_state_digest": "sha256:9ded5ade77354f020cc1f672eea75abdc7bd3d89a832ece7832a11a9da350e4d",
+            "reference_version": "cr-frontier-reference-v0.1-synthetic",
+            "mutation": "principal_aggregation_removed",
+            "settlement_result": "release",
+            "reason": "within_declared_reach",
+            "release_id": "fe010-a",
+            "post_state_digest": "sha256:301471d6bf46f58d20433d68984c549a5f8f5f40bd15d8402f22f3059bf8ef7e"
+          }
+        },
+        {
+          "index": 1,
+          "type": "settle",
+          "expected_reference": "refuse",
+          "actual": "release",
+          "reason": "within_declared_reach",
+          "receipt": {
+            "proposal_digest": "sha256:b0dbb28d3df55b92e7fb90040ab0b0da65f658270dfa8c45a635b0f043156c03",
+            "pre_state_digest": "sha256:301471d6bf46f58d20433d68984c549a5f8f5f40bd15d8402f22f3059bf8ef7e",
+            "reference_version": "cr-frontier-reference-v0.1-synthetic",
+            "mutation": "principal_aggregation_removed",
+            "settlement_result": "release",
+            "reason": "within_declared_reach",
+            "release_id": "fe010-b",
+            "post_state_digest": "sha256:68405e32be4fd9b5754f62d1dc00f7249a6a76d72f1b4c2b85d8af9ebcb35515"
+          }
+        }
+      ],
+      "detected": true,
+      "expected_detection": true,
+      "invariant_violation": "Shared-principal exposure aggregation is ignored."
+    },
+    {
+      "scenario_id": "FE010",
+      "mutation": "exposure_conservation_broken",
+      "escaped_forbidden_state": true,
+      "final_state_digest": "sha256:68405e32be4fd9b5754f62d1dc00f7249a6a76d72f1b4c2b85d8af9ebcb35515",
+      "trace": [
+        {
+          "index": 0,
+          "type": "settle",
+          "expected_reference": "release",
+          "actual": "release",
+          "reason": "within_declared_reach",
+          "receipt": {
+            "proposal_digest": "sha256:562788db2446951da5b1ee894479b0dea435f44fd02d1c08f05e3384accefc99",
+            "pre_state_digest": "sha256:9ded5ade77354f020cc1f672eea75abdc7bd3d89a832ece7832a11a9da350e4d",
+            "reference_version": "cr-frontier-reference-v0.1-synthetic",
+            "mutation": "exposure_conservation_broken",
+            "settlement_result": "release",
+            "reason": "within_declared_reach",
+            "release_id": "fe010-a",
+            "post_state_digest": "sha256:301471d6bf46f58d20433d68984c549a5f8f5f40bd15d8402f22f3059bf8ef7e"
+          }
+        },
+        {
+          "index": 1,
+          "type": "settle",
+          "expected_reference": "refuse",
+          "actual": "release",
+          "reason": "within_declared_reach",
+          "receipt": {
+            "proposal_digest": "sha256:b0dbb28d3df55b92e7fb90040ab0b0da65f658270dfa8c45a635b0f043156c03",
+            "pre_state_digest": "sha256:301471d6bf46f58d20433d68984c549a5f8f5f40bd15d8402f22f3059bf8ef7e",
+            "reference_version": "cr-frontier-reference-v0.1-synthetic",
+            "mutation": "exposure_conservation_broken",
+            "settlement_result": "release",
+            "reason": "within_declared_reach",
+            "release_id": "fe010-b",
+            "post_state_digest": "sha256:68405e32be4fd9b5754f62d1dc00f7249a6a76d72f1b4c2b85d8af9ebcb35515"
+          }
+        }
+      ],
+      "detected": true,
+      "expected_detection": true,
+      "invariant_violation": "Exposure capacity can be overdrawn or manufactured."
+    }
+  ]
+}

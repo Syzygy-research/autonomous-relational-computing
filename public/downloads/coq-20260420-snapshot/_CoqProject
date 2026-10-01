@@ -1,0 +1,21 @@
+-R . VALIS
+
+Syntax.v
+Operational.v
+Operational_StaticFragment.v
+Operational_StaticNormalize.v
+Operational_AlgebraicSoundness.v
+Kernel.v
+KernelInstance_Current.v
+KernelInstance_Constitutional.v
+# Axiomatic dagger-category presentation; excluded from verification build
+# Phase1_DaggerPresentation.v
+ChildKernel.v
+economics/RelationalEconomics.v
+economics/RelationalEconomics_Params_KernelInstanceCurrent_Nat.v
+economics/EconDynamics.v
+economics/EconFieldDynamics.v
+# Phase-2 blueprint (contains admitted/axiomatic placeholders); excluded from verification build
+# Phase2_Skeleton.v
+# research-only shim providing classical axioms; remove for kernel-only build
+# compat/ClassicalShim.v  # removed from v1 core; commented out for verification build

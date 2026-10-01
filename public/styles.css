@@ -1,0 +1,551 @@
+/* Recursive Settlement — Valis brand kit v1.0 (Sept 2026) applied. */
+
+/* ---- Tokens ---------------------------------------------------------- */
+:root {
+  --carbon:   #0A0B0C; /* base surface, ~70% */
+  --graphite: #101215; /* cards, panels, wells */
+  --chassis:  #2A2E33; /* borders, rules, dividers */
+  --steel:    #7C848E; /* secondary text, labels */
+  --paper:    #F2F3F1; /* primary text */
+  --ember:    #E8451C; /* fills, enforcement, edges */
+  --glow:     #FF7A1A; /* accent type, peaks, hover */
+
+  /* Heat roles — Ember is the standing accent, Glow sits above it
+     for hover, focus and transient peaks only. Never beside it as an equal. */
+  --accent:      var(--ember);
+  --accent-peak: var(--glow);
+
+  --font-sans: 'Archivo', Helvetica, Arial, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+
+  --radius: 0px;
+  --ease: cubic-bezier(.16, 1, .3, 1);
+  --duration: 320ms;
+
+  --page: 66rem;   /* outer measure — header, main, footer */
+  --prose: 42rem;  /* running-text column */
+  --rail: 12rem;   /* section-label rail */
+  --gutter: clamp(1.5rem, 4vw, 3rem);
+}
+
+/* ---- Reset / base -------------------------------------------------- */
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--carbon);
+  color: var(--paper);
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: clamp(1rem, 0.96rem + 0.2vw, 1.0625rem);
+  line-height: 1.6;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  overflow-wrap: break-word;
+}
+
+img { max-width: 100%; height: auto; }
+
+::selection {
+  background: var(--accent);
+  color: var(--carbon);
+}
+
+/* ---- Header ------------------------------------------------------- */
+.site-header {
+  max-width: var(--page);
+  margin: 0 auto;
+  padding: clamp(1.5rem, 4vw, 2.5rem) var(--gutter);
+  border-bottom: 1px solid var(--chassis);
+}
+
+.site-header img {
+  display: block;
+  width: 168px;
+  height: auto;
+}
+
+.site-header__tagline {
+  margin: 0.9rem 0 0;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--steel);
+}
+
+/* ---- Shell ------------------------------------------------------ */
+main {
+  max-width: var(--page);
+  margin: 0 auto;
+  padding: clamp(2.5rem, 7vw, 5rem) var(--gutter) clamp(3rem, 8vw, 5.5rem);
+  counter-reset: band;
+}
+
+/* ---- Hero ----------------------------------------------------- */
+.hero { margin-bottom: clamp(1rem, 3vw, 2rem); }
+
+h1 {
+  font-weight: 700;
+  font-size: clamp(2.5rem, 1.55rem + 3.6vw, 4.25rem);
+  line-height: 1.04;
+  letter-spacing: -0.025em;
+  margin: 0 0 1.25rem;
+  max-width: 15ch;
+  text-wrap: balance;
+}
+
+/* headline accent — heat on the phrase about stopping */
+h1 .hl { color: var(--accent); }
+
+.lede {
+  font-size: clamp(1.15rem, 1rem + 0.7vw, 1.45rem);
+  line-height: 1.5;
+  color: var(--paper);
+  margin: 0 0 2rem;
+  max-width: 32rem;
+}
+
+.hero__context {
+  color: var(--steel);
+  max-width: var(--prose);
+  margin: 0;
+}
+
+/* ---- Bands (section = label rail + body) --------------------- */
+.band {
+  display: grid;
+  grid-template-columns: minmax(0, var(--rail)) minmax(0, 1fr);
+  column-gap: clamp(1.75rem, 4vw, 3.5rem);
+  border-top: 1px solid var(--chassis);
+  margin-top: clamp(2.5rem, 5vw, 4rem);
+  padding-top: clamp(1.5rem, 2.5vw, 2rem);
+  counter-increment: band;
+}
+
+.band__head {
+  grid-column: 1;
+  align-self: start;
+}
+
+/* section label — "S01 · Principle"; subtle, always present */
+.band__eyebrow {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--steel);
+  text-wrap: pretty;
+}
+
+.band__eyebrow::before {
+  content: "S" counter(band, decimal-leading-zero) "\00A0\00A0·\00A0\00A0";
+}
+
+/* prose sections carry the label above a full heading */
+p.band__eyebrow { margin-bottom: 0.85rem; }
+
+.band__body {
+  grid-column: 2;
+  max-width: var(--prose);
+}
+
+@media (min-width: 60rem) {
+  .band__head {
+    position: sticky;
+    top: 2rem;
+  }
+}
+
+h2 {
+  font-weight: 600;
+  font-size: clamp(1.45rem, 1.2rem + 1vw, 2rem);
+  letter-spacing: -0.015em;
+  line-height: 1.1;
+  margin: 0;
+  text-wrap: balance;
+}
+
+/* ---- Body copy --------------------------------------------- */
+p { margin: 0 0 1.25rem; }
+.band__body > p:last-child { margin-bottom: 0; }
+
+/* opening statement line inside a band */
+.band__statement {
+  font-size: clamp(1.1rem, 1rem + 0.5vw, 1.3rem);
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+  color: var(--paper);
+  margin: 0 0 1.5rem;
+  text-wrap: balance;
+}
+
+strong {
+  font-weight: 600;
+  color: var(--accent);
+}
+
+em {
+  font-style: normal;
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  letter-spacing: 0.02em;
+  color: var(--paper);
+}
+
+/* sub-heads inside a prose band (e.g. Object-first / Relation-first) */
+.band__body h4 {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 0.8125rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--steel);
+  margin: 2.25rem 0 0.75rem;
+}
+
+/* relation / pipeline chains */
+.chain {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  line-height: 1.7;
+  letter-spacing: 0.02em;
+  color: var(--paper);
+  border-left: 2px solid var(--ember);
+  padding: 0.5rem 0 0.5rem 1.1rem;
+  margin: 0 0 1.25rem;
+  overflow-wrap: anywhere;
+}
+
+/* ---- Settlement chain — full-bleed pipeline strip ---------- */
+.creed {
+  margin: clamp(3rem, 6vw, 4.5rem) calc(-1 * var(--gutter)) 0;
+  padding: clamp(2.25rem, 4vw, 3.25rem) var(--gutter);
+  background: var(--graphite);
+  border-block: 1px solid var(--chassis);
+}
+
+.flow {
+  position: relative;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem 1rem;
+}
+
+/* the track the pulse runs along */
+.flow::before {
+  content: "";
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  top: 5px;
+  height: 1px;
+  background: var(--chassis);
+}
+
+/* the accent pulse — hidden at rest, driven only by scroll */
+.flow::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 16%;
+  height: 3px;
+  transform: translateY(-50%);
+  background: linear-gradient(90deg, transparent, var(--ember) 30%, var(--ember) 52%, var(--glow) 82%, transparent);
+  opacity: 0;
+  animation: flow-pulse linear both;
+  animation-timeline: view();
+  animation-range: cover 2% cover 60%;
+}
+
+.flow__step {
+  position: relative;
+  display: grid;
+  gap: 0.7rem;
+  align-content: start;
+  justify-items: center;
+  text-align: center;
+  min-width: 0;
+}
+
+.flow__node {
+  width: 11px;
+  height: 11px;
+  border: 1px solid var(--steel);
+  background: transparent;
+}
+
+.flow__actor {
+  font-weight: 600;
+  font-size: clamp(1.05rem, 0.95rem + 0.5vw, 1.35rem);
+  letter-spacing: -0.01em;
+  color: var(--paper);
+}
+
+.flow__verb {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 0.6875rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--steel);
+}
+
+@keyframes flow-pulse {
+  0%   { left: -16%; opacity: 0; }
+  6%   { opacity: 1; }
+  94%  { opacity: 1; }
+  100% { left: 100%; opacity: 0; }
+}
+
+@keyframes flow-node {
+  0%, 100% { border-color: var(--steel); background: transparent; }
+  45%, 60% { border-color: var(--glow); background: var(--glow); }
+}
+
+.flow__node {
+  animation: flow-node linear both;
+  animation-timeline: view();
+}
+
+.flow__step:nth-child(1) .flow__node { animation-range: cover 4% cover 15%; }
+.flow__step:nth-child(2) .flow__node { animation-range: cover 15% cover 26%; }
+.flow__step:nth-child(3) .flow__node { animation-range: cover 26% cover 38%; }
+.flow__step:nth-child(4) .flow__node { animation-range: cover 38% cover 50%; }
+.flow__step:nth-child(5) .flow__node { animation-range: cover 50% cover 62%; }
+
+/* stacked pipeline — track runs down the left edge */
+@media (max-width: 40rem) {
+  .flow {
+    grid-template-columns: 1fr;
+    gap: 1.35rem;
+    padding-left: 1.4rem;
+  }
+  .flow::before {
+    left: 4px;
+    right: auto;
+    top: 4px;
+    bottom: 4px;
+    height: auto;
+    width: 1px;
+  }
+  .flow::after {
+    left: 4px;
+    top: 0;
+    width: 3px;
+    height: 14%;
+    transform: translateX(-50%);
+    background: linear-gradient(180deg, transparent, var(--ember) 30%, var(--ember) 52%, var(--glow) 82%, transparent);
+    animation-name: flow-pulse-v;
+  }
+  .flow__step {
+    justify-items: start;
+    text-align: left;
+    gap: 0.4rem;
+  }
+  .flow__node { position: absolute; left: -1.4rem; top: 3px; }
+}
+
+@keyframes flow-pulse-v {
+  0%   { top: -16%; opacity: 0; }
+  6%   { opacity: 1; }
+  94%  { opacity: 1; }
+  100% { top: 100%; opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flow::after,
+  .flow__node { animation: none !important; }
+}
+
+/* ---- Module grids (Solutions, Team) ----------------------- */
+.band--grid .band__head { grid-row: 1; }
+
+.grid {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  margin-top: clamp(1.5rem, 3vw, 2rem);
+  display: grid;
+  gap: 1px;
+  background: var(--chassis);
+  border: 1px solid var(--chassis);
+}
+
+.grid--solutions {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  counter-reset: cell;
+}
+
+.grid--team {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@media (max-width: 60rem) {
+  .grid--solutions { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+.cell {
+  background: var(--graphite);
+  padding: clamp(1.25rem, 2.4vw, 1.75rem);
+  display: flex;
+  flex-direction: column;
+}
+
+.cell--wide { grid-column: 1 / -1; }
+
+/* Solutions cell */
+.cell--solution h4 {
+  counter-increment: cell;
+  margin: 0 0 0.4rem;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 1.0625rem;
+  letter-spacing: -0.01em;
+  color: var(--paper);
+}
+
+.cell--solution h4::before {
+  content: counter(cell, decimal-leading-zero);
+  display: block;
+  margin-bottom: 0.9rem;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  color: var(--ember);
+}
+
+.cell--solution h5 {
+  margin: 0 0 0.85rem;
+  font-weight: 500;
+  font-size: 0.95rem;
+  line-height: 1.35;
+  color: var(--paper);
+}
+
+.cell--solution p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--steel);
+}
+
+/* Team cell */
+.cell--member h3 {
+  margin: 0 0 0.3rem;
+  font-weight: 600;
+  font-size: 1.15rem;
+  letter-spacing: -0.01em;
+  color: var(--paper);
+}
+
+.cell--member h5 {
+  margin: 0 0 0.9rem;
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 0.6875rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--steel);
+}
+
+.cell--member p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--steel);
+}
+
+.cell--support h3 {
+  margin: 0 0 1rem;
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 0.6875rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--steel);
+}
+
+.names {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.75rem;
+  font-size: 0.95rem;
+  color: var(--paper);
+}
+
+/* ---- Contact ------------------------------------------------ */
+.band__body a {
+  color: var(--accent);
+  overflow-wrap: anywhere;
+  text-decoration: underline;
+  text-decoration-color: var(--chassis);
+  text-underline-offset: 0.2em;
+  text-decoration-thickness: 1px;
+  transition: color var(--duration) var(--ease),
+              text-decoration-color var(--duration) var(--ease);
+}
+
+.band__body a:hover,
+.band__body a:focus-visible {
+  color: var(--accent-peak);
+  text-decoration-color: var(--accent-peak);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--accent-peak);
+  outline-offset: 3px;
+}
+
+/* ---- Footer ----------------------------------------------- */
+.site-footer {
+  max-width: var(--page);
+  margin: 0 auto;
+  padding: 2rem var(--gutter) 3rem;
+  border-top: 1px solid var(--chassis);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 2rem;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--steel);
+}
+
+/* ---- Narrow ---------------------------------------------- */
+@media (max-width: 48rem) {
+  .band {
+    grid-template-columns: 1fr;
+    row-gap: 1.25rem;
+  }
+  .band__head { grid-column: 1; }
+  .band__body { grid-column: 1; }
+  .grid--solutions,
+  .grid--team { grid-template-columns: 1fr; }
+}
+
+/* ---- Motion preference --------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}

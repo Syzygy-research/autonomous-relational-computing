@@ -1,0 +1,337 @@
+{
+  "title": "VALIS Coq Proof Snapshot",
+  "version": "coq-proof-snapshot-20260420-review-bundle-current",
+  "generated_at": "2026-09-27T19:35:00.5542952Z",
+  "source": "review-bundles/20260420-review-bundle-current/tools/coq",
+  "evidence_class": "FORMALLY_ESTABLISHED_WITHIN_DECLARED_MODEL",
+  "boundary": "Machine-checkable Coq proof/source snapshot for the historical/formal kernel lineage. The sealed kernel scope is scanned separately from exploratory Phase 2/geometry material. This snapshot does not by itself establish production KORE conformance, current CR-Core implementation correspondence, universal safety, underwriting validity, or independent external review.",
+  "reproduction": "Use public/downloads/coq-20260420-snapshot/Makefile with a compatible Coq environment. Original verifier target checked make -C tools/coq kernel and scanned the sealed kernel scope for Admitted/admit placeholders.",
+  "files": [
+    {
+      "path": "public/downloads/coq-20260420-snapshot/_CoqProject",
+      "bytes": 767,
+      "sha256": "sha256:936cb53f6813c5e4a641e429bde8ee492fa380e3e4cc0ef4e249ba7def7f2b8f"
+    },
+    {
+      "path": "public/downloads/coq-20260420-snapshot/_CoqProject.core",
+      "bytes": 442,
+      "sha256": "sha256:77a9455c97ba60e3a0d8c0513236df1be28f8ef71b2624e31ac458601a7220cf"
+    },
+    {
+      "path": "public/downloads/coq-20260420-snapshot/_CoqProject.demo",
+      "bytes": 276,
+      "sha256": "sha256:6d2a8cce42b3b69f1a91025330370021e5df22f528f015e5f6da768b26b07ba8"
+    },
+    {
+      "path": "public/downloads/coq-20260420-snapshot/_CoqProject.kernel",
+      "bytes": 264,
+      "sha256": "sha256:c388da54d2090e78f0f1ea4255a1cc823ab65e1a0094b0c6f24ae20186f1ce52"
+    },
+    {
+      "path": "public/downloads/coq-20260420-snapshot/_CoqProject.kernel_minimal",
+      "bytes": 79,
+      "sha256": "sha256:9f91d506cbee584f9d9682a8c010aeca7faa261343a6eaba5a4cf1e989421e2d"
+    },
+    {
+      "path": "public/downloads/coq-20260420-snapshot/ChildKernel.v",
+      "bytes": 12228,
+      "sha256": "sha256:84c71207ebec13667eef7b1e81cea63d684cae8a58361f95383c057174a1f727"
+    },
+    {
+      "path": "public/downloads/coq-20260420-snapshot/Concrete_Kernel_Examples.v",
+      "bytes": 1467,
+      "sha256": "sha256:02b3d7c796192065f0ed957003dbf9e04129e9709d257110af011480ddba66f9"
+    },
+    {
+      "path": "public/downloads/coq-20260420-snapshot/coq-proof-issue.md",
+      "bytes": 1884,
+      "sha256": "sha256:b9f7615b74aaaf9399fd8ef5f3b33ff19e5765800e97de0c058af867e5cc7eda"
+    },
+    {
+      "path": "public/downloads/coq-20260420-snapshot/DaggerCategory.v",
+      "bytes": 2789,
+      "sha256": "sha256:ec4ae71c6ab3f7df830b146caba3add0ba684d00434ae2baf5492c351079f8b0"
+    },
+    {
+      "path": "public/downloads/coq-20260420-snapshot/Denotation.v",
+      "bytes": 7643,
+      "sha256": "sha256:6baeef838439f337e61ce27611e1e46dba1fd48b933da0adc15d25e6dedbe5ec"
+    },
+    {
+      "path": "public/downloads/coq-20260420-snapshot/Dockerfile",
+      "bytes": 527,
+      "sha256": "sha256:4de439210af937498e346f3d864344cbe3e606fb5260eec129afe5c3a5b1258d"
+    },
+    {
+      "path": "public/downloads/coq-20260420-snapshot/economics/EconDynamics.v",
+      "bytes": 23287,
+      "sha256": "sha256:90c0b6c172866a63866db7eafafb3ddb762d71433f5b54d9c6785217c6422753"
+    },
+    {
+      "path": "public/downloads/coq-20260420-snapshot/economics/EconFieldDynamics.v",
+      "bytes": 31479,
+      "sha256": "sha256:68ada45e9d04ef3a22cba0f5b6ce61b84f642a253362bb699de0389bb588ff01"
+    },
+    {
+      "path": "public/downloads/coq-20260420-snapshot/economics/RelationalEconomics_ExtractionDemo.v",
+      "bytes": 2653,
+      "sha256": "sha256:84c9932c628b8206fa3c080873ca59dedf22a698eee2ba72101618f186102e16"
+    },
+    {
+      "path": "public/downloads/coq-20260420-snapshot/economics/RelationalEconomics_Params_KernelInstanceCurrent_Nat.v",
+      "bytes": 8416,
+      "sha256": "sha256:7806937484d65c2e838212158f41bf79bcfc6ce92e3227cee163b9273d3bc4af"
+    },
+    {
+      "path": "public/downloads/coq-20260420-snapshot/economics/RelationalEconomics.v",
+      "bytes": 22542,
+      "sha256": "sha256:d227242381247ecec23ed67283d6f886f94533b3d7f206302977b6c4ff5ffabe"
+    },
+    {
+      "path": "public/downloads/coq-20260420-snapshot/Kernel_Implementation.v",
+      "bytes": 14532,
+      "sha256": "sha256:1b7c6a21bb5b7bd45557738837aaff724ff49d40ae9b8cd0ada3776924f6474c"
+    },
+    {
+      "path": "public/downloads/coq-20260420-snapshot/Kernel.v",
+      "bytes": 7707,
+      "sha256": "sha256:65ca16368d83b25edfdd81b159a15c5a296303f91f79d86da3971149a52149fb"
+    },
+    {
+      "path": "public/downloads/coq-20260420-snapshot/KernelInstance_Constitutional.v",
+      "bytes": 15762,
+      "sha256": "sha256:3043a380c3df1e8cbb40fa87445c42ea115b67b11cd7ca3f997f05a6c5612722"
+    },
+    {
+      "path": "public/downloads/coq-20260420-snapshot/KernelInstance_Current.v",
+      "bytes": 8988,
+      "sha256": "sha256:75ab571637ed322d0061c9b68a05e1eaff53975e54fdf00777f078a7bfa27bc9"
+    },
+    {
+      "path": "public/downloads/coq-20260420-snapshot/Makefile",
+      "bytes": 1402,
+      "sha256": "sha256:9a6c8d4860465e9368d4369d3f894b82a9ae50d556afd4a88ea4a5ac6efec3bc"
+    },
+    {
+      "path": "public/downloads/coq-20260420-snapshot/Operational_AlgebraicSoundness.v",
+      "bytes": 4886,
+      "sha256": "sha256:521d9c58c69d053014cd4077155aa44f41c0bb1b15333496a29a0386aff68a30"
+    },
+    {
+      "path": "public/downloads/coq-20260420-snapshot/Operational_StaticFragment.v",
+      "bytes": 7793,
+      "sha256": "sha256:54a5d1e89036fa8c04a3e9e4264704b63e9b8cd32d15d40f9c6bdd82c7471cb7"
+    },
+    {
+      "path": "public/downloads/coq-20260420-snapshot/Operational_StaticNormalize.v",
+      "bytes": 6388,
+      "sha256": "sha256:9b69849c1c0886cdb145ecf665f630a6f246a4d6608114fc910239ef55cc332e"
+    },
+    {
+      "path": "public/downloads/coq-20260420-snapshot/Operational.v",
+      "bytes": 12582,
+      "sha256": "sha256:ead8717f5fa99d24617c3cb858880a6b6ebdfc2f714c6d44f11841f4d18544e0"
+    },
+    {
+      "path": "public/downloads/coq-20260420-snapshot/Phase1_DaggerPresentation.v",
+      "bytes": 10913,
+      "sha256": "sha256:766c900929f103ac0c2b26fe41548c38a5884f47527721a6c012d697a9abe052"
+    },
+    {
+      "path": "public/downloads/coq-20260420-snapshot/Phase2_Skeleton.v",
+      "bytes": 13424,
+      "sha256": "sha256:4725d045d2814ffc2ce5f546be1920e97d3eae0336887ca482c8d5cfc9b41e0e"
+    },
+    {
+      "path": "public/downloads/coq-20260420-snapshot/phase2/_CoqProject.phase2",
+      "bytes": 248,
+      "sha256": "sha256:14144b2046d9ae804bcf2cce1ebe8a49040451f2e43a6123793c585feec7b2c3"
+    },
+    {
+      "path": "public/downloads/coq-20260420-snapshot/phase2/Phase1_Phase2_Soundness.v",
+      "bytes": 4874,
+      "sha256": "sha256:b871fadfa8b0b16d3f9ad6a76f1fe26ae12a49f45e9f46d6a30301624e7bb365"
+    },
+    {
+      "path": "public/downloads/coq-20260420-snapshot/phase2/Phase2_AlgebraicClosure.v",
+      "bytes": 6340,
+      "sha256": "sha256:62a8540ef8fc82b0581f623927fea1a70eccc9be6e138b0f27f6fa67c1d402a2"
+    },
+    {
+      "path": "public/downloads/coq-20260420-snapshot/phase2/Phase2_Base.v",
+      "bytes": 567,
+      "sha256": "sha256:fc9ac7a9dac68df89f2795d01ddd8b5d5038a590b38d6e47781797645690851e"
+    },
+    {
+      "path": "public/downloads/coq-20260420-snapshot/phase2/Phase2_Confluence.v",
+      "bytes": 2276,
+      "sha256": "sha256:841e8e4b696e3688b9c93be1047c83920b3daa6aa355ab2548f564324199d53f"
+    },
+    {
+      "path": "public/downloads/coq-20260420-snapshot/phase2/Phase2_Model_Trivial.v",
+      "bytes": 8231,
+      "sha256": "sha256:eabad49ba728b055b28bd3d9ded1ae1d6a88fd06d5e4e86f9028479efe665018"
+    },
+    {
+      "path": "public/downloads/coq-20260420-snapshot/phase2/Phase2_MultiStep.v",
+      "bytes": 563,
+      "sha256": "sha256:b690d45bf88ddbad8a060aa2efbe7a5e38e63ea438826bf54824cf0816f44475"
+    },
+    {
+      "path": "public/downloads/coq-20260420-snapshot/phase2/Phase2_NormalForm.v",
+      "bytes": 6702,
+      "sha256": "sha256:dfe5a3492726ab6cdac98e181f27cae5f61051951c8a7f11d233d89742a82334"
+    },
+    {
+      "path": "public/downloads/coq-20260420-snapshot/phase2/Phase2_Operational.v",
+      "bytes": 5478,
+      "sha256": "sha256:10238a3ceeb7752c828847ea590c4ebaaa4d6b9e56203516cc54baca234f43db"
+    },
+    {
+      "path": "public/downloads/coq-20260420-snapshot/phase2/Phase2_Relation.v",
+      "bytes": 285,
+      "sha256": "sha256:612f46b390770eb97e90c1973eacf14aa029bc5cab068e028e7fdbc5702cd830"
+    },
+    {
+      "path": "public/downloads/coq-20260420-snapshot/phase2/Phase2_Syntax.v",
+      "bytes": 711,
+      "sha256": "sha256:4a94b2c3aafb8158db18ef46d5ff2f5d38d37a0626c977004db0c17202fcb139"
+    },
+    {
+      "path": "public/downloads/coq-20260420-snapshot/phase2/Phase2_Termination.v",
+      "bytes": 994,
+      "sha256": "sha256:e08068b8079539f64c7d6831e8d27c72416e6bfe422dc293bcf7fe6ee295451a"
+    },
+    {
+      "path": "public/downloads/coq-20260420-snapshot/proof_test.v",
+      "bytes": 664,
+      "sha256": "sha256:6e2d7ff188691b70a283e6b71e4281e719b6fbebafb17eb1667de4066af4d224"
+    },
+    {
+      "path": "public/downloads/coq-20260420-snapshot/Proofs.v",
+      "bytes": 679,
+      "sha256": "sha256:a6fa5f99a92c4e55ea51ee36b70b1eb38e466f25a5199629b00f24e2a9970fc5"
+    },
+    {
+      "path": "public/downloads/coq-20260420-snapshot/README.md",
+      "bytes": 998,
+      "sha256": "sha256:80684313c4e6c731b3b3e046099fe5990d7da8d5d3609a1cf099f30cd30c0a8e"
+    },
+    {
+      "path": "public/downloads/coq-20260420-snapshot/Syntax.v",
+      "bytes": 2029,
+      "sha256": "sha256:1595527577a3c95ccfd837ef19a998bef95d06994fad4c39a4e28e2befae638c"
+    },
+    {
+      "path": "public/downloads/coq-20260420-snapshot/Theorems.v",
+      "bytes": 1803,
+      "sha256": "sha256:a7216f00b2049655b1950041cb4e2ea2f7162d5ab92754e7283d14e7d130197e"
+    },
+    {
+      "path": "public/downloads/coq-20260420-snapshot/Valis_Composition.v",
+      "bytes": 7405,
+      "sha256": "sha256:6a00329917094bbd05478649623db6d0e11f0430ff3a40456f5911c2610f5930"
+    },
+    {
+      "path": "public/downloads/coq-20260420-snapshot/Valis_Skeleton.v",
+      "bytes": 1118,
+      "sha256": "sha256:7b0a08353e8f4daa492e9d66823515080f7ba20909df94d7bec5db5c1ba783ad"
+    },
+    {
+      "path": "public/downloads/coq-20260420-snapshot/VALIS/Phase2/Geometry/CurvatureEntropyInequality.v",
+      "bytes": 1172,
+      "sha256": "sha256:68558eb2e63f53b06862b1e70dc1acac797e59784b86d2d912ed3908aa8572fd"
+    },
+    {
+      "path": "public/downloads/coq-20260420-snapshot/VALIS/Phase2/Geometry/CurvatureEntropyRates.v",
+      "bytes": 5266,
+      "sha256": "sha256:cef74dd3b6e088d5e0498e01665307d189fd2850232a2ff431cb074219e6d4f7"
+    },
+    {
+      "path": "public/downloads/coq-20260420-snapshot/VALIS/Phase2/Geometry/RelationalRicci.v",
+      "bytes": 2316,
+      "sha256": "sha256:c63f43c9b54ef9a38749d8ec22546311a2c18908c0a31265dcb295ad23f51974"
+    }
+  ],
+  "sealed_kernel_scope": {
+    "project_file": "public/downloads/coq-20260420-snapshot/_CoqProject.kernel",
+    "files": [
+      "Syntax.v",
+      "Operational.v",
+      "Operational_AlgebraicSoundness.v",
+      "Operational_StaticFragment.v",
+      "Operational_StaticNormalize.v",
+      "Kernel.v",
+      "KernelInstance_Current.v",
+      "KernelInstance_Constitutional.v",
+      "DaggerCategory.v",
+      "Denotation.v",
+      "Phase1_DaggerPresentation.v"
+    ],
+    "admitted_or_admit_placeholders": 0,
+    "claim": "No Admitted/admit placeholders found in the sealed kernel scope by repository scan."
+  },
+  "exploratory_placeholder_count": 12,
+  "exploratory_placeholders": [
+    {
+      "path": "public/downloads/coq-20260420-snapshot/phase2/Phase2_Operational.v",
+      "line": 142,
+      "text": "Admitted."
+    },
+    {
+      "path": "public/downloads/coq-20260420-snapshot/phase2/Phase2_Operational.v",
+      "line": 146,
+      "text": "Admitted."
+    },
+    {
+      "path": "public/downloads/coq-20260420-snapshot/phase2/Phase2_Operational.v",
+      "line": 150,
+      "text": "Admitted."
+    },
+    {
+      "path": "public/downloads/coq-20260420-snapshot/phase2/Phase2_Termination.v",
+      "line": 23,
+      "text": "admit."
+    },
+    {
+      "path": "public/downloads/coq-20260420-snapshot/phase2/Phase2_Termination.v",
+      "line": 24,
+      "text": "Admitted."
+    },
+    {
+      "path": "public/downloads/coq-20260420-snapshot/Phase2_Skeleton.v",
+      "line": 87,
+      "text": "Admitted."
+    },
+    {
+      "path": "public/downloads/coq-20260420-snapshot/Phase2_Skeleton.v",
+      "line": 128,
+      "text": "Admitted."
+    },
+    {
+      "path": "public/downloads/coq-20260420-snapshot/Phase2_Skeleton.v",
+      "line": 224,
+      "text": "Admitted."
+    },
+    {
+      "path": "public/downloads/coq-20260420-snapshot/Phase2_Skeleton.v",
+      "line": 229,
+      "text": "Admitted."
+    },
+    {
+      "path": "public/downloads/coq-20260420-snapshot/Phase2_Skeleton.v",
+      "line": 287,
+      "text": "Admitted."
+    },
+    {
+      "path": "public/downloads/coq-20260420-snapshot/Phase2_Skeleton.v",
+      "line": 292,
+      "text": "Admitted."
+    },
+    {
+      "path": "public/downloads/coq-20260420-snapshot/Theorems.v",
+      "line": 51,
+      "text": "Admitted."
+    }
+  ]
+}

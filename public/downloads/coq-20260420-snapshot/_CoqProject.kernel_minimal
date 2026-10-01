@@ -1,0 +1,6 @@
+-R . VALIS
+Syntax.v
+DaggerCategory.v
+Denotation.v
+Operational.v
+Kernel.v

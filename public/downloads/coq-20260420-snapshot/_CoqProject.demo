@@ -1,0 +1,9 @@
+-R . VALIS
+
+# Demo/legacy-only build: keeps the verification gate clean while still
+# allowing extraction/examples to compile against the toy nat-only kernel.
+
+Kernel.v
+Kernel_Implementation.v
+Concrete_Kernel_Examples.v
+economics/RelationalEconomics_ExtractionDemo.v

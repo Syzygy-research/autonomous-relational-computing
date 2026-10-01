@@ -1,0 +1,13 @@
+{
+  "terminal": true,
+  "result": "contained",
+  "state_digest": "sha256:83780eb246d7c5a4034774849cd6b72086e5a6d81115a1ca7a140b600e24020e",
+  "step_count": 4,
+  "invariant_results": [
+    {
+      "id": "forbidden_state_not_reached",
+      "pass": true,
+      "detail": "Forbidden synthetic state not reached."
+    }
+  ]
+}

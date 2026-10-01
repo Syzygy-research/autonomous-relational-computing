@@ -1,0 +1,254 @@
+{
+  "manifest_version": "phase-v-comparator-fixtures-v0.1-derived-candidate",
+  "created_at": "2026-09-24T21:56:56.041Z",
+  "model_version": "phase-v-conventional-comparator-v0.1-derived-candidate",
+  "fixture_count": 35,
+  "fixtures": [
+    {
+      "vector_id": "V001",
+      "path": "conformance/comparator/phase-v/V001.json",
+      "digest": "sha256:991cb9ae8ec486e07a07f14d5c7b39534c4be7d49ff8b8de1b181e1e37a884a7",
+      "expected_verdict": "RELEASE",
+      "reason_class": "PROSPECTIVE_REACHABILITY_EVALUATION"
+    },
+    {
+      "vector_id": "V002",
+      "path": "conformance/comparator/phase-v/V002.json",
+      "digest": "sha256:09873c80b551b801c18386e038586c5b3ca7eceb31e21430610f779ebc027c13",
+      "expected_verdict": "REFUSAL",
+      "reason_class": "AUTHORITY_GRAPH"
+    },
+    {
+      "vector_id": "V003",
+      "path": "conformance/comparator/phase-v/V003.json",
+      "digest": "sha256:019b1a84255faafea111794db01c440f161e37b139f98b3e880ffa01c02e8b47",
+      "expected_verdict": "REFUSAL",
+      "reason_class": "AUTHORITY_GRAPH"
+    },
+    {
+      "vector_id": "V004",
+      "path": "conformance/comparator/phase-v/V004.json",
+      "digest": "sha256:8ea4d5a8019b6a0b8083805abf73582dadd9109cd540e642781f73fc41baae7d",
+      "expected_verdict": "REFUSAL",
+      "reason_class": "BOUND_IDENTITY_AND_PAYLOAD"
+    },
+    {
+      "vector_id": "V005",
+      "path": "conformance/comparator/phase-v/V005.json",
+      "digest": "sha256:a164eec5a5706b24e394ebc4c0c3d7d53f94df84d99483fd0c3e8149fab3caae",
+      "expected_verdict": "REFUSAL",
+      "reason_class": "BOUND_IDENTITY_AND_PAYLOAD"
+    },
+    {
+      "vector_id": "V006",
+      "path": "conformance/comparator/phase-v/V006.json",
+      "digest": "sha256:4c65ae7182e219dd22cbed6eded8b6dc4e6c933e7b513379a1797b345a4be040",
+      "expected_verdict": "REFUSAL",
+      "reason_class": "CAUSAL_HISTORY_AND_SINGLE_USE_RELEASE"
+    },
+    {
+      "vector_id": "V007",
+      "path": "conformance/comparator/phase-v/V007.json",
+      "digest": "sha256:1f040a30126fe50fd69719c046770dc9fa906b78621017cc52b3b0ca8b30f7b2",
+      "expected_verdict": "REFUSAL",
+      "reason_class": "PROSPECTIVE_REACHABILITY_EVALUATION"
+    },
+    {
+      "vector_id": "V008",
+      "path": "conformance/comparator/phase-v/V008.json",
+      "digest": "sha256:646a82704be9f37e51b136abd02fe56ca06d105aeb61b20961df6f414368807e",
+      "expected_verdict": "REFUSAL",
+      "reason_class": "FINALITY_BOUNDARY"
+    },
+    {
+      "vector_id": "V009",
+      "path": "conformance/comparator/phase-v/V009.json",
+      "digest": "sha256:e5a789732a6b3620117b61dbbd1c8839d9ac5a5ac45e085a1039dd011f9c09c5",
+      "expected_verdict": "EVIDENCE_REQUIRED",
+      "reason_class": "FINALITY_BOUNDARY"
+    },
+    {
+      "vector_id": "V010",
+      "path": "conformance/comparator/phase-v/V010.json",
+      "digest": "sha256:ee76f0335b5ad10de9afa47643b2c3feab49475d55fe41bc64f1e5439d7868c6",
+      "expected_verdict": "REFUSAL",
+      "reason_class": "EXPOSURE_HYPERGRAPH"
+    },
+    {
+      "vector_id": "V011",
+      "path": "conformance/comparator/phase-v/V011.json",
+      "digest": "sha256:5f574c3c4858acd884e6f064d1d13e53f1ac94f38a4bee3cd282c7851ee8e33d",
+      "expected_verdict": "REFUSAL",
+      "reason_class": "EXPOSURE_HYPERGRAPH"
+    },
+    {
+      "vector_id": "V012",
+      "path": "conformance/comparator/phase-v/V012.json",
+      "digest": "sha256:62b02ec5c7b39125e71b33a19c779c34b5a981bef003c4704ea7405e433256b6",
+      "expected_verdict": "REFUSAL_OR_SERIALIZED",
+      "reason_class": "PROSPECTIVE_REACHABILITY_EVALUATION"
+    },
+    {
+      "vector_id": "V013",
+      "path": "conformance/comparator/phase-v/V013.json",
+      "digest": "sha256:6a5721a0dd1d11bf054f3e62c2164aa98f550754a8624090fd921741955961ac",
+      "expected_verdict": "INDETERMINATE",
+      "reason_class": "CONSERVATIVE_UNCERTAINTY"
+    },
+    {
+      "vector_id": "V014",
+      "path": "conformance/comparator/phase-v/V014.json",
+      "digest": "sha256:4f5c0abad10e84865c223db6134590cfbfee9aa83877b8c5e3b5defd68434253",
+      "expected_verdict": "INDETERMINATE",
+      "reason_class": "PROSPECTIVE_REACHABILITY_EVALUATION"
+    },
+    {
+      "vector_id": "V015",
+      "path": "conformance/comparator/phase-v/V015.json",
+      "digest": "sha256:a9cce5d4aa3ee9f382900a2fa58cb8dd7914f0dc0564608db5c984868fc3a835",
+      "expected_verdict": "REFUSAL_OR_HOLD",
+      "reason_class": "CAUSAL_HISTORY_AND_SINGLE_USE_RELEASE"
+    },
+    {
+      "vector_id": "V016",
+      "path": "conformance/comparator/phase-v/V016.json",
+      "digest": "sha256:d1ad730faea72d2cef081b10daf04c12932300ca65fbb102ab30f7fd81015d13",
+      "expected_verdict": "HOLD",
+      "reason_class": "PROSPECTIVE_REACHABILITY_EVALUATION"
+    },
+    {
+      "vector_id": "V017",
+      "path": "conformance/comparator/phase-v/V017.json",
+      "digest": "sha256:131d5c16a3d775ac07c53b1df80fdb2fa89160aef61b4ee0d33ff690d748b5b5",
+      "expected_verdict": "HOLD",
+      "reason_class": "PROSPECTIVE_REACHABILITY_EVALUATION"
+    },
+    {
+      "vector_id": "V018",
+      "path": "conformance/comparator/phase-v/V018.json",
+      "digest": "sha256:9a65c9c803e6282ea80bfe434263f4677cbd2ecfd5c40439af47ac1c4bd8754d",
+      "expected_verdict": "REFUSAL",
+      "reason_class": "DEPENDENCY_DAG"
+    },
+    {
+      "vector_id": "V019",
+      "path": "conformance/comparator/phase-v/V019.json",
+      "digest": "sha256:126bd1cd5793a6c3209c93e49560feee1b9b111eb09b5df0c9e0df97473f98c3",
+      "expected_verdict": "REFUSAL",
+      "reason_class": "FRESHNESS_AND_CAUSAL_ORDER"
+    },
+    {
+      "vector_id": "V020",
+      "path": "conformance/comparator/phase-v/V020.json",
+      "digest": "sha256:3303614a4a85a981e94c9f1cd4ce744a152c81aa49ca706958e200438419a529",
+      "expected_verdict": "REFUSAL",
+      "reason_class": "BOUND_IDENTITY_AND_PAYLOAD"
+    },
+    {
+      "vector_id": "V021",
+      "path": "conformance/comparator/phase-v/V021.json",
+      "digest": "sha256:7157d752a0b365e46d759be697078673dcef49b1c1dae8f73ffe1cef7bce7cbc",
+      "expected_verdict": "INDETERMINATE",
+      "reason_class": "CAUSAL_HISTORY_AND_SINGLE_USE_RELEASE"
+    },
+    {
+      "vector_id": "V022",
+      "path": "conformance/comparator/phase-v/V022.json",
+      "digest": "sha256:e633958b5cf2ef42b274ae305176b1fcd8e2eb56506bfc53f63a2badd3d0dad2",
+      "expected_verdict": "REFUSAL",
+      "reason_class": "PROSPECTIVE_REACHABILITY_EVALUATION"
+    },
+    {
+      "vector_id": "V023",
+      "path": "conformance/comparator/phase-v/V023.json",
+      "digest": "sha256:c4a4184a46f672488eb33bfe69300fc24eb924e8bf2c72a5f441875eb61b1cde",
+      "expected_verdict": "HOLD_OR_RELEASE_SCOPED",
+      "reason_class": "PROSPECTIVE_REACHABILITY_EVALUATION"
+    },
+    {
+      "vector_id": "V024",
+      "path": "conformance/comparator/phase-v/V024.json",
+      "digest": "sha256:27e5a78b887a95d75f42c564de6d4c07f51b1d737b2d1cd5e773a2255f1a47e7",
+      "expected_verdict": "REFUSAL",
+      "reason_class": "BOUND_IDENTITY_AND_PAYLOAD"
+    },
+    {
+      "vector_id": "V025",
+      "path": "conformance/comparator/phase-v/V025.json",
+      "digest": "sha256:d5c79d39d80af7cdc9575c400284237628d7c6faa85d74ddc78f0afeeae02e8b",
+      "expected_verdict": "REFUSAL",
+      "reason_class": "AUTHORITY_GRAPH"
+    },
+    {
+      "vector_id": "V026",
+      "path": "conformance/comparator/phase-v/V026.json",
+      "digest": "sha256:7c88b0559f3f896da0fa47221f7960a29e9b154c465e1feca618ec6f3ab33da5",
+      "expected_verdict": "REFUSAL",
+      "reason_class": "EXPOSURE_HYPERGRAPH"
+    },
+    {
+      "vector_id": "V027",
+      "path": "conformance/comparator/phase-v/V027.json",
+      "digest": "sha256:646a9a8743ef1345bd8ecaa6db4119fd73cce61e4cb2bdd9efa0dd39d61a7e44",
+      "expected_verdict": "REFUSAL_OR_HOLD",
+      "reason_class": "CONSERVATIVE_UNCERTAINTY"
+    },
+    {
+      "vector_id": "V028",
+      "path": "conformance/comparator/phase-v/V028.json",
+      "digest": "sha256:6458c8d634acd4aa725c7038ee3084f0e00532124f74c796f89942b1c47296bd",
+      "expected_verdict": "REFUSAL",
+      "reason_class": "AUTHORITY_GRAPH"
+    },
+    {
+      "vector_id": "V029",
+      "path": "conformance/comparator/phase-v/V029.json",
+      "digest": "sha256:46c4ec8a4b3e89eea60e6766ea2e9357c886fded6eed588e791d37305d78cb41",
+      "expected_verdict": "EVIDENCE_CORRECTION",
+      "reason_class": "TYPED_EVIDENCE_AND_CORRECTION"
+    },
+    {
+      "vector_id": "V030",
+      "path": "conformance/comparator/phase-v/V030.json",
+      "digest": "sha256:c1887022197b2eeed541815beab3cf5e961910ea0f770a33505f6ed411e05fb7",
+      "expected_verdict": "REFUSAL",
+      "reason_class": "FRESHNESS_AND_CAUSAL_ORDER"
+    },
+    {
+      "vector_id": "V031",
+      "path": "conformance/comparator/phase-v/V031.json",
+      "digest": "sha256:fd9f6044edf1cb1a18a671de5eb0e4721c06a4e293b662b1e08463ec13b9ca81",
+      "expected_verdict": "REFUSAL_OR_ORDERED",
+      "reason_class": "FRESHNESS_AND_CAUSAL_ORDER"
+    },
+    {
+      "vector_id": "V032",
+      "path": "conformance/comparator/phase-v/V032.json",
+      "digest": "sha256:72d960af11bea85a4bb116ddd733b5c21249e1a82a16a31d56c9678888cff046",
+      "expected_verdict": "REFUSAL",
+      "reason_class": "DEPENDENCY_DAG"
+    },
+    {
+      "vector_id": "V033",
+      "path": "conformance/comparator/phase-v/V033.json",
+      "digest": "sha256:984ea270484c425c2678f200e17d2658d13b3909321886349cd090d2d7fc287c",
+      "expected_verdict": "EVIDENCE_REQUIRED",
+      "reason_class": "PROSPECTIVE_REACHABILITY_EVALUATION"
+    },
+    {
+      "vector_id": "V034",
+      "path": "conformance/comparator/phase-v/V034.json",
+      "digest": "sha256:80e9e2209e3d9e2354f130ab03e6ee883656cd6b89ae268dbff3ba7a46af5611",
+      "expected_verdict": "EVIDENCE_CORRECTION_OR_HOLD",
+      "reason_class": "TYPED_EVIDENCE_AND_CORRECTION"
+    },
+    {
+      "vector_id": "V035",
+      "path": "conformance/comparator/phase-v/V035.json",
+      "digest": "sha256:465aa05066da3b7e46eddfafe63b2552373b772ccae4800f92e5c9f4ab606a3c",
+      "expected_verdict": "REFUSAL_OR_CONSTRAINED_RELEASE",
+      "reason_class": "MULTIDIMENSIONAL_REACH"
+    }
+  ],
+  "claim_boundary": "These fixtures move Phase V into runnable differential scoring, but they are derived candidates from the current CR corpus rather than independent comparator fixture bytes."
+}

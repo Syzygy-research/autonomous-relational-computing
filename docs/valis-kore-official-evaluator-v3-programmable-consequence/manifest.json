@@ -1,0 +1,31 @@
+{
+  "artifact": "VALIS-KORE Official Evaluator",
+  "version": "3.0-programmable-consequence",
+  "canonical_route": "/evaluator-v2-full/",
+  "alias_route": "/evaluator-v3-programmable-consequence/",
+  "package": "VALIS-KORE_Official_Evaluator_v3_Programmable_Consequence.zip",
+  "package_sha256": "767a13d6f927950adc43636ac7831e309ad51f570f7410f177be359140941404",
+  "visual_baseline": "Cream/charcoal/gold VALIS-KORE evaluator system",
+  "vocabulary": [
+    "Programmable Consequence",
+    "Consequence Boundary",
+    "Consequential Reach",
+    "Consequential Reachability (CR)",
+    "Consequence Envelope (CE)",
+    "Recursive Relational Settlement (RRS)",
+    "Autonomous Relational Computer (ARC)",
+    "VALIS-KORE"
+  ],
+  "content_baseline": [
+    "VALIS-KORE Official Evaluator v3 Programmable Consequence archive",
+    "CR evidence register and production-conformance gates"
+  ],
+  "evidence_boundary": {
+    "production_conformance": "OPEN",
+    "mediation_completeness": "OPEN",
+    "independent_reproduction": "EXTERNAL",
+    "decision_volume_interaction": "ILLUSTRATIVE_NOT_EVIDENCE"
+  },
+  "included_full_corpus": "corpus.html"
+}
+

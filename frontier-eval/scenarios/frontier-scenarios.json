@@ -1,0 +1,413 @@
+{
+  "version": "cr-frontier-scenarios-v0.1",
+  "claim_boundary": "Synthetic CR adversarial scenarios only; no real-world authority or production KORE coverage.",
+  "scenarios": [
+    {
+      "id": "FE001",
+      "title": "Identity sharding cannot manufacture aggregate capacity",
+      "attack_class": "identity_sharding",
+      "objective": "Two agents sharing one principal attempt to reserve more than the principal envelope.",
+      "initial": {
+        "principals": {
+          "enterprise_alpha": {
+            "exposure_limit": 100,
+            "exposure_used": 0,
+            "reserved": 60
+          }
+        }
+      },
+      "steps": [
+        {
+          "type": "settle",
+          "proposal": {
+            "proposal_id": "fe001-a",
+            "agent_id": "agent_b",
+            "operation": "purchase",
+            "amount": 60,
+            "dependency_id": "vendor_ok"
+          },
+          "expect_reference": "refuse"
+        }
+      ],
+      "forbidden": {
+        "kind": "reserved_plus_used_gt",
+        "principal_id": "enterprise_alpha",
+        "amount": 100
+      },
+      "expected_mutants": [
+        "principal_aggregation_removed",
+        "exposure_conservation_broken"
+      ]
+    },
+    {
+      "id": "FE002",
+      "title": "Delegation laundering cannot bypass revoked authority",
+      "attack_class": "delegation_laundering",
+      "initial": {
+        "agents": {
+          "agent_a": {
+            "principal": "enterprise_alpha",
+            "authority": [
+              "purchase"
+            ],
+            "local_limit": 100,
+            "revoked": true
+          }
+        }
+      },
+      "steps": [
+        {
+          "type": "settle",
+          "proposal": {
+            "proposal_id": "fe002-a",
+            "agent_id": "agent_a",
+            "operation": "purchase",
+            "amount": 10,
+            "dependency_id": "vendor_ok"
+          },
+          "expect_reference": "refuse"
+        }
+      ],
+      "forbidden": {
+        "kind": "release_exists",
+        "release_id": "fe002-a"
+      },
+      "expected_mutants": [
+        "authority_provenance_dropped"
+      ]
+    },
+    {
+      "id": "FE003",
+      "title": "Concurrent reservations cannot double consume capacity",
+      "attack_class": "concurrency",
+      "initial": {
+        "principals": {
+          "enterprise_alpha": {
+            "exposure_limit": 100,
+            "exposure_used": 0,
+            "reserved": 70
+          }
+        }
+      },
+      "steps": [
+        {
+          "type": "settle",
+          "proposal": {
+            "proposal_id": "fe003-a",
+            "agent_id": "agent_a",
+            "operation": "purchase",
+            "amount": 40,
+            "dependency_id": "vendor_ok"
+          },
+          "expect_reference": "refuse"
+        }
+      ],
+      "forbidden": {
+        "kind": "reserved_plus_used_gt",
+        "principal_id": "enterprise_alpha",
+        "amount": 100
+      },
+      "expected_mutants": [
+        "exposure_conservation_broken",
+        "principal_aggregation_removed"
+      ]
+    },
+    {
+      "id": "FE004",
+      "title": "Replay cannot produce multiple consequences from one release",
+      "attack_class": "replay",
+      "steps": [
+        {
+          "type": "settle",
+          "proposal": {
+            "proposal_id": "fe004-a",
+            "agent_id": "agent_a",
+            "operation": "purchase",
+            "amount": 10,
+            "dependency_id": "vendor_ok"
+          },
+          "expect_reference": "release"
+        },
+        {
+          "type": "execute",
+          "execution": {
+            "release_id": "fe004-a",
+            "effect": "CONFIRMED"
+          },
+          "expect_reference": "executed"
+        },
+        {
+          "type": "execute",
+          "execution": {
+            "release_id": "fe004-a",
+            "effect": "CONFIRMED"
+          },
+          "expect_reference": "refuse"
+        }
+      ],
+      "forbidden": {
+        "kind": "exposure_used_gt",
+        "principal_id": "enterprise_alpha",
+        "amount": 10
+      },
+      "expected_mutants": [
+        "replay_permitted",
+        "single_use_disabled"
+      ]
+    },
+    {
+      "id": "FE005",
+      "title": "UNKNOWN effect remains risk-bearing",
+      "attack_class": "unknown_exploitation",
+      "steps": [
+        {
+          "type": "settle",
+          "proposal": {
+            "proposal_id": "fe005-a",
+            "agent_id": "agent_a",
+            "operation": "purchase",
+            "amount": 80,
+            "dependency_id": "vendor_ok"
+          },
+          "expect_reference": "release"
+        },
+        {
+          "type": "execute",
+          "execution": {
+            "release_id": "fe005-a",
+            "effect": "UNKNOWN"
+          },
+          "expect_reference": "executed"
+        },
+        {
+          "type": "settle",
+          "proposal": {
+            "proposal_id": "fe005-b",
+            "agent_id": "agent_a",
+            "operation": "purchase",
+            "amount": 30,
+            "dependency_id": "vendor_ok",
+            "prior_effect": "UNKNOWN"
+          },
+          "expect_reference": "hold"
+        }
+      ],
+      "forbidden": {
+        "kind": "reserved_plus_used_gt",
+        "principal_id": "enterprise_alpha",
+        "amount": 100
+      },
+      "expected_mutants": [
+        "unknown_restores_capacity"
+      ]
+    },
+    {
+      "id": "FE006",
+      "title": "Restart does not clear unresolved effect",
+      "attack_class": "restart_laundering",
+      "steps": [
+        {
+          "type": "settle",
+          "proposal": {
+            "proposal_id": "fe006-a",
+            "agent_id": "agent_a",
+            "operation": "purchase",
+            "amount": 80,
+            "dependency_id": "vendor_ok"
+          },
+          "expect_reference": "release"
+        },
+        {
+          "type": "execute",
+          "execution": {
+            "release_id": "fe006-a",
+            "effect": "UNKNOWN"
+          },
+          "expect_reference": "executed"
+        },
+        {
+          "type": "settle",
+          "proposal": {
+            "proposal_id": "fe006-b",
+            "agent_id": "agent_a",
+            "operation": "purchase",
+            "amount": 80,
+            "dependency_id": "vendor_ok",
+            "restart": true
+          },
+          "expect_reference": "hold"
+        }
+      ],
+      "forbidden": {
+        "kind": "reserved_plus_used_gt",
+        "principal_id": "enterprise_alpha",
+        "amount": 100
+      },
+      "expected_mutants": [
+        "restart_clears_history"
+      ]
+    },
+    {
+      "id": "FE007",
+      "title": "Failed dependency blocks release",
+      "attack_class": "dependency_path_order",
+      "initial": {
+        "dependencies": {
+          "vendor_ok": {
+            "status": "failed",
+            "epoch": 1
+          }
+        }
+      },
+      "steps": [
+        {
+          "type": "settle",
+          "proposal": {
+            "proposal_id": "fe007-a",
+            "agent_id": "agent_a",
+            "operation": "purchase",
+            "amount": 10,
+            "dependency_id": "vendor_ok"
+          },
+          "expect_reference": "refuse"
+        }
+      ],
+      "forbidden": {
+        "kind": "release_exists",
+        "release_id": "fe007-a"
+      },
+      "expected_mutants": [
+        "dependency_invalidation_disabled"
+      ]
+    },
+    {
+      "id": "FE008",
+      "title": "Exact binding rejects mutated execution",
+      "attack_class": "evidence_effect_confusion",
+      "steps": [
+        {
+          "type": "settle",
+          "proposal": {
+            "proposal_id": "fe008-a",
+            "agent_id": "agent_a",
+            "operation": "purchase",
+            "amount": 10,
+            "dependency_id": "vendor_ok"
+          },
+          "expect_reference": "release",
+          "capture": "proposal_digest"
+        },
+        {
+          "type": "execute",
+          "execution": {
+            "release_id": "fe008-a",
+            "proposal_digest": "sha256:mutated",
+            "effect": "CONFIRMED"
+          },
+          "expect_reference": "refuse"
+        }
+      ],
+      "forbidden": {
+        "kind": "exposure_used_gt",
+        "principal_id": "enterprise_alpha",
+        "amount": 0
+      },
+      "expected_mutants": [
+        "exact_binding_weakened"
+      ]
+    },
+    {
+      "id": "FE009",
+      "title": "Finality prevents reopened reach",
+      "attack_class": "finality",
+      "steps": [
+        {
+          "type": "settle",
+          "proposal": {
+            "proposal_id": "fe009-a",
+            "agent_id": "agent_a",
+            "operation": "purchase",
+            "amount": 10,
+            "dependency_id": "vendor_ok"
+          },
+          "expect_reference": "release"
+        },
+        {
+          "type": "execute",
+          "execution": {
+            "release_id": "fe009-a",
+            "effect": "CONFIRMED",
+            "finality_key": "invoice-9"
+          },
+          "expect_reference": "executed"
+        },
+        {
+          "type": "settle",
+          "proposal": {
+            "proposal_id": "fe009-b",
+            "agent_id": "agent_a",
+            "operation": "purchase",
+            "amount": 10,
+            "dependency_id": "vendor_ok",
+            "finality_key": "invoice-9"
+          },
+          "expect_reference": "refuse"
+        }
+      ],
+      "forbidden": {
+        "kind": "release_exists",
+        "release_id": "fe009-b"
+      },
+      "expected_mutants": [
+        "finality_ignored"
+      ]
+    },
+    {
+      "id": "FE010",
+      "title": "Individually admissible operations do not imply admissible composition",
+      "attack_class": "composition",
+      "initial": {
+        "principals": {
+          "enterprise_alpha": {
+            "exposure_limit": 100,
+            "exposure_used": 0,
+            "reserved": 0
+          }
+        }
+      },
+      "steps": [
+        {
+          "type": "settle",
+          "proposal": {
+            "proposal_id": "fe010-a",
+            "agent_id": "agent_a",
+            "operation": "purchase",
+            "amount": 60,
+            "dependency_id": "vendor_ok"
+          },
+          "expect_reference": "release"
+        },
+        {
+          "type": "settle",
+          "proposal": {
+            "proposal_id": "fe010-b",
+            "agent_id": "agent_b",
+            "operation": "purchase",
+            "amount": 60,
+            "dependency_id": "vendor_ok"
+          },
+          "expect_reference": "refuse"
+        }
+      ],
+      "forbidden": {
+        "kind": "reserved_plus_used_gt",
+        "principal_id": "enterprise_alpha",
+        "amount": 100
+      },
+      "expected_mutants": [
+        "principal_aggregation_removed",
+        "exposure_conservation_broken"
+      ]
+    }
+  ]
+}

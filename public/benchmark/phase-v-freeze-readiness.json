@@ -1,0 +1,149 @@
+{
+  "report_version": "valis-kore-phase-v-freeze-readiness-v0.1",
+  "created_at": "2026-09-24T21:57:03.613Z",
+  "verdict": "READY_TO_FREEZE",
+  "comparator_baseline_summary": {
+    "vector_count": 35,
+    "differential_outcome_counts": {
+      "MATCH": 35
+    },
+    "differential_axis_counts": {
+      "verdict": {
+        "match": 35,
+        "divergence": 0
+      },
+      "release_allowed": {
+        "match": 35,
+        "divergence": 0
+      },
+      "consequence_must_be_mediated": {
+        "match": 35,
+        "divergence": 0
+      },
+      "uncertainty_must_not_widen_authority": {
+        "match": 35,
+        "divergence": 0
+      },
+      "future_release_allowed_after_transition": {
+        "match": 35,
+        "divergence": 0
+      },
+      "external_truth_observation_distinction": {
+        "match": 35,
+        "divergence": 0
+      },
+      "scalar_confidence_insufficient": {
+        "match": 35,
+        "divergence": 0
+      }
+    },
+    "interpretation": "Meaningful local Phase V baseline: the declared conventional comparator reproduces the current V001-V035 CR corpus across all scored axes. This does not establish production conformance, independent reproduction, semantic correctness, or formal irreducibility."
+  },
+  "adversarial_execution_summary": {
+    "verdict": "ADVERSARIAL_FIRST_ORDER_EXECUTED_NO_UNEXPLAINED_FAILURES",
+    "executed_first_order_cases": 1120,
+    "minimized_failure_count": 0,
+    "scope_boundary": "This pass executes first-order generated cases against encoded metamorphic property obligations and mutation controls. It does not execute every higher-order composition case and does not test the production kernel."
+  },
+  "closure_execution_summary": {
+    "verdict": "REFERENCE_CLOSURE_EXECUTED_NO_UNEXPLAINED_FAILURES",
+    "pair_interaction_cases": 4760,
+    "recursive_chains": 5,
+    "higher_order_triples_considered": 6545,
+    "mutation_survivors": 0,
+    "production_kernel_conformance": "BLOCKED_PRECONDITIONS_MISSING",
+    "claim_boundary": "This closes the repository-local CR-Core reference/evaluator closure campaign over encoded comparator fixtures, metamorphic obligations, pair interactions, recursive chains, selected higher-order reductions, and mutation controls. It is not production-kernel conformance and not independent third-party validation."
+  },
+  "adversarial_surface_summary": {
+    "verdict": "ADVERSARIAL_SWEEP_SPACE_BUILT",
+    "first_order_case_count": 1120,
+    "pair_interaction_case_count": 4760,
+    "unique_triple_count": 6545,
+    "unique_four_vector_count": 52360,
+    "recursive_chain_count": 5,
+    "interpretation": "The repository-local reference closure campaign executed first-order, pair interaction, recursive-chain, selected higher-order reduction, mutation, and local reproduction checks with no unexplained minimized failures. Production-kernel conformance remains separate."
+  },
+  "primary_metric": {
+    "name": "unexplained_minimized_failures",
+    "value": 0,
+    "status": "MEASURED_FOR_REFERENCE_CLOSURE_SCOPE",
+    "meaning": "From this point forward, closure is measured by how many minimized failures cannot be explained by the existing V001-V035 semantic basis, not by raw generated test count."
+  },
+  "closure_campaign_order": [
+    "Freeze comparator implementation",
+    "Freeze CR reference implementation",
+    "Freeze generator and transformation definitions",
+    "Run generated adversarial cases",
+    "Apply metamorphic invariants",
+    "Minimize every failure",
+    "Map minimized failures back to V001-V035",
+    "Create V036+ only when reduction fails",
+    "Rerun affected search surface",
+    "Mutation-test the apparatus",
+    "Repeat until no unexplained semantic class remains"
+  ],
+  "freeze_gate": "CR-Core freezes when independently frozen evaluators agree on the declared semantic corpus; generated adversarial composition produces no unexplained minimized semantic obligations; metamorphic invariants hold across the tested search space; deliberately defective semantic mutations are detected; and every exception has a classified, reproducible disposition.",
+  "gates": [
+    {
+      "id": "comparator_baseline",
+      "status": "PASS_CANDIDATE_BASELINE",
+      "evidence": "Conventional comparator matches V001-V035 on all seven scored axes.",
+      "next": "Freeze the current comparator implementation by digest and keep it unchanged for the closure campaign."
+    },
+    {
+      "id": "cr_reference_implementation",
+      "status": "PASS_REFERENCE_SNAPSHOT",
+      "evidence": "CR corpus, comparator fixtures, sweep definitions, and closure runner have a repository-local reference closure snapshot.",
+      "next": "Prepare the CR-Core v1.0 reference freeze record."
+    },
+    {
+      "id": "generator_definitions",
+      "status": "PASS_CANDIDATE_SPACE_BUILT",
+      "evidence": "Generated search surface exists: 1120 first-order cases, 4760 pair interactions, 6545 triples, 52360 four-vector combinations.",
+      "next": "Carry these generator definitions into the freeze manifest."
+    },
+    {
+      "id": "adversarial_execution",
+      "status": "PASS_REFERENCE_CLOSURE_EXECUTED",
+      "evidence": "Reference closure executed: 4760 pair interactions, 5 recursive chains, selected higher-order reductions, and broader mutation controls; no unexplained minimized failures.",
+      "next": "Prepare CR-Core reference freeze record; keep production-kernel conformance separate."
+    },
+    {
+      "id": "metamorphic_invariants",
+      "status": "PASS_REFERENCE_CLOSURE_PROPERTIES",
+      "evidence": "Encoded metamorphic properties were applied across first-order and pair/chain/reduction closure scope.",
+      "next": "Move to freeze record or production-kernel target declaration."
+    },
+    {
+      "id": "failure_minimization",
+      "status": "PASS_NO_REFERENCE_CLOSURE_FAILURE_SET",
+      "evidence": "No unexplained minimized failures were found in the repository-local reference closure scope.",
+      "next": "Keep minimization active for any future V036+ or production-kernel divergence."
+    },
+    {
+      "id": "v036_promotion",
+      "status": "PASS_NO_V036_PROMOTION_REQUIRED",
+      "evidence": "No irreducible minimized failure appeared in the reference closure scope, so no V036+ promotion is required now.",
+      "next": "Use V036+ only after minimization proves a failure cannot be explained by the existing semantic basis."
+    },
+    {
+      "id": "mutation_testing",
+      "status": "PASS_BROADER_MUTANTS_DETECTED",
+      "evidence": "Broader encoded semantic mutants were detected in the reference closure pass.",
+      "next": "Keep mutation suite versioned with any future semantics."
+    },
+    {
+      "id": "independent_reproduction",
+      "status": "PASS_LOCAL_INDEPENDENT_REPRODUCTION",
+      "evidence": "A separate repository-local closure runner re-read frozen artifacts and reproduced the closure digests. Third-party reproduction remains separate.",
+      "next": "Seek external reproduction after freeze."
+    },
+    {
+      "id": "production_kernel_conformance",
+      "status": "SEPARATE_TARGET_REQUIRED",
+      "evidence": "Production-kernel conformance remains separate: the production gate reports missing declared target even though the local Rust health endpoint is reachable.",
+      "next": "Declare exact production target and source/build/runtime/config correspondence before claiming production conformance."
+    }
+  ],
+  "claim_boundary": "This report is a readiness gate for the Phase V/VI closure campaign. It supports freezing the repository-local CR-Core reference/evaluator semantics within the declared scope. It does not claim production-kernel conformance, external independent validation, universal completeness, or formal irreducibility."
+}

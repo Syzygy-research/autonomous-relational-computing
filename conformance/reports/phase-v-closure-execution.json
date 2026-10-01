@@ -1,0 +1,120 @@
+{
+  "report_version": "valis-kore-phase-v-closure-execution-v0.1",
+  "created_at": "2026-09-24T21:57:02.318Z",
+  "verdict": "REFERENCE_CLOSURE_EXECUTED_NO_UNEXPLAINED_FAILURES",
+  "baseline": {
+    "first_order_verdict": "ADVERSARIAL_FIRST_ORDER_EXECUTED_NO_UNEXPLAINED_FAILURES",
+    "first_order_cases": 1120,
+    "first_order_minimized_failures": 0
+  },
+  "pair_interactions": {
+    "executed_pair_interaction_cases": 4760,
+    "checked_pair_obligations": 9520,
+    "minimized_failure_count": 0
+  },
+  "recursive_chains": {
+    "executed_recursive_chains": 5,
+    "minimized_failure_count": 0
+  },
+  "higher_order_reductions": {
+    "triples_considered": 6545,
+    "four_vector_combinations_considered": 52360,
+    "reduction_strategy": "Higher-order combinations reduce to pairwise composition obligations plus seed-level metamorphic obligations in this encoded closure pass.",
+    "sampled_witnesses": [
+      {
+        "id": "HOR-1",
+        "seeds": [
+          "V001",
+          "V002",
+          "V003"
+        ],
+        "digest": "sha256:ac7bd55e8f0b0d6ab1f15de335937660a20ad809bb11902a165db83d7d935715"
+      },
+      {
+        "id": "HOR-2",
+        "seeds": [
+          "V004",
+          "V005",
+          "V006"
+        ],
+        "digest": "sha256:a628f96f2aa1c3a7236dc2516c46b1a8387ad1d9678861a471150a519dede939"
+      },
+      {
+        "id": "HOR-3",
+        "seeds": [
+          "V001",
+          "V002",
+          "V003",
+          "V004"
+        ],
+        "digest": "sha256:582636ac50a2cce9ee1e17511677a767b80e2aa01c3d06bf1709293c7f461d4c"
+      },
+      {
+        "id": "HOR-4",
+        "seeds": [
+          "V005",
+          "V006",
+          "V007",
+          "V008"
+        ],
+        "digest": "sha256:506a840c813e731fca1c28f9b3ce3539dbddedd8eab0d6179cac84232118a971"
+      }
+    ]
+  },
+  "broader_mutation_testing": {
+    "mutant_count": 8,
+    "mutants": [
+      {
+        "id": "mut-uncertainty-scalar",
+        "detected_by": "less_certain_evidence_must_not_widen_reach"
+      },
+      {
+        "id": "mut-auth-from-authn",
+        "detected_by": "revocation_must_not_manufacture_authority"
+      },
+      {
+        "id": "mut-exposure-dimensions-erased",
+        "detected_by": "splitting_exposure_must_not_manufacture_capacity"
+      },
+      {
+        "id": "mut-restart-unmediated",
+        "detected_by": "restart_without_new_legitimizing_information_must_not_widen_reach"
+      },
+      {
+        "id": "mut-payload-unbound",
+        "detected_by": "bound_consequence_mutation_must_not_inherit_old_release"
+      },
+      {
+        "id": "mut-stale-unmediated",
+        "detected_by": "stale_state_must_not_widen_reach"
+      },
+      {
+        "id": "mut-unknown-restores",
+        "detected_by": "unknown_must_not_become_nothing_happened"
+      },
+      {
+        "id": "mut-dependency-erased",
+        "detected_by": "acceptable_subsets_do_not_imply_acceptable_union"
+      }
+    ],
+    "detected": 8,
+    "survived": 0,
+    "boundary": "Mutants exercise encoded semantic obligations, not arbitrary implementation defects."
+  },
+  "independent_reproduction": {
+    "status": "LOCAL_INDEPENDENT_REPRODUCTION_EXECUTED",
+    "method": "A separate closure runner re-read frozen reports and comparator fixtures, recomputed pair/chain/higher-order reductions, and produced independent digests without reusing the first-order result rows as authority.",
+    "input_digests": {
+      "sweep": "sha256:aac0eb0ec121efb743b17263c81d1873775dc1e27aefa50e875f9bcebd1ad366",
+      "first_order": "sha256:9a45da23fbd55a7fbed3aaab6dee37c2701314fdd7cafe734dd96c7b6b014abd"
+    }
+  },
+  "production_kernel_conformance": {
+    "status": "BLOCKED_PRECONDITIONS_MISSING",
+    "observed": "production target is not declared",
+    "boundary": "Production-kernel conformance is separate from CR-Core reference freeze and still requires declared target/source/build/runtime/config correspondence."
+  },
+  "unexplained_minimized_failures": [],
+  "result_digest": "sha256:720cd454459ef01f916faa244a497107332577657b93be43732b24ea070e4271",
+  "claim_boundary": "This closes the repository-local CR-Core reference/evaluator closure campaign over encoded comparator fixtures, metamorphic obligations, pair interactions, recursive chains, selected higher-order reductions, and mutation controls. It is not production-kernel conformance and not independent third-party validation."
+}

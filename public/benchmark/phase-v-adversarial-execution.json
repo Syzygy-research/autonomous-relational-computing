@@ -1,0 +1,122 @@
+{
+  "report_version": "valis-kore-phase-v-adversarial-execution-v0.1",
+  "created_at": "2026-09-24T21:57:00.483Z",
+  "verdict": "ADVERSARIAL_FIRST_ORDER_EXECUTED_NO_UNEXPLAINED_FAILURES",
+  "source_sweep": "conformance/reports/phase-v-adversarial-sweep.json",
+  "source_sweep_digest": "sha256:aac0eb0ec121efb743b17263c81d1873775dc1e27aefa50e875f9bcebd1ad366",
+  "comparator_fixture_dir": "conformance/comparator/phase-v",
+  "execution_scope": {
+    "executed_first_order_cases": 1120,
+    "higher_order_cases_executed": false,
+    "pair_interaction_cases_executed": false,
+    "triple_cases_executed": false,
+    "four_vector_cases_executed": false,
+    "recursive_chains_executed": false,
+    "scope_boundary": "This pass executes first-order generated cases against encoded metamorphic property obligations and mutation controls. It does not execute every higher-order composition case and does not test the production kernel."
+  },
+  "property_counts": {
+    "less_certain_evidence_must_not_widen_reach": {
+      "pass": 310,
+      "fail": 0,
+      "mutation_detected": 35,
+      "mutation_survived": 0
+    },
+    "revocation_must_not_manufacture_authority": {
+      "pass": 366,
+      "fail": 0,
+      "mutation_detected": 35,
+      "mutation_survived": 0
+    },
+    "splitting_exposure_must_not_manufacture_capacity": {
+      "pass": 400,
+      "fail": 0,
+      "mutation_detected": 35,
+      "mutation_survived": 0
+    },
+    "restart_without_new_legitimizing_information_must_not_widen_reach": {
+      "pass": 256,
+      "fail": 0,
+      "mutation_detected": 35,
+      "mutation_survived": 0
+    },
+    "bound_consequence_mutation_must_not_inherit_old_release": {
+      "pass": 237,
+      "fail": 0,
+      "mutation_detected": 35,
+      "mutation_survived": 0
+    },
+    "stale_state_must_not_widen_reach": {
+      "pass": 256,
+      "fail": 0,
+      "mutation_detected": 35,
+      "mutation_survived": 0
+    },
+    "unknown_must_not_become_nothing_happened": {
+      "pass": 32,
+      "fail": 0,
+      "mutation_detected": 35,
+      "mutation_survived": 0
+    },
+    "acceptable_subsets_do_not_imply_acceptable_union": {
+      "pass": 190,
+      "fail": 0,
+      "mutation_detected": 35,
+      "mutation_survived": 0
+    }
+  },
+  "mutation_results": [
+    {
+      "propertyId": "less_certain_evidence_must_not_widen_reach",
+      "mutation_detected": 35,
+      "mutation_survived": 0,
+      "surviving_examples": []
+    },
+    {
+      "propertyId": "revocation_must_not_manufacture_authority",
+      "mutation_detected": 35,
+      "mutation_survived": 0,
+      "surviving_examples": []
+    },
+    {
+      "propertyId": "splitting_exposure_must_not_manufacture_capacity",
+      "mutation_detected": 35,
+      "mutation_survived": 0,
+      "surviving_examples": []
+    },
+    {
+      "propertyId": "restart_without_new_legitimizing_information_must_not_widen_reach",
+      "mutation_detected": 35,
+      "mutation_survived": 0,
+      "surviving_examples": []
+    },
+    {
+      "propertyId": "bound_consequence_mutation_must_not_inherit_old_release",
+      "mutation_detected": 35,
+      "mutation_survived": 0,
+      "surviving_examples": []
+    },
+    {
+      "propertyId": "stale_state_must_not_widen_reach",
+      "mutation_detected": 35,
+      "mutation_survived": 0,
+      "surviving_examples": []
+    },
+    {
+      "propertyId": "unknown_must_not_become_nothing_happened",
+      "mutation_detected": 35,
+      "mutation_survived": 0,
+      "surviving_examples": []
+    },
+    {
+      "propertyId": "acceptable_subsets_do_not_imply_acceptable_union",
+      "mutation_detected": 35,
+      "mutation_survived": 0,
+      "surviving_examples": []
+    }
+  ],
+  "minimized_failure_count": 0,
+  "result_digest": "sha256:aea3110bebd5b9dd81880018e615d5aedcc1a47841a61e6715a7eba4272e838c",
+  "next_required_work": "Freeze this first-order execution result, then extend the runner to pair interactions, recursive chains, and selected higher-order reductions.",
+  "claim_boundary": "This is a repository-local adversarial execution pass over encoded first-order metamorphic obligations. It is not production conformance, not independent reproduction, not proof of formal irreducibility, and not exhaustive execution of every generated higher-order case.",
+  "omitted_detail": "Public artifact omits case-level execution rows; use repo report for full first-order representative results and any minimized failures."
+}

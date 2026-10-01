@@ -1,0 +1,179 @@
+{
+  "name": "cr-frontier-adversarial-evaluation-pack",
+  "version": "0.1-skeleton",
+  "created_at": "2026-09-26T20:11:45.0416218Z",
+  "status": "FRONTIER_EVAL_REFERENCE_PASS_MUTANTS_DETECTED",
+  "mission": "Synthetic offline frontier-lab adversarial evaluation package for Consequential Reachability reference semantics.",
+  "non_goals": [
+    "production VALIS runtime",
+    "production KORE integration",
+    "GMAP deployment",
+    "SaaS product",
+    "dashboard",
+    "gateway",
+    "cloud service",
+    "real-world execution system"
+  ],
+  "source_boundary": "Uses current reconstructed/derived corpus and comparator fixture boundaries. Does not package production KORE or controlled internals.",
+  "safety_boundary": [
+    "offline",
+    "synthetic state only",
+    "no real credentials",
+    "no real money",
+    "no external APIs",
+    "no hardware",
+    "no shell access from agent",
+    "no customer/user data"
+  ],
+  "verified_phase_v_repository_evidence": {
+    "comparator_vectors": 35,
+    "comparator_matches": 35,
+    "scored_axes": [
+      "verdict",
+      "release_allowed",
+      "consequence_must_be_mediated",
+      "uncertainty_must_not_widen_authority",
+      "future_release_allowed_after_transition",
+      "external_truth_observation_distinction",
+      "scalar_confidence_insufficient"
+    ],
+    "pair_interaction_cases": 4760,
+    "checked_pair_obligations": 9520,
+    "recursive_chains": 5,
+    "triples_considered": 6545,
+    "four_vector_combinations_considered": 52360,
+    "deliberate_mutants": 8,
+    "mutants_detected": 8,
+    "mutation_survivors": 0,
+    "unexplained_minimized_failures": 0,
+    "freeze_readiness": "READY_TO_FREEZE_REFERENCE_EVALUATOR_SCOPE_ONLY"
+  },
+  "holds": [
+    "50,000 deterministic fuzz runs and 960/960 generated differential scenarios are documented/reported but not yet tied to first-class machine report artifacts in this pass.",
+    "Corpus/comparator fixtures are reconstructed/derived candidates and must not be represented as recovered historical canonical fixture bytes.",
+    "Production conformance remains open until a production target is declared and tested.",
+    "Historical Coq/GMAP/value artifacts are lineage/support, not automatically current CR semantics or public-disclosure material."
+  ],
+  "sources": [
+    {
+      "path": "docs/frontier-eval-inventory-v0.1.md",
+      "sha256": "0f36a6430f921128ff11f15ed7e4cb3a5a27614bd702e7cab37abe89a8bb6714",
+      "bytes": 19809
+    },
+    {
+      "path": "conformance/corpus/MANIFEST.json",
+      "sha256": "b4584ab37a36970e94156039661658da0bc87b995bce101562978f5d0dbabae6",
+      "bytes": 9699
+    },
+    {
+      "path": "conformance/comparator/phase-v/MANIFEST.json",
+      "sha256": "3e80645c86e6f6e1d5b874abd355cf0709001bfb5024eeb06db4ddd7341529c1",
+      "bytes": 14412
+    },
+    {
+      "path": "conformance/reports/phase-v-comparator-experiment.json",
+      "sha256": "ea9be8b5a65f58579027adc225cbf7cd2d91230586da367cb5ea6155e76920f4",
+      "bytes": 71602
+    },
+    {
+      "path": "conformance/reports/phase-v-adversarial-sweep.json",
+      "sha256": "aac0eb0ec121efb743b17263c81d1873775dc1e27aefa50e875f9bcebd1ad366",
+      "bytes": 779249
+    },
+    {
+      "path": "conformance/reports/phase-v-adversarial-execution.json",
+      "sha256": "9a45da23fbd55a7fbed3aaab6dee37c2701314fdd7cafe734dd96c7b6b014abd",
+      "bytes": 23564
+    },
+    {
+      "path": "conformance/reports/phase-v-closure-execution.json",
+      "sha256": "4445f0ae1c717f0928a3e18810d8eab3b9a9d372c349b9c151d032173bc051c9",
+      "bytes": 4392
+    },
+    {
+      "path": "conformance/reports/phase-v-freeze-readiness.json",
+      "sha256": "136f12b228de023940ffb16a2b890d88c25ec27c51723a2a2ca10343e7df7598",
+      "bytes": 8383
+    },
+    {
+      "path": "cr-benchmark-core/manifest.json",
+      "sha256": "8064801f3b5fa4ff45edb6656c0ed14465b07fea39a107e60614db9e437223ae",
+      "bytes": 1218
+    },
+    {
+      "path": "cr-benchmark-core/SPEC.md",
+      "sha256": "5c8f7a7d056cb38705a071430a7d3eba7a58c68b9305d616b7c43d88710cdf47",
+      "bytes": 1434
+    },
+    {
+      "path": "docs/valis-claim-boundary-ledger.md",
+      "sha256": "006338d99a64ff3c666d9b460cbd209571a7f55f2e184fc11af1c90928b7b700",
+      "bytes": 9955
+    },
+    {
+      "path": "docs/valis-counterexample-intake.md",
+      "sha256": "c1194337ce3479d50fe8e6300e06c8aaae5c759221e39d8460ddf793893c16da",
+      "bytes": 3900
+    },
+    {
+      "path": "docs/valis-scientific-lineage.md",
+      "sha256": "ad5b19d4a14273d75a9a36676fe370fa31bdeb76d3020230ab9e6e6a64675eb0",
+      "bytes": 19052
+    }
+  ],
+  "frontier_eval_report": {
+    "path": "frontier-eval/reports/frontier-eval-report.json",
+    "sha256": "sha256:82cba831d20dd68367bd9192659f13b46d5c3bb04b23e21aba802b456a84b5bd"
+  },
+  "frontier_eval_results": {
+    "path": "frontier-eval/reports/frontier-eval-results.jsonl",
+    "sha256": "sha256:e396c8d92298ebe2f81c6f53f9f93321bde3ac9478505060c71038128a3ec467"
+  },
+  "source_files": [
+    {
+      "path": "conformance/corpus/MANIFEST.json",
+      "sha256": "sha256:b4584ab37a36970e94156039661658da0bc87b995bce101562978f5d0dbabae6",
+      "bytes": 9699
+    },
+    {
+      "path": "conformance/comparator/phase-v/MANIFEST.json",
+      "sha256": "sha256:b2d526dd5142b0febc705f4378abe601fb07d21376f274b631d27020eccdadbd",
+      "bytes": 10536
+    },
+    {
+      "path": "conformance/reports/phase-v-comparator-experiment.json",
+      "sha256": "sha256:ea9be8b5a65f58579027adc225cbf7cd2d91230586da367cb5ea6155e76920f4",
+      "bytes": 71602
+    },
+    {
+      "path": "conformance/reports/phase-v-adversarial-sweep.json",
+      "sha256": "sha256:aac0eb0ec121efb743b17263c81d1873775dc1e27aefa50e875f9bcebd1ad366",
+      "bytes": 779249
+    },
+    {
+      "path": "conformance/reports/phase-v-adversarial-execution.json",
+      "sha256": "sha256:9a45da23fbd55a7fbed3aaab6dee37c2701314fdd7cafe734dd96c7b6b014abd",
+      "bytes": 23564
+    },
+    {
+      "path": "conformance/reports/phase-v-closure-execution.json",
+      "sha256": "sha256:0330c05d8dd8dde1c4be5b42d47e210db6d277d846ef06b1070a35b13bac4317",
+      "bytes": 4512
+    },
+    {
+      "path": "conformance/reports/phase-v-freeze-readiness.json",
+      "sha256": "sha256:136f12b228de023940ffb16a2b890d88c25ec27c51723a2a2ca10343e7df7598",
+      "bytes": 8383
+    },
+    {
+      "path": "frontier-eval/scenarios/frontier-scenarios.json",
+      "sha256": "sha256:8596aac35b2454161f3309f5c7410902fa9986b88985cae2c31bcaff977806b3",
+      "bytes": 11157
+    },
+    {
+      "path": "frontier-eval/reference/cr-core-synthetic.mjs",
+      "sha256": "sha256:72cb1174ac4209d23e7db78baa97491e3f66283cf0478a0bbefb47f03ca2a555",
+      "bytes": 8468
+    }
+  ]
+}

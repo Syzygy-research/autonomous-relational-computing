@@ -1,0 +1,13 @@
+-R . VALIS
+
+Syntax.v
+Operational.v
+Operational_AlgebraicSoundness.v
+Operational_StaticFragment.v
+Operational_StaticNormalize.v
+Kernel.v
+KernelInstance_Current.v
+KernelInstance_Constitutional.v
+DaggerCategory.v
+Denotation.v
+Phase1_DaggerPresentation.v

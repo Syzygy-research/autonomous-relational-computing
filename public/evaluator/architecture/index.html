@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Evaluator Architecture | Recursive Settlement</title>
+  <meta name="description" content="How the Recursive Settlement evaluator differs from an agent harness and from production VALIS/KORE runtime enforcement." />
+  <link rel="stylesheet" href="/munich-home.css" />
+</head>
+<body>
+  <div class="w">
+    <nav>
+      <div class="brand">Recursive<b>Settlement</b></div>
+      <div class="links"><a href="/evaluator/">Evaluator</a><a href="/evidence/">Evidence</a><a href="/technology/">Technology</a><a href="/engage/">Engage</a></div>
+    </nav>
+    <section class="hero evaluator-hero">
+      <div>
+        <div class="ey">Evaluator architecture</div>
+        <h1>The evaluator is a synthetic consequential world.</h1>
+        <p class="lead">A visitor can connect intelligence to a fake world, run declared operations, inspect the state transitions, and export evidence. No real money, credentials, cloud systems, hardware or production KORE deployment is required.</p>
+        <div class="btns"><a class="btn" href="/frontier-eval/README.md">Open local pack</a><a class="btn" href="/evaluator/">Back to evaluator</a></div>
+      </div>
+      <div class="aside"><b>Boundary.</b><br />The evaluator tests CR semantics over synthetic state. Production KORE is the later question of enforcing those semantics against reality.</div>
+    </section>
+  </div>
+
+  <section class="sec">
+    <div class="w">
+      <div class="ey">Three things people confuse</div>
+      <h2>Evaluation harness, agent harness, consequence runtime.</h2>
+      <div class="route-grid route-grid--munich">
+        <a class="route" href="#evaluation"><span>01 · Evaluation harness</span><h3>Runs tasks and grades world state</h3><p>Supplies synthetic tools, state, scenarios, graders, traces and exports.</p></a>
+        <a class="route" href="#agent"><span>02 · Agent harness</span><h3>Makes a model act</h3><p>Prompts, tools, memory, retries, scaffolding and the model-facing loop are brought by the participant.</p></a>
+        <a class="route" href="#runtime"><span>03 · Consequence runtime</span><h3>Enforces against reality</h3><p>Production VALIS/KORE mediates real authority, real execution and real-world effects. That is a separate stage.</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec dark" id="evaluation">
+    <div class="w">
+      <div class="ey">Evaluator loop</div>
+      <h2>Bring intelligence to a bounded synthetic world.</h2>
+      <div class="visual-panel">
+        <div class="axis-viz">
+          <div class="axis-box"><b>Their agent</b><span>Receives observations, chooses declared synthetic actions, and can use any provider or custom harness locally.</span></div>
+          <div class="axis-arrow">→</div>
+          <div class="axis-box"><b>CR evaluator</b><span>Applies CR-Core settlement to synthetic identities, authority, exposure, dependencies, effects and observations.</span></div>
+        </div>
+        <div class="timeline-viz" style="margin-top:1rem">
+          <div><b>01</b><span>observe()</span></div>
+          <div><b>02</b><span>available actions</span></div>
+          <div><b>03</b><span>act(action)</span></div>
+          <div><b>04</b><span>grade state</span></div>
+          <div><b>05</b><span>export trace</span></div>
+        </div>
+      </div>
+      <p class="copy copy-wide">The evaluator grades the state of the synthetic world, not the agent's claim about the world. If an agent says it completed $120 of synthetic spend but the state says $60, the agent did not succeed.</p>
+    </div>
+  </section>
+
+  <section class="sec" id="agent">
+    <div class="w g2">
+      <div><div class="ey">BYO agent</div><h2>Local first. Provider agnostic.</h2></div>
+      <div class="copy"><p>Bring Your Own Agent means the participant supplies the intelligence implementation and connects it to the local synthetic tool surface. The evaluator should not require RecursiveSettlement.com to hold model API keys, execute arbitrary uploaded code, or host public agent runs.</p><p>The agent can be Claude, GPT, Gemini, a local model, a deterministic planner, a human, or a custom research system. CR evaluates consequential transitions on the consequence side.</p></div>
+    </div>
+  </section>
+
+  <section class="sec" id="runtime">
+    <div class="w">
+      <div class="ey">Production boundary</div>
+      <h2>Do not require integration before evaluation.</h2>
+      <div class="boundary-grid">
+        <div><strong>Evaluator</strong><span>Their problem -> synthetic CR representation -> evaluation -> evidence.</span></div>
+        <div><strong>Production KORE</strong><span>Only after correspondence exists: real agent -> real settlement -> real execution -> real world.</span></div>
+      </div>
+      <p class="copy copy-wide">Munich does not need production KORE to examine risk correspondence. A frontier lab does not need production VALIS to study capability-consequence separation. An engineer does not need to trust the implementation to independently reproduce the semantics from a frozen corpus.</p>
+    </div>
+  </section>
+</body>
+</html>

@@ -1,0 +1,54 @@
+{
+  "title": "VALIS-KORE Proof Artifact Index",
+  "version": "1.0",
+  "entries": [
+    {
+      "id": "F1",
+      "name": "State Sufficiency",
+      "status": "CLOSED_WITHIN_DECLARED_MODEL",
+      "artifact_path": "/downloads/coq-20260420-snapshot/",
+      "availability": "downloadable_coq_snapshot"
+    },
+    {
+      "id": "F2",
+      "name": "Transition Consistency",
+      "status": "CLOSED_WITHIN_DECLARED_MODEL",
+      "artifact_path": "/downloads/coq-20260420-snapshot/",
+      "availability": "downloadable_coq_snapshot"
+    },
+    {
+      "id": "F3",
+      "name": "Conservative Uncertainty",
+      "status": "CLOSED_WITHIN_DECLARED_MODEL",
+      "artifact_path": "/downloads/coq-20260420-snapshot/",
+      "availability": "downloadable_coq_snapshot"
+    },
+    {
+      "id": "F4",
+      "name": "Realizability",
+      "status": "CLOSED_BY_CONSTRUCTION",
+      "artifact_path": "/downloads/coq-20260420-snapshot/",
+      "availability": "downloadable_coq_snapshot"
+    },
+    {
+      "id": "F5",
+      "name": "Mediation Separability",
+      "status": "CLOSED_AT_ARCHITECTURAL_BOUNDARY",
+      "artifact_path": "/downloads/coq-20260420-snapshot/",
+      "availability": "downloadable_coq_snapshot"
+    },
+    {
+      "id": "F6",
+      "name": "Recursive Closure",
+      "status": "CLOSED_WITHIN_DECLARED_MODEL",
+      "artifact_path": "/downloads/coq-20260420-snapshot/",
+      "availability": "downloadable_coq_snapshot"
+    }
+  ],
+  "note": "Public portal does not fabricate proof-file paths. Attach exact proof artifacts before claiming downloadable machine-checked proof reproduction.",
+  "controlled_formal_material": {
+    "status": "PUBLIC_SNAPSHOT_INCLUDED_WITH_BOUNDARY",
+    "public_claim": "A bounded Coq source snapshot is included for formal-kernel lineage review. It is not a production KORE conformance proof and not a current CR-Core correspondence proof.",
+    "disclosure_boundary": "Do not embed Kore-sensitive proof source or implementation correspondence in public downloads without review."
+  }
+}

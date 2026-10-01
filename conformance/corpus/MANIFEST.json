@@ -1,0 +1,255 @@
+{
+  "kind": "valis_kore_conformance_corpus_manifest",
+  "version": "0.1-reconstructed-candidate",
+  "generated_at": "2026-09-24T02:33:20.239Z",
+  "source_ledger": "conformance/fixture-recovery-ledger.json",
+  "claim_boundary": "This is a new versioned reconstructed candidate corpus generated from repo-held public evaluator/narrative evidence. It is not the original historical canonical fixture byte set.",
+  "vectors": [
+    {
+      "vector_id": "V001",
+      "path": "conformance/corpus/V001.json",
+      "digest": "sha256:c3675a377dbd24f2fac3a55a8c9a4afa7e2a04b38c107d24573b0876717f9859",
+      "title": "Baseline Release",
+      "expected_typed_outcome": "RELEASE"
+    },
+    {
+      "vector_id": "V002",
+      "path": "conformance/corpus/V002.json",
+      "digest": "sha256:eb8414a620c3cee43ea85b591b161e3755ed1607b7e5081dec7cfa5ffa86b0e9",
+      "title": "Authority Absent",
+      "expected_typed_outcome": "REFUSAL"
+    },
+    {
+      "vector_id": "V003",
+      "path": "conformance/corpus/V003.json",
+      "digest": "sha256:fdb621582e35749bce8ad0a81e479ea6e6dc2931cc599464923351ff016ac24e",
+      "title": "Self-Approval",
+      "expected_typed_outcome": "REFUSAL"
+    },
+    {
+      "vector_id": "V004",
+      "path": "conformance/corpus/V004.json",
+      "digest": "sha256:8d29f2d0e13f2684adfe7f622e5bc4ec6f9e484466059ac6bef6746ab4c95273",
+      "title": "Payload Mutation",
+      "expected_typed_outcome": "REFUSAL"
+    },
+    {
+      "vector_id": "V005",
+      "path": "conformance/corpus/V005.json",
+      "digest": "sha256:4dc99c43589cc17ef012aab3b1f877e80f1778101ba4933182368933162430a4",
+      "title": "Target Mutation",
+      "expected_typed_outcome": "REFUSAL"
+    },
+    {
+      "vector_id": "V006",
+      "path": "conformance/corpus/V006.json",
+      "digest": "sha256:36f5002af7d7cdc8dea82d61239b41b88f2c9e4d19e9a928c88efe60cdf7fdfe",
+      "title": "Replay",
+      "expected_typed_outcome": "REFUSAL"
+    },
+    {
+      "vector_id": "V007",
+      "path": "conformance/corpus/V007.json",
+      "digest": "sha256:cbb58b9a640f700ce13ebf3fcfc152412d8dcfd6b130b94d30697a263f7ba199",
+      "title": "Expiry",
+      "expected_typed_outcome": "REFUSAL"
+    },
+    {
+      "vector_id": "V008",
+      "path": "conformance/corpus/V008.json",
+      "digest": "sha256:204e95ffdd131637872ca6a20331249e53c2005d96565528e7ef21b25d0e2df1",
+      "title": "Pre-Finality Revocation",
+      "expected_typed_outcome": "REFUSAL"
+    },
+    {
+      "vector_id": "V009",
+      "path": "conformance/corpus/V009.json",
+      "digest": "sha256:2c779f5886233cb9dc4997b4cbf5b3923b39ffab39564908cbc8f6e8af7569db",
+      "title": "Post-Finality Revocation",
+      "expected_typed_outcome": "EVIDENCE_REQUIRED"
+    },
+    {
+      "vector_id": "V010",
+      "path": "conformance/corpus/V010.json",
+      "digest": "sha256:02b50f07642848d33901fc8402cb1e368b9d102f4a75c10a1c59631f0cf29d6c",
+      "title": "Aggregate Exposure",
+      "expected_typed_outcome": "REFUSAL"
+    },
+    {
+      "vector_id": "V011",
+      "path": "conformance/corpus/V011.json",
+      "digest": "sha256:46773579c30398a86f9718cdc71eb73c6acf448cc6095cab0af668687e03757b",
+      "title": "Shared-Principal Anti-Sharding",
+      "expected_typed_outcome": "REFUSAL"
+    },
+    {
+      "vector_id": "V012",
+      "path": "conformance/corpus/V012.json",
+      "digest": "sha256:16d5ae200a643653ef07593f4ed49f60ba1cc768e85abfd6371ac4fbf13d785c",
+      "title": "Concurrency",
+      "expected_typed_outcome": "REFUSAL_OR_SERIALIZED"
+    },
+    {
+      "vector_id": "V013",
+      "path": "conformance/corpus/V013.json",
+      "digest": "sha256:d96797a1c4826a6d6bb12a93a22b4afa3c30e5c8b12604d9b4f8ecbe15805d8f",
+      "title": "UNKNOWN Effect",
+      "expected_typed_outcome": "INDETERMINATE"
+    },
+    {
+      "vector_id": "V014",
+      "path": "conformance/corpus/V014.json",
+      "digest": "sha256:4029ca6448acea360f66848a5c63cbdb5ca9ba0b3ae9b9fcdb81db9428d20c20",
+      "title": "PARTIAL Effect",
+      "expected_typed_outcome": "INDETERMINATE"
+    },
+    {
+      "vector_id": "V015",
+      "path": "conformance/corpus/V015.json",
+      "digest": "sha256:840926ecd9f3c89cb73053f1d682ba22227f68bbb833ab168fb272bb20273a24",
+      "title": "Restart Non-Widening",
+      "expected_typed_outcome": "REFUSAL_OR_HOLD"
+    },
+    {
+      "vector_id": "V016",
+      "path": "conformance/corpus/V016.json",
+      "digest": "sha256:ba017574e34e4c7eddcf8b324339b2cc44fd2f76a8afa87e925698a22ca52965",
+      "title": "Verifier Unavailable",
+      "expected_typed_outcome": "HOLD"
+    },
+    {
+      "vector_id": "V017",
+      "path": "conformance/corpus/V017.json",
+      "digest": "sha256:7d4df53444beae070501d793da24d7ea330849d75a5849f039c8a2507bc4f2fb",
+      "title": "Ledger Unavailable",
+      "expected_typed_outcome": "HOLD"
+    },
+    {
+      "vector_id": "V018",
+      "path": "conformance/corpus/V018.json",
+      "digest": "sha256:e0812061d19dae37200b749bf76a5474240319fad9b95b2487c017c221d47847",
+      "title": "Failed Dependency",
+      "expected_typed_outcome": "REFUSAL"
+    },
+    {
+      "vector_id": "V019",
+      "path": "conformance/corpus/V019.json",
+      "digest": "sha256:2df98f2277125f3a855be64d2415d1c2d7c36da57e4a4354ec567260b2d127a5",
+      "title": "Stale State",
+      "expected_typed_outcome": "REFUSAL"
+    },
+    {
+      "vector_id": "V020",
+      "path": "conformance/corpus/V020.json",
+      "digest": "sha256:305457a05ab55b9f3c4d4a4af5894ee0d298d0bd33cfe668fd019d85625b8505",
+      "title": "Wrong Executor",
+      "expected_typed_outcome": "REFUSAL"
+    },
+    {
+      "vector_id": "V021",
+      "path": "conformance/corpus/V021.json",
+      "digest": "sha256:83bfa53e107e6cfdee1f5d8de40573ed3c04aca99e961f8a24fda113dd3a463a",
+      "title": "Effect Before Receipt Crash",
+      "expected_typed_outcome": "INDETERMINATE"
+    },
+    {
+      "vector_id": "V022",
+      "path": "conformance/corpus/V022.json",
+      "digest": "sha256:f168061d430b135ca49a1241c1db379f75360c6796b6072210e9a402668b7ddd",
+      "title": "Forged Receipt",
+      "expected_typed_outcome": "REFUSAL"
+    },
+    {
+      "vector_id": "V023",
+      "path": "conformance/corpus/V023.json",
+      "digest": "sha256:74113a67d49d5e7b25a82799530c4f243aeb06023bf7f2e63d2a9b5193684b3d",
+      "title": "Scoped Recovery",
+      "expected_typed_outcome": "HOLD_OR_RELEASE_SCOPED"
+    },
+    {
+      "vector_id": "V024",
+      "path": "conformance/corpus/V024.json",
+      "digest": "sha256:04fb177ce2415115ca08c2b4f39330f71bc91b1572b534d88cdd065c3d35cac8",
+      "title": "Runtime Digest Mismatch",
+      "expected_typed_outcome": "REFUSAL"
+    },
+    {
+      "vector_id": "V025",
+      "path": "conformance/corpus/V025.json",
+      "digest": "sha256:c774fbb2da9b834e94cf8ec4ce4f8dbf3b463846941115f7ca20dfb5095521dc",
+      "title": "LIVE_BOUND Authority Revocation",
+      "expected_typed_outcome": "REFUSAL"
+    },
+    {
+      "vector_id": "V026",
+      "path": "conformance/corpus/V026.json",
+      "digest": "sha256:890cb7882bfb8934a21c74de559a505ecb59f5c39e6e19daf4cc5ca51058c9a2",
+      "title": "Correlated Counterparty Exposure",
+      "expected_typed_outcome": "REFUSAL"
+    },
+    {
+      "vector_id": "V027",
+      "path": "conformance/corpus/V027.json",
+      "digest": "sha256:8309665fdbdeaef4fde764d11854b77fe0a26c6eb476cb302d87b148d55ed58c",
+      "title": "UNKNOWN Effect Plus New Authorization",
+      "expected_typed_outcome": "REFUSAL_OR_HOLD"
+    },
+    {
+      "vector_id": "V028",
+      "path": "conformance/corpus/V028.json",
+      "digest": "sha256:45bc32025291be74f55dee2844f0398481d56a72e71bb0a18df466307f75a798",
+      "title": "Nested Delegation",
+      "expected_typed_outcome": "REFUSAL"
+    },
+    {
+      "vector_id": "V029",
+      "path": "conformance/corpus/V029.json",
+      "digest": "sha256:70be21f9f92cefded0e94c557a50367344e490b33390541ff5cf69de59f96fdf",
+      "title": "Late Evidence Correction",
+      "expected_typed_outcome": "EVIDENCE_CORRECTION"
+    },
+    {
+      "vector_id": "V030",
+      "path": "conformance/corpus/V030.json",
+      "digest": "sha256:d5ba5b7d480e3b9852ebfbee3ccfe71e6b1c6fb0f55d0488b45534143bfb6b6a",
+      "title": "Locally Safe Globally Forbidden",
+      "expected_typed_outcome": "REFUSAL"
+    },
+    {
+      "vector_id": "V031",
+      "path": "conformance/corpus/V031.json",
+      "digest": "sha256:e98a5b9d5d6c188ca3d5b6e04d3741ebf3ff6c10e464d5a7690b4fd4ca2072d1",
+      "title": "Causal Race Ordering",
+      "expected_typed_outcome": "REFUSAL_OR_ORDERED"
+    },
+    {
+      "vector_id": "V032",
+      "path": "conformance/corpus/V032.json",
+      "digest": "sha256:e813d0c36565bd74b12b94999110d86b6e30ff44c54f6596ca2fcba075e1a494",
+      "title": "Shared Dependency Exposure",
+      "expected_typed_outcome": "REFUSAL"
+    },
+    {
+      "vector_id": "V033",
+      "path": "conformance/corpus/V033.json",
+      "digest": "sha256:3a0180a135ef773dead1fa26273c89324efdd306e018b0ad57f4bf0f2ce60027",
+      "title": "Compensation vs Prevention",
+      "expected_typed_outcome": "EVIDENCE_REQUIRED"
+    },
+    {
+      "vector_id": "V034",
+      "path": "conformance/corpus/V034.json",
+      "digest": "sha256:ea2d55fff87fa6baccdb4a91a4895b012b96fada9fc321dc759c8d7f7215c2bb",
+      "title": "Observation Conflicts",
+      "expected_typed_outcome": "EVIDENCE_CORRECTION_OR_HOLD"
+    },
+    {
+      "vector_id": "V035",
+      "path": "conformance/corpus/V035.json",
+      "digest": "sha256:e5583e686bf8fa98ed831dd54dac7a5ed5019aad1868d1dde1c358477f81feac",
+      "title": "Multidimensional Consequence Envelope",
+      "expected_typed_outcome": "REFUSAL_OR_CONSTRAINED_RELEASE"
+    }
+  ],
+  "corpus_digest": "sha256:f564a6cc11d542fd3abe86c1cedf51f7c0348d5e468f2d3c916e90e78e57fe53"
+}

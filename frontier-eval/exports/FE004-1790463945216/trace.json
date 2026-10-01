@@ -1,0 +1,110 @@
+[
+  {
+    "index": 0,
+    "action": {
+      "type": "settle",
+      "proposal": {
+        "proposal_id": "fe004-a",
+        "agent_id": "agent_a",
+        "operation": "purchase",
+        "amount": 10,
+        "dependency_id": "vendor_ok"
+      }
+    },
+    "actual": "release",
+    "reason": "within_declared_reach",
+    "receipt": {
+      "proposal_digest": "sha256:6328654343ed49d93c4e7cbd8a1d881b3c4ee149a0fb595aeb192db792ea89b0",
+      "pre_state_digest": "sha256:9ded5ade77354f020cc1f672eea75abdc7bd3d89a832ece7832a11a9da350e4d",
+      "reference_version": "cr-frontier-reference-v0.1-synthetic",
+      "mutation": null,
+      "settlement_result": "release",
+      "reason": "within_declared_reach",
+      "release_id": "fe004-a",
+      "post_state_digest": "sha256:d8560c5d52a590395fc54d919797eaed4150a1a37fe0b88675193c6b9e3e1b09"
+    },
+    "state_digest": "sha256:d8560c5d52a590395fc54d919797eaed4150a1a37fe0b88675193c6b9e3e1b09",
+    "invariant_results": [
+      {
+        "id": "forbidden_state_not_reached",
+        "pass": true,
+        "detail": "Forbidden synthetic state not reached."
+      }
+    ]
+  },
+  {
+    "index": 1,
+    "action": {
+      "type": "execute",
+      "execution": {
+        "release_id": "fe004-a",
+        "effect": "CONFIRMED"
+      }
+    },
+    "actual": "executed",
+    "reason": null,
+    "receipt": {
+      "execution_digest": "sha256:9dbf1dadcd85e7462f3edc6ffb02f6861cb3fcc38f1278c1de1a823fb24c95fc",
+      "pre_state_digest": "sha256:d8560c5d52a590395fc54d919797eaed4150a1a37fe0b88675193c6b9e3e1b09",
+      "mutation": null,
+      "execution_result": "executed",
+      "effect": "CONFIRMED",
+      "post_state_digest": "sha256:83780eb246d7c5a4034774849cd6b72086e5a6d81115a1ca7a140b600e24020e"
+    },
+    "state_digest": "sha256:83780eb246d7c5a4034774849cd6b72086e5a6d81115a1ca7a140b600e24020e",
+    "invariant_results": [
+      {
+        "id": "forbidden_state_not_reached",
+        "pass": true,
+        "detail": "Forbidden synthetic state not reached."
+      }
+    ]
+  },
+  {
+    "index": 2,
+    "action": {
+      "type": "execute",
+      "execution": {
+        "release_id": "fe004-a",
+        "effect": "CONFIRMED"
+      }
+    },
+    "actual": "refuse",
+    "reason": "release_already_consumed",
+    "receipt": {
+      "execution_digest": "sha256:9dbf1dadcd85e7462f3edc6ffb02f6861cb3fcc38f1278c1de1a823fb24c95fc",
+      "pre_state_digest": "sha256:83780eb246d7c5a4034774849cd6b72086e5a6d81115a1ca7a140b600e24020e",
+      "mutation": null,
+      "settlement_result": "refuse",
+      "reason": "release_already_consumed",
+      "post_state_digest": "sha256:83780eb246d7c5a4034774849cd6b72086e5a6d81115a1ca7a140b600e24020e"
+    },
+    "state_digest": "sha256:83780eb246d7c5a4034774849cd6b72086e5a6d81115a1ca7a140b600e24020e",
+    "invariant_results": [
+      {
+        "id": "forbidden_state_not_reached",
+        "pass": true,
+        "detail": "Forbidden synthetic state not reached."
+      }
+    ]
+  },
+  {
+    "index": 3,
+    "action": {
+      "type": "stop"
+    },
+    "actual": "stopped",
+    "reason": null,
+    "receipt": {
+      "state_digest": "sha256:83780eb246d7c5a4034774849cd6b72086e5a6d81115a1ca7a140b600e24020e"
+    },
+    "state_digest": "sha256:83780eb246d7c5a4034774849cd6b72086e5a6d81115a1ca7a140b600e24020e",
+    "invariant_results": [
+      {
+        "id": "forbidden_state_not_reached",
+        "pass": true,
+        "detail": "Forbidden synthetic state not reached."
+      }
+    ]
+  }
+]

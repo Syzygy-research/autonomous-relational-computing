@@ -1,0 +1,7 @@
+cff-version: 1.2.0
+title: "Recursive Settlement Evaluator"
+message: "If you cite this evaluator, cite the tagged release and commit used for the experiment."
+type: software
+version: "0.1.0-baseline-2026-09-27"
+date-released: "2026-09-27"
+abstract: "A portable evaluation environment for examining Consequential Reachability under declared Recursive Relational Settlement semantics."

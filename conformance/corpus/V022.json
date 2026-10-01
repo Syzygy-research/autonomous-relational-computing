@@ -1,0 +1,67 @@
+{
+  "vector_id": "V022",
+  "benchmark_version": "0.1-reconstructed-candidate",
+  "title": "Forged Receipt",
+  "historical_status": "new_versioned_reconstruction_original_bytes_unrecovered",
+  "initial_state": {
+    "version": "reconstructed-candidate-state-v0.1",
+    "settled": true,
+    "vector_id": "V022",
+    "authority_model": "declared_by_vector",
+    "exposure_model": "declared_by_vector",
+    "evidence_model": "declared_by_vector"
+  },
+  "event_sequence": [
+    {
+      "step": "proposal",
+      "vector_id": "V022",
+      "title": "Forged Receipt"
+    },
+    {
+      "step": "settlement",
+      "expected_typed_outcome": "REFUSAL"
+    }
+  ],
+  "expected_typed_outcome": "REFUSAL",
+  "expected_state_projection": {
+    "release_allowed": false,
+    "consequence_must_be_mediated": true,
+    "uncertainty_must_not_widen_authority": false,
+    "historical_bytes_recovered": false
+  },
+  "invariants": [
+    "evidence_integrity"
+  ],
+  "falsifiers": [
+    "forged receipt settles effect"
+  ],
+  "required_evidence": [
+    "artifact_identity",
+    "proposal_digest",
+    "expected_projection",
+    "observed_projection",
+    "trace_digest",
+    "verdict",
+    "divergence_classification_if_any"
+  ],
+  "provenance": {
+    "source_type": "reconstructed_candidate_from_recovery_ledger",
+    "source_ledger_status": "missing_exact_fixture_bytes",
+    "historical_digest": null,
+    "ui_or_narrative_sources": {
+      "htmlMatches": [],
+      "narrativeMatches": [
+        {
+          "source": "docs/corpus/sources/2026-09-20-consolidated-narrative.txt",
+          "hits": [
+            {
+              "line": 3153,
+              "text": "V022 — Forged Receipt"
+            }
+          ]
+        }
+      ]
+    },
+    "rule": "Do not represent this file as the original historical canonical fixture bytes."
+  }
+}

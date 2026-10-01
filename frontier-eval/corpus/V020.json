@@ -1,0 +1,98 @@
+{
+  "vector_id": "V020",
+  "benchmark_version": "0.1-reconstructed-candidate",
+  "title": "Wrong Executor",
+  "historical_status": "new_versioned_reconstruction_original_bytes_unrecovered",
+  "initial_state": {
+    "version": "reconstructed-candidate-state-v0.1",
+    "settled": true,
+    "vector_id": "V020",
+    "authority_model": "declared_by_vector",
+    "exposure_model": "declared_by_vector",
+    "evidence_model": "declared_by_vector"
+  },
+  "event_sequence": [
+    {
+      "step": "proposal",
+      "vector_id": "V020",
+      "title": "Wrong Executor"
+    },
+    {
+      "step": "settlement",
+      "expected_typed_outcome": "REFUSAL"
+    }
+  ],
+  "expected_typed_outcome": "REFUSAL",
+  "expected_state_projection": {
+    "release_allowed": false,
+    "consequence_must_be_mediated": true,
+    "uncertainty_must_not_widen_authority": false,
+    "historical_bytes_recovered": false
+  },
+  "invariants": [
+    "executor_binding"
+  ],
+  "falsifiers": [
+    "wrong executor consumes release"
+  ],
+  "required_evidence": [
+    "artifact_identity",
+    "proposal_digest",
+    "expected_projection",
+    "observed_projection",
+    "trace_digest",
+    "verdict",
+    "divergence_classification_if_any"
+  ],
+  "provenance": {
+    "source_type": "reconstructed_candidate_from_recovery_ledger",
+    "source_ledger_status": "ui_scenario_recovered_not_promoted",
+    "historical_digest": null,
+    "ui_or_narrative_sources": {
+      "htmlMatches": [
+        {
+          "source": "docs/corpus/sources/official-evaluator-v2-full/extracted/corpus.html",
+          "scenario_present": true,
+          "evidence_present": true,
+          "extraction_digest": "sha256:cec1a12dd5dfd0dff404d034f495791a759913abc126fd3719289ce6597418ca",
+          "status": "ui_evaluator_extraction_only_not_historical_fixture"
+        },
+        {
+          "source": "docs/valis-kore-official-evaluator-v2-full/corpus.html",
+          "scenario_present": true,
+          "evidence_present": true,
+          "extraction_digest": "sha256:cec1a12dd5dfd0dff404d034f495791a759913abc126fd3719289ce6597418ca",
+          "status": "ui_evaluator_extraction_only_not_historical_fixture"
+        },
+        {
+          "source": "public/evaluator-v2-full/corpus.html",
+          "scenario_present": true,
+          "evidence_present": true,
+          "extraction_digest": "sha256:cec1a12dd5dfd0dff404d034f495791a759913abc126fd3719289ce6597418ca",
+          "status": "ui_evaluator_extraction_only_not_historical_fixture"
+        }
+      ],
+      "narrativeMatches": [
+        {
+          "source": "docs/corpus/sources/2026-09-20-consolidated-narrative.txt",
+          "hits": [
+            {
+              "line": 3121,
+              "text": "V020 — Wrong Executor"
+            }
+          ]
+        },
+        {
+          "source": "docs/corpus/2026-09-23-cr-benchmark-core-fixture-recovery-alignment.md",
+          "hits": [
+            {
+              "line": 28,
+              "text": "- concrete setup semantics for vectors including V001, V002, V004-V006, V010-V011, V013, V015, V018-V020, and V025."
+            }
+          ]
+        }
+      ]
+    },
+    "rule": "Do not represent this file as the original historical canonical fixture bytes."
+  }
+}

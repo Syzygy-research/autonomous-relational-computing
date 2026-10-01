@@ -1,0 +1,2175 @@
+{
+  "report_version": "valis-kore-phase-v-comparator-experiment-v0.1",
+  "created_at": "2026-09-24T21:56:57.271Z",
+  "verdict": "DIFFERENTIAL_EXPERIMENT_EXECUTED",
+  "source_digest": "sha256:8e440ad8c52075e830ceac946c794afb425240d2006b3de37cf5c7f88c6a71b7",
+  "source_path": "docs/corpus/sources/claude-phase-iv-comparator/2026-09-24-phase-iv-comparator-extract.txt",
+  "corpus_dir": "conformance/corpus",
+  "vector_count": 35,
+  "supplied_comparator_fixture_count": 35,
+  "normalized_runnable_fixture_count": 35,
+  "missing_comparator_fixture_count": 0,
+  "invalid_comparator_fixture_count": 0,
+  "differential_outcome_counts": {
+    "MATCH": 35
+  },
+  "differential_axis_counts": {
+    "verdict": {
+      "match": 35,
+      "divergence": 0
+    },
+    "release_allowed": {
+      "match": 35,
+      "divergence": 0
+    },
+    "consequence_must_be_mediated": {
+      "match": 35,
+      "divergence": 0
+    },
+    "uncertainty_must_not_widen_authority": {
+      "match": 35,
+      "divergence": 0
+    },
+    "future_release_allowed_after_transition": {
+      "match": 35,
+      "divergence": 0
+    },
+    "external_truth_observation_distinction": {
+      "match": 35,
+      "divergence": 0
+    },
+    "scalar_confidence_insufficient": {
+      "match": 35,
+      "divergence": 0
+    }
+  },
+  "comparator_model_requirements": [
+    "append_only_causal_history",
+    "prospective_evaluation_function",
+    "authority_graph",
+    "exposure_hypergraph",
+    "dependency_dag",
+    "typed_evidence_state",
+    "finality_semantics",
+    "model_versioning",
+    "conservative_uncertainty_semantics",
+    "external_truth_distinct_from_system_observation"
+  ],
+  "differential_outcome_classes": [
+    "MATCH",
+    "DIVERGENCE",
+    "MODEL_AMBIGUITY",
+    "EVIDENCE_INSUFFICIENT",
+    "IMPLEMENTATION_FAILURE"
+  ],
+  "phase_v_corrections": [
+    "Do not accept append-only history as the only authoritative primitive without modeling external truth versus system observation.",
+    "Do not collapse UNKNOWN, CONTESTED, PARTIAL, CONFIRMED, FAILED, and correction states into a single scalar confidence.",
+    "Do not accept mechanically derivable fixtures as a substitute for machine-readable comparator cases.",
+    "Do not claim novelty, production conformance, or independent validation from this comparator-readiness gate."
+  ],
+  "rows": [
+    {
+      "vector_id": "V001",
+      "title": "Baseline Release",
+      "priority_case": false,
+      "cr_fixture_digest": "sha256:60c94da2acba2e1fde9e62c43adf4eb2ef3c5f8022aba04fab523383cd44b716",
+      "comparator_fixture_digest": "sha256:991cb9ae8ec486e07a07f14d5c7b39534c4be7d49ff8b8de1b181e1e37a884a7",
+      "valis_expected_typed_outcome": "RELEASE",
+      "comparator_expected_verdict": "RELEASE",
+      "representability_status": "covered_by_control_surface",
+      "comparator_fixture_status": "NORMALIZED_FIXTURE_PRESENT",
+      "runnable_now": true,
+      "differential_outcome": "MATCH",
+      "differential_detail": "Comparator matches top-level verdict and checked projection/evidence axes.",
+      "differential_axes": [
+        {
+          "axis": "verdict",
+          "expected": "RELEASE",
+          "observed": "RELEASE",
+          "match": true
+        },
+        {
+          "axis": "release_allowed",
+          "expected": true,
+          "observed": true,
+          "match": true
+        },
+        {
+          "axis": "consequence_must_be_mediated",
+          "expected": true,
+          "observed": true,
+          "match": true
+        },
+        {
+          "axis": "uncertainty_must_not_widen_authority",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "future_release_allowed_after_transition",
+          "expected": true,
+          "observed": true,
+          "match": true
+        },
+        {
+          "axis": "external_truth_observation_distinction",
+          "expected": true,
+          "observed": true,
+          "match": true
+        },
+        {
+          "axis": "scalar_confidence_insufficient",
+          "expected": true,
+          "observed": true,
+          "match": true
+        }
+      ],
+      "failed_differential_axes": [],
+      "reason": "Comparator fixture is present and was checked for minimum shape."
+    },
+    {
+      "vector_id": "V002",
+      "title": "Authority Absent",
+      "priority_case": false,
+      "cr_fixture_digest": "sha256:d89472a40338590b70be0ffd7956976ffbcde4deae7fdb4e5e374b6ef33bae5d",
+      "comparator_fixture_digest": "sha256:09873c80b551b801c18386e038586c5b3ca7eceb31e21430610f779ebc027c13",
+      "valis_expected_typed_outcome": "REFUSAL",
+      "comparator_expected_verdict": "REFUSAL",
+      "representability_status": "requires_semantic_mapping",
+      "comparator_fixture_status": "NORMALIZED_FIXTURE_PRESENT",
+      "runnable_now": true,
+      "differential_outcome": "MATCH",
+      "differential_detail": "Comparator matches top-level verdict and checked projection/evidence axes.",
+      "differential_axes": [
+        {
+          "axis": "verdict",
+          "expected": "REFUSAL",
+          "observed": "REFUSAL",
+          "match": true
+        },
+        {
+          "axis": "release_allowed",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "consequence_must_be_mediated",
+          "expected": true,
+          "observed": true,
+          "match": true
+        },
+        {
+          "axis": "uncertainty_must_not_widen_authority",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "future_release_allowed_after_transition",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "external_truth_observation_distinction",
+          "expected": true,
+          "observed": true,
+          "match": true
+        },
+        {
+          "axis": "scalar_confidence_insufficient",
+          "expected": true,
+          "observed": true,
+          "match": true
+        }
+      ],
+      "failed_differential_axes": [],
+      "reason": "Comparator fixture is present and was checked for minimum shape."
+    },
+    {
+      "vector_id": "V003",
+      "title": "Self-Approval",
+      "priority_case": false,
+      "cr_fixture_digest": "sha256:4c7e80991afdcd85d5791b08dc752d009acf3563598e8ec977ce5404671ddb5a",
+      "comparator_fixture_digest": "sha256:019b1a84255faafea111794db01c440f161e37b139f98b3e880ffa01c02e8b47",
+      "valis_expected_typed_outcome": "REFUSAL",
+      "comparator_expected_verdict": "REFUSAL",
+      "representability_status": "covered_by_control_surface",
+      "comparator_fixture_status": "NORMALIZED_FIXTURE_PRESENT",
+      "runnable_now": true,
+      "differential_outcome": "MATCH",
+      "differential_detail": "Comparator matches top-level verdict and checked projection/evidence axes.",
+      "differential_axes": [
+        {
+          "axis": "verdict",
+          "expected": "REFUSAL",
+          "observed": "REFUSAL",
+          "match": true
+        },
+        {
+          "axis": "release_allowed",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "consequence_must_be_mediated",
+          "expected": true,
+          "observed": true,
+          "match": true
+        },
+        {
+          "axis": "uncertainty_must_not_widen_authority",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "future_release_allowed_after_transition",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "external_truth_observation_distinction",
+          "expected": true,
+          "observed": true,
+          "match": true
+        },
+        {
+          "axis": "scalar_confidence_insufficient",
+          "expected": true,
+          "observed": true,
+          "match": true
+        }
+      ],
+      "failed_differential_axes": [],
+      "reason": "Comparator fixture is present and was checked for minimum shape."
+    },
+    {
+      "vector_id": "V004",
+      "title": "Payload Mutation",
+      "priority_case": false,
+      "cr_fixture_digest": "sha256:474f65793f0d32a9d60910b4b6119af730ab39941fa900980fc8b937e23a77eb",
+      "comparator_fixture_digest": "sha256:8ea4d5a8019b6a0b8083805abf73582dadd9109cd540e642781f73fc41baae7d",
+      "valis_expected_typed_outcome": "REFUSAL",
+      "comparator_expected_verdict": "REFUSAL",
+      "representability_status": "covered_by_control_surface",
+      "comparator_fixture_status": "NORMALIZED_FIXTURE_PRESENT",
+      "runnable_now": true,
+      "differential_outcome": "MATCH",
+      "differential_detail": "Comparator matches top-level verdict and checked projection/evidence axes.",
+      "differential_axes": [
+        {
+          "axis": "verdict",
+          "expected": "REFUSAL",
+          "observed": "REFUSAL",
+          "match": true
+        },
+        {
+          "axis": "release_allowed",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "consequence_must_be_mediated",
+          "expected": true,
+          "observed": true,
+          "match": true
+        },
+        {
+          "axis": "uncertainty_must_not_widen_authority",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "future_release_allowed_after_transition",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "external_truth_observation_distinction",
+          "expected": true,
+          "observed": true,
+          "match": true
+        },
+        {
+          "axis": "scalar_confidence_insufficient",
+          "expected": true,
+          "observed": true,
+          "match": true
+        }
+      ],
+      "failed_differential_axes": [],
+      "reason": "Comparator fixture is present and was checked for minimum shape."
+    },
+    {
+      "vector_id": "V005",
+      "title": "Target Mutation",
+      "priority_case": false,
+      "cr_fixture_digest": "sha256:38e81d624fd76d3bda4fbfad32852a387fb9e1a75318f0b8cdf2bc999abb4058",
+      "comparator_fixture_digest": "sha256:a164eec5a5706b24e394ebc4c0c3d7d53f94df84d99483fd0c3e8149fab3caae",
+      "valis_expected_typed_outcome": "REFUSAL",
+      "comparator_expected_verdict": "REFUSAL",
+      "representability_status": "covered_by_control_surface",
+      "comparator_fixture_status": "NORMALIZED_FIXTURE_PRESENT",
+      "runnable_now": true,
+      "differential_outcome": "MATCH",
+      "differential_detail": "Comparator matches top-level verdict and checked projection/evidence axes.",
+      "differential_axes": [
+        {
+          "axis": "verdict",
+          "expected": "REFUSAL",
+          "observed": "REFUSAL",
+          "match": true
+        },
+        {
+          "axis": "release_allowed",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "consequence_must_be_mediated",
+          "expected": true,
+          "observed": true,
+          "match": true
+        },
+        {
+          "axis": "uncertainty_must_not_widen_authority",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "future_release_allowed_after_transition",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "external_truth_observation_distinction",
+          "expected": true,
+          "observed": true,
+          "match": true
+        },
+        {
+          "axis": "scalar_confidence_insufficient",
+          "expected": true,
+          "observed": true,
+          "match": true
+        }
+      ],
+      "failed_differential_axes": [],
+      "reason": "Comparator fixture is present and was checked for minimum shape."
+    },
+    {
+      "vector_id": "V006",
+      "title": "Replay",
+      "priority_case": false,
+      "cr_fixture_digest": "sha256:7196319a68976bf9e10dfe71ece7c9a7cdbff371c3d4c36a6a6ea5171806ef05",
+      "comparator_fixture_digest": "sha256:4c65ae7182e219dd22cbed6eded8b6dc4e6c933e7b513379a1797b345a4be040",
+      "valis_expected_typed_outcome": "REFUSAL",
+      "comparator_expected_verdict": "REFUSAL",
+      "representability_status": "covered_by_control_surface",
+      "comparator_fixture_status": "NORMALIZED_FIXTURE_PRESENT",
+      "runnable_now": true,
+      "differential_outcome": "MATCH",
+      "differential_detail": "Comparator matches top-level verdict and checked projection/evidence axes.",
+      "differential_axes": [
+        {
+          "axis": "verdict",
+          "expected": "REFUSAL",
+          "observed": "REFUSAL",
+          "match": true
+        },
+        {
+          "axis": "release_allowed",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "consequence_must_be_mediated",
+          "expected": true,
+          "observed": true,
+          "match": true
+        },
+        {
+          "axis": "uncertainty_must_not_widen_authority",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "future_release_allowed_after_transition",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "external_truth_observation_distinction",
+          "expected": true,
+          "observed": true,
+          "match": true
+        },
+        {
+          "axis": "scalar_confidence_insufficient",
+          "expected": true,
+          "observed": true,
+          "match": true
+        }
+      ],
+      "failed_differential_axes": [],
+      "reason": "Comparator fixture is present and was checked for minimum shape."
+    },
+    {
+      "vector_id": "V007",
+      "title": "Expiry",
+      "priority_case": false,
+      "cr_fixture_digest": "sha256:e1135ee2fe957c9664823755534bc7d8fb09ba5681f69e59a2fd5c9621d46cd2",
+      "comparator_fixture_digest": "sha256:1f040a30126fe50fd69719c046770dc9fa906b78621017cc52b3b0ca8b30f7b2",
+      "valis_expected_typed_outcome": "REFUSAL",
+      "comparator_expected_verdict": "REFUSAL",
+      "representability_status": "covered_by_control_surface",
+      "comparator_fixture_status": "NORMALIZED_FIXTURE_PRESENT",
+      "runnable_now": true,
+      "differential_outcome": "MATCH",
+      "differential_detail": "Comparator matches top-level verdict and checked projection/evidence axes.",
+      "differential_axes": [
+        {
+          "axis": "verdict",
+          "expected": "REFUSAL",
+          "observed": "REFUSAL",
+          "match": true
+        },
+        {
+          "axis": "release_allowed",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "consequence_must_be_mediated",
+          "expected": true,
+          "observed": true,
+          "match": true
+        },
+        {
+          "axis": "uncertainty_must_not_widen_authority",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "future_release_allowed_after_transition",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "external_truth_observation_distinction",
+          "expected": true,
+          "observed": true,
+          "match": true
+        },
+        {
+          "axis": "scalar_confidence_insufficient",
+          "expected": true,
+          "observed": true,
+          "match": true
+        }
+      ],
+      "failed_differential_axes": [],
+      "reason": "Comparator fixture is present and was checked for minimum shape."
+    },
+    {
+      "vector_id": "V008",
+      "title": "Pre-Finality Revocation",
+      "priority_case": false,
+      "cr_fixture_digest": "sha256:1a87b04b9ed76386ef1f89f7a10369f5e7b6cb2b4a49d7cd936f718b374441fe",
+      "comparator_fixture_digest": "sha256:646a82704be9f37e51b136abd02fe56ca06d105aeb61b20961df6f414368807e",
+      "valis_expected_typed_outcome": "REFUSAL",
+      "comparator_expected_verdict": "REFUSAL",
+      "representability_status": "covered_by_control_surface",
+      "comparator_fixture_status": "NORMALIZED_FIXTURE_PRESENT",
+      "runnable_now": true,
+      "differential_outcome": "MATCH",
+      "differential_detail": "Comparator matches top-level verdict and checked projection/evidence axes.",
+      "differential_axes": [
+        {
+          "axis": "verdict",
+          "expected": "REFUSAL",
+          "observed": "REFUSAL",
+          "match": true
+        },
+        {
+          "axis": "release_allowed",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "consequence_must_be_mediated",
+          "expected": true,
+          "observed": true,
+          "match": true
+        },
+        {
+          "axis": "uncertainty_must_not_widen_authority",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "future_release_allowed_after_transition",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "external_truth_observation_distinction",
+          "expected": true,
+          "observed": true,
+          "match": true
+        },
+        {
+          "axis": "scalar_confidence_insufficient",
+          "expected": true,
+          "observed": true,
+          "match": true
+        }
+      ],
+      "failed_differential_axes": [],
+      "reason": "Comparator fixture is present and was checked for minimum shape."
+    },
+    {
+      "vector_id": "V009",
+      "title": "Post-Finality Revocation",
+      "priority_case": true,
+      "cr_fixture_digest": "sha256:e4d93b8dce59175a832ec2db26f172f1a08a686ddffbaa8de0c840dd756d5a36",
+      "comparator_fixture_digest": "sha256:e5a789732a6b3620117b61dbbd1c8839d9ac5a5ac45e085a1039dd011f9c09c5",
+      "valis_expected_typed_outcome": "EVIDENCE_REQUIRED",
+      "comparator_expected_verdict": "EVIDENCE_REQUIRED",
+      "representability_status": "partially_representable",
+      "comparator_fixture_status": "NORMALIZED_FIXTURE_PRESENT",
+      "runnable_now": true,
+      "differential_outcome": "MATCH",
+      "differential_detail": "Comparator matches top-level verdict and checked projection/evidence axes.",
+      "differential_axes": [
+        {
+          "axis": "verdict",
+          "expected": "EVIDENCE_REQUIRED",
+          "observed": "EVIDENCE_REQUIRED",
+          "match": true
+        },
+        {
+          "axis": "release_allowed",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "consequence_must_be_mediated",
+          "expected": true,
+          "observed": true,
+          "match": true
+        },
+        {
+          "axis": "uncertainty_must_not_widen_authority",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "future_release_allowed_after_transition",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "external_truth_observation_distinction",
+          "expected": true,
+          "observed": true,
+          "match": true
+        },
+        {
+          "axis": "scalar_confidence_insufficient",
+          "expected": true,
+          "observed": true,
+          "match": true
+        }
+      ],
+      "failed_differential_axes": [],
+      "reason": "Comparator fixture is present and was checked for minimum shape."
+    },
+    {
+      "vector_id": "V010",
+      "title": "Aggregate Exposure",
+      "priority_case": false,
+      "cr_fixture_digest": "sha256:400d5be01fe8828661f50ef69470999cb6a81e18af51aeee685838d3e9c839d1",
+      "comparator_fixture_digest": "sha256:ee76f0335b5ad10de9afa47643b2c3feab49475d55fe41bc64f1e5439d7868c6",
+      "valis_expected_typed_outcome": "REFUSAL",
+      "comparator_expected_verdict": "REFUSAL",
+      "representability_status": "covered_by_control_surface",
+      "comparator_fixture_status": "NORMALIZED_FIXTURE_PRESENT",
+      "runnable_now": true,
+      "differential_outcome": "MATCH",
+      "differential_detail": "Comparator matches top-level verdict and checked projection/evidence axes.",
+      "differential_axes": [
+        {
+          "axis": "verdict",
+          "expected": "REFUSAL",
+          "observed": "REFUSAL",
+          "match": true
+        },
+        {
+          "axis": "release_allowed",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "consequence_must_be_mediated",
+          "expected": true,
+          "observed": true,
+          "match": true
+        },
+        {
+          "axis": "uncertainty_must_not_widen_authority",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "future_release_allowed_after_transition",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "external_truth_observation_distinction",
+          "expected": true,
+          "observed": true,
+          "match": true
+        },
+        {
+          "axis": "scalar_confidence_insufficient",
+          "expected": true,
+          "observed": true,
+          "match": true
+        }
+      ],
+      "failed_differential_axes": [],
+      "reason": "Comparator fixture is present and was checked for minimum shape."
+    },
+    {
+      "vector_id": "V011",
+      "title": "Shared-Principal Anti-Sharding",
+      "priority_case": false,
+      "cr_fixture_digest": "sha256:045eef27fbe17a62be2f5a2ed94709951124c088e15520d98874e0ecc634cbf0",
+      "comparator_fixture_digest": "sha256:5f574c3c4858acd884e6f064d1d13e53f1ac94f38a4bee3cd282c7851ee8e33d",
+      "valis_expected_typed_outcome": "REFUSAL",
+      "comparator_expected_verdict": "REFUSAL",
+      "representability_status": "partially_representable",
+      "comparator_fixture_status": "NORMALIZED_FIXTURE_PRESENT",
+      "runnable_now": true,
+      "differential_outcome": "MATCH",
+      "differential_detail": "Comparator matches top-level verdict and checked projection/evidence axes.",
+      "differential_axes": [
+        {
+          "axis": "verdict",
+          "expected": "REFUSAL",
+          "observed": "REFUSAL",
+          "match": true
+        },
+        {
+          "axis": "release_allowed",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "consequence_must_be_mediated",
+          "expected": true,
+          "observed": true,
+          "match": true
+        },
+        {
+          "axis": "uncertainty_must_not_widen_authority",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "future_release_allowed_after_transition",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "external_truth_observation_distinction",
+          "expected": true,
+          "observed": true,
+          "match": true
+        },
+        {
+          "axis": "scalar_confidence_insufficient",
+          "expected": true,
+          "observed": true,
+          "match": true
+        }
+      ],
+      "failed_differential_axes": [],
+      "reason": "Comparator fixture is present and was checked for minimum shape."
+    },
+    {
+      "vector_id": "V012",
+      "title": "Concurrency",
+      "priority_case": false,
+      "cr_fixture_digest": "sha256:7ca77c3d71b9c7d619b7ca228fe77ae119d2d0586dfb26ad44eabf85693438c8",
+      "comparator_fixture_digest": "sha256:62b02ec5c7b39125e71b33a19c779c34b5a981bef003c4704ea7405e433256b6",
+      "valis_expected_typed_outcome": "REFUSAL_OR_SERIALIZED",
+      "comparator_expected_verdict": "REFUSAL_OR_SERIALIZED",
+      "representability_status": "requires_failure_injection",
+      "comparator_fixture_status": "NORMALIZED_FIXTURE_PRESENT",
+      "runnable_now": true,
+      "differential_outcome": "MATCH",
+      "differential_detail": "Comparator matches top-level verdict and checked projection/evidence axes.",
+      "differential_axes": [
+        {
+          "axis": "verdict",
+          "expected": "REFUSAL_OR_SERIALIZED",
+          "observed": "REFUSAL_OR_SERIALIZED",
+          "match": true
+        },
+        {
+          "axis": "release_allowed",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "consequence_must_be_mediated",
+          "expected": true,
+          "observed": true,
+          "match": true
+        },
+        {
+          "axis": "uncertainty_must_not_widen_authority",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "future_release_allowed_after_transition",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "external_truth_observation_distinction",
+          "expected": true,
+          "observed": true,
+          "match": true
+        },
+        {
+          "axis": "scalar_confidence_insufficient",
+          "expected": true,
+          "observed": true,
+          "match": true
+        }
+      ],
+      "failed_differential_axes": [],
+      "reason": "Comparator fixture is present and was checked for minimum shape."
+    },
+    {
+      "vector_id": "V013",
+      "title": "UNKNOWN Effect",
+      "priority_case": true,
+      "cr_fixture_digest": "sha256:fd47ea6fe06bb4567c843e776107e86a02d711c06fe09ad1472abbe9270de261",
+      "comparator_fixture_digest": "sha256:6a5721a0dd1d11bf054f3e62c2164aa98f550754a8624090fd921741955961ac",
+      "valis_expected_typed_outcome": "INDETERMINATE",
+      "comparator_expected_verdict": "INDETERMINATE",
+      "representability_status": "covered_by_control_surface",
+      "comparator_fixture_status": "NORMALIZED_FIXTURE_PRESENT",
+      "runnable_now": true,
+      "differential_outcome": "MATCH",
+      "differential_detail": "Comparator matches top-level verdict and checked projection/evidence axes.",
+      "differential_axes": [
+        {
+          "axis": "verdict",
+          "expected": "INDETERMINATE",
+          "observed": "INDETERMINATE",
+          "match": true
+        },
+        {
+          "axis": "release_allowed",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "consequence_must_be_mediated",
+          "expected": true,
+          "observed": true,
+          "match": true
+        },
+        {
+          "axis": "uncertainty_must_not_widen_authority",
+          "expected": true,
+          "observed": true,
+          "match": true
+        },
+        {
+          "axis": "future_release_allowed_after_transition",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "external_truth_observation_distinction",
+          "expected": true,
+          "observed": true,
+          "match": true
+        },
+        {
+          "axis": "scalar_confidence_insufficient",
+          "expected": true,
+          "observed": true,
+          "match": true
+        }
+      ],
+      "failed_differential_axes": [],
+      "reason": "Comparator fixture is present and was checked for minimum shape."
+    },
+    {
+      "vector_id": "V014",
+      "title": "PARTIAL Effect",
+      "priority_case": true,
+      "cr_fixture_digest": "sha256:638c720a6703821f59c0d440fecf405ca050f0402549417c7ed81f8c6ea60c44",
+      "comparator_fixture_digest": "sha256:4f5c0abad10e84865c223db6134590cfbfee9aa83877b8c5e3b5defd68434253",
+      "valis_expected_typed_outcome": "INDETERMINATE",
+      "comparator_expected_verdict": "INDETERMINATE",
+      "representability_status": "requires_higher_level_endpoint",
+      "comparator_fixture_status": "NORMALIZED_FIXTURE_PRESENT",
+      "runnable_now": true,
+      "differential_outcome": "MATCH",
+      "differential_detail": "Comparator matches top-level verdict and checked projection/evidence axes.",
+      "differential_axes": [
+        {
+          "axis": "verdict",
+          "expected": "INDETERMINATE",
+          "observed": "INDETERMINATE",
+          "match": true
+        },
+        {
+          "axis": "release_allowed",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "consequence_must_be_mediated",
+          "expected": true,
+          "observed": true,
+          "match": true
+        },
+        {
+          "axis": "uncertainty_must_not_widen_authority",
+          "expected": true,
+          "observed": true,
+          "match": true
+        },
+        {
+          "axis": "future_release_allowed_after_transition",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "external_truth_observation_distinction",
+          "expected": true,
+          "observed": true,
+          "match": true
+        },
+        {
+          "axis": "scalar_confidence_insufficient",
+          "expected": true,
+          "observed": true,
+          "match": true
+        }
+      ],
+      "failed_differential_axes": [],
+      "reason": "Comparator fixture is present and was checked for minimum shape."
+    },
+    {
+      "vector_id": "V015",
+      "title": "Restart Non-Widening",
+      "priority_case": false,
+      "cr_fixture_digest": "sha256:fd60d5b1d4b1e243a29f53af8ca9f3f7ec80b7434eb61691ff72cc1a386ea2f9",
+      "comparator_fixture_digest": "sha256:a9cce5d4aa3ee9f382900a2fa58cb8dd7914f0dc0564608db5c984868fc3a835",
+      "valis_expected_typed_outcome": "REFUSAL_OR_HOLD",
+      "comparator_expected_verdict": "REFUSAL_OR_HOLD",
+      "representability_status": "covered_by_control_surface",
+      "comparator_fixture_status": "NORMALIZED_FIXTURE_PRESENT",
+      "runnable_now": true,
+      "differential_outcome": "MATCH",
+      "differential_detail": "Comparator matches top-level verdict and checked projection/evidence axes.",
+      "differential_axes": [
+        {
+          "axis": "verdict",
+          "expected": "REFUSAL_OR_HOLD",
+          "observed": "REFUSAL_OR_HOLD",
+          "match": true
+        },
+        {
+          "axis": "release_allowed",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "consequence_must_be_mediated",
+          "expected": true,
+          "observed": true,
+          "match": true
+        },
+        {
+          "axis": "uncertainty_must_not_widen_authority",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "future_release_allowed_after_transition",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "external_truth_observation_distinction",
+          "expected": true,
+          "observed": true,
+          "match": true
+        },
+        {
+          "axis": "scalar_confidence_insufficient",
+          "expected": true,
+          "observed": true,
+          "match": true
+        }
+      ],
+      "failed_differential_axes": [],
+      "reason": "Comparator fixture is present and was checked for minimum shape."
+    },
+    {
+      "vector_id": "V016",
+      "title": "Verifier Unavailable",
+      "priority_case": false,
+      "cr_fixture_digest": "sha256:f08655596bfaf1d9ad7d772a8c373c02b6a26e63715420d484f669cac2f03120",
+      "comparator_fixture_digest": "sha256:d1ad730faea72d2cef081b10daf04c12932300ca65fbb102ab30f7fd81015d13",
+      "valis_expected_typed_outcome": "HOLD",
+      "comparator_expected_verdict": "HOLD",
+      "representability_status": "requires_failure_injection",
+      "comparator_fixture_status": "NORMALIZED_FIXTURE_PRESENT",
+      "runnable_now": true,
+      "differential_outcome": "MATCH",
+      "differential_detail": "Comparator matches top-level verdict and checked projection/evidence axes.",
+      "differential_axes": [
+        {
+          "axis": "verdict",
+          "expected": "HOLD",
+          "observed": "HOLD",
+          "match": true
+        },
+        {
+          "axis": "release_allowed",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "consequence_must_be_mediated",
+          "expected": true,
+          "observed": true,
+          "match": true
+        },
+        {
+          "axis": "uncertainty_must_not_widen_authority",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "future_release_allowed_after_transition",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "external_truth_observation_distinction",
+          "expected": true,
+          "observed": true,
+          "match": true
+        },
+        {
+          "axis": "scalar_confidence_insufficient",
+          "expected": true,
+          "observed": true,
+          "match": true
+        }
+      ],
+      "failed_differential_axes": [],
+      "reason": "Comparator fixture is present and was checked for minimum shape."
+    },
+    {
+      "vector_id": "V017",
+      "title": "Ledger Unavailable",
+      "priority_case": false,
+      "cr_fixture_digest": "sha256:2f6b7cbd6c055ba7968539d59ca5aacd00169e4ba6d50d924503b741e07e9989",
+      "comparator_fixture_digest": "sha256:131d5c16a3d775ac07c53b1df80fdb2fa89160aef61b4ee0d33ff690d748b5b5",
+      "valis_expected_typed_outcome": "HOLD",
+      "comparator_expected_verdict": "HOLD",
+      "representability_status": "requires_failure_injection",
+      "comparator_fixture_status": "NORMALIZED_FIXTURE_PRESENT",
+      "runnable_now": true,
+      "differential_outcome": "MATCH",
+      "differential_detail": "Comparator matches top-level verdict and checked projection/evidence axes.",
+      "differential_axes": [
+        {
+          "axis": "verdict",
+          "expected": "HOLD",
+          "observed": "HOLD",
+          "match": true
+        },
+        {
+          "axis": "release_allowed",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "consequence_must_be_mediated",
+          "expected": true,
+          "observed": true,
+          "match": true
+        },
+        {
+          "axis": "uncertainty_must_not_widen_authority",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "future_release_allowed_after_transition",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "external_truth_observation_distinction",
+          "expected": true,
+          "observed": true,
+          "match": true
+        },
+        {
+          "axis": "scalar_confidence_insufficient",
+          "expected": true,
+          "observed": true,
+          "match": true
+        }
+      ],
+      "failed_differential_axes": [],
+      "reason": "Comparator fixture is present and was checked for minimum shape."
+    },
+    {
+      "vector_id": "V018",
+      "title": "Failed Dependency",
+      "priority_case": false,
+      "cr_fixture_digest": "sha256:326bdaaaea606e37953949e63cbd20bbe97c45ce15b019b2b380f7b63f51322f",
+      "comparator_fixture_digest": "sha256:9a65c9c803e6282ea80bfe434263f4677cbd2ecfd5c40439af47ac1c4bd8754d",
+      "valis_expected_typed_outcome": "REFUSAL",
+      "comparator_expected_verdict": "REFUSAL",
+      "representability_status": "requires_semantic_mapping",
+      "comparator_fixture_status": "NORMALIZED_FIXTURE_PRESENT",
+      "runnable_now": true,
+      "differential_outcome": "MATCH",
+      "differential_detail": "Comparator matches top-level verdict and checked projection/evidence axes.",
+      "differential_axes": [
+        {
+          "axis": "verdict",
+          "expected": "REFUSAL",
+          "observed": "REFUSAL",
+          "match": true
+        },
+        {
+          "axis": "release_allowed",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "consequence_must_be_mediated",
+          "expected": true,
+          "observed": true,
+          "match": true
+        },
+        {
+          "axis": "uncertainty_must_not_widen_authority",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "future_release_allowed_after_transition",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "external_truth_observation_distinction",
+          "expected": true,
+          "observed": true,
+          "match": true
+        },
+        {
+          "axis": "scalar_confidence_insufficient",
+          "expected": true,
+          "observed": true,
+          "match": true
+        }
+      ],
+      "failed_differential_axes": [],
+      "reason": "Comparator fixture is present and was checked for minimum shape."
+    },
+    {
+      "vector_id": "V019",
+      "title": "Stale State",
+      "priority_case": false,
+      "cr_fixture_digest": "sha256:2c097e920320f4a370c5d721201964505cf89a06ed6e18278101be102bdcedc3",
+      "comparator_fixture_digest": "sha256:126bd1cd5793a6c3209c93e49560feee1b9b111eb09b5df0c9e0df97473f98c3",
+      "valis_expected_typed_outcome": "REFUSAL",
+      "comparator_expected_verdict": "REFUSAL",
+      "representability_status": "covered_by_control_surface",
+      "comparator_fixture_status": "NORMALIZED_FIXTURE_PRESENT",
+      "runnable_now": true,
+      "differential_outcome": "MATCH",
+      "differential_detail": "Comparator matches top-level verdict and checked projection/evidence axes.",
+      "differential_axes": [
+        {
+          "axis": "verdict",
+          "expected": "REFUSAL",
+          "observed": "REFUSAL",
+          "match": true
+        },
+        {
+          "axis": "release_allowed",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "consequence_must_be_mediated",
+          "expected": true,
+          "observed": true,
+          "match": true
+        },
+        {
+          "axis": "uncertainty_must_not_widen_authority",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "future_release_allowed_after_transition",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "external_truth_observation_distinction",
+          "expected": true,
+          "observed": true,
+          "match": true
+        },
+        {
+          "axis": "scalar_confidence_insufficient",
+          "expected": true,
+          "observed": true,
+          "match": true
+        }
+      ],
+      "failed_differential_axes": [],
+      "reason": "Comparator fixture is present and was checked for minimum shape."
+    },
+    {
+      "vector_id": "V020",
+      "title": "Wrong Executor",
+      "priority_case": false,
+      "cr_fixture_digest": "sha256:721abb1b39be167d95bae768d8460dca0ed5c6d21e8d5b9b5a680d54af263200",
+      "comparator_fixture_digest": "sha256:3303614a4a85a981e94c9f1cd4ce744a152c81aa49ca706958e200438419a529",
+      "valis_expected_typed_outcome": "REFUSAL",
+      "comparator_expected_verdict": "REFUSAL",
+      "representability_status": "covered_by_control_surface",
+      "comparator_fixture_status": "NORMALIZED_FIXTURE_PRESENT",
+      "runnable_now": true,
+      "differential_outcome": "MATCH",
+      "differential_detail": "Comparator matches top-level verdict and checked projection/evidence axes.",
+      "differential_axes": [
+        {
+          "axis": "verdict",
+          "expected": "REFUSAL",
+          "observed": "REFUSAL",
+          "match": true
+        },
+        {
+          "axis": "release_allowed",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "consequence_must_be_mediated",
+          "expected": true,
+          "observed": true,
+          "match": true
+        },
+        {
+          "axis": "uncertainty_must_not_widen_authority",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "future_release_allowed_after_transition",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "external_truth_observation_distinction",
+          "expected": true,
+          "observed": true,
+          "match": true
+        },
+        {
+          "axis": "scalar_confidence_insufficient",
+          "expected": true,
+          "observed": true,
+          "match": true
+        }
+      ],
+      "failed_differential_axes": [],
+      "reason": "Comparator fixture is present and was checked for minimum shape."
+    },
+    {
+      "vector_id": "V021",
+      "title": "Effect Before Receipt Crash",
+      "priority_case": true,
+      "cr_fixture_digest": "sha256:09e046bfa6fb5681b451a8cd5a8e1e04f735f5d3dee753afdbe24759c53dbda6",
+      "comparator_fixture_digest": "sha256:7157d752a0b365e46d759be697078673dcef49b1c1dae8f73ffe1cef7bce7cbc",
+      "valis_expected_typed_outcome": "INDETERMINATE",
+      "comparator_expected_verdict": "INDETERMINATE",
+      "representability_status": "covered_by_control_surface",
+      "comparator_fixture_status": "NORMALIZED_FIXTURE_PRESENT",
+      "runnable_now": true,
+      "differential_outcome": "MATCH",
+      "differential_detail": "Comparator matches top-level verdict and checked projection/evidence axes.",
+      "differential_axes": [
+        {
+          "axis": "verdict",
+          "expected": "INDETERMINATE",
+          "observed": "INDETERMINATE",
+          "match": true
+        },
+        {
+          "axis": "release_allowed",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "consequence_must_be_mediated",
+          "expected": true,
+          "observed": true,
+          "match": true
+        },
+        {
+          "axis": "uncertainty_must_not_widen_authority",
+          "expected": true,
+          "observed": true,
+          "match": true
+        },
+        {
+          "axis": "future_release_allowed_after_transition",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "external_truth_observation_distinction",
+          "expected": true,
+          "observed": true,
+          "match": true
+        },
+        {
+          "axis": "scalar_confidence_insufficient",
+          "expected": true,
+          "observed": true,
+          "match": true
+        }
+      ],
+      "failed_differential_axes": [],
+      "reason": "Comparator fixture is present and was checked for minimum shape."
+    },
+    {
+      "vector_id": "V022",
+      "title": "Forged Receipt",
+      "priority_case": false,
+      "cr_fixture_digest": "sha256:108b7c371ba9aaf72ac73a63d4f80fc00496ec2cd721a348e04057b0ff0adbcb",
+      "comparator_fixture_digest": "sha256:e633958b5cf2ef42b274ae305176b1fcd8e2eb56506bfc53f63a2badd3d0dad2",
+      "valis_expected_typed_outcome": "REFUSAL",
+      "comparator_expected_verdict": "REFUSAL",
+      "representability_status": "covered_by_control_surface",
+      "comparator_fixture_status": "NORMALIZED_FIXTURE_PRESENT",
+      "runnable_now": true,
+      "differential_outcome": "MATCH",
+      "differential_detail": "Comparator matches top-level verdict and checked projection/evidence axes.",
+      "differential_axes": [
+        {
+          "axis": "verdict",
+          "expected": "REFUSAL",
+          "observed": "REFUSAL",
+          "match": true
+        },
+        {
+          "axis": "release_allowed",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "consequence_must_be_mediated",
+          "expected": true,
+          "observed": true,
+          "match": true
+        },
+        {
+          "axis": "uncertainty_must_not_widen_authority",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "future_release_allowed_after_transition",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "external_truth_observation_distinction",
+          "expected": true,
+          "observed": true,
+          "match": true
+        },
+        {
+          "axis": "scalar_confidence_insufficient",
+          "expected": true,
+          "observed": true,
+          "match": true
+        }
+      ],
+      "failed_differential_axes": [],
+      "reason": "Comparator fixture is present and was checked for minimum shape."
+    },
+    {
+      "vector_id": "V023",
+      "title": "Scoped Recovery",
+      "priority_case": false,
+      "cr_fixture_digest": "sha256:88ba625ac22599731f913a550e52a91dcad05acf416339790f1206674073efc5",
+      "comparator_fixture_digest": "sha256:c4a4184a46f672488eb33bfe69300fc24eb924e8bf2c72a5f441875eb61b1cde",
+      "valis_expected_typed_outcome": "HOLD_OR_RELEASE_SCOPED",
+      "comparator_expected_verdict": "HOLD_OR_RELEASE_SCOPED",
+      "representability_status": "partially_representable",
+      "comparator_fixture_status": "NORMALIZED_FIXTURE_PRESENT",
+      "runnable_now": true,
+      "differential_outcome": "MATCH",
+      "differential_detail": "Comparator matches top-level verdict and checked projection/evidence axes.",
+      "differential_axes": [
+        {
+          "axis": "verdict",
+          "expected": "HOLD_OR_RELEASE_SCOPED",
+          "observed": "HOLD_OR_RELEASE_SCOPED",
+          "match": true
+        },
+        {
+          "axis": "release_allowed",
+          "expected": true,
+          "observed": true,
+          "match": true
+        },
+        {
+          "axis": "consequence_must_be_mediated",
+          "expected": true,
+          "observed": true,
+          "match": true
+        },
+        {
+          "axis": "uncertainty_must_not_widen_authority",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "future_release_allowed_after_transition",
+          "expected": true,
+          "observed": true,
+          "match": true
+        },
+        {
+          "axis": "external_truth_observation_distinction",
+          "expected": true,
+          "observed": true,
+          "match": true
+        },
+        {
+          "axis": "scalar_confidence_insufficient",
+          "expected": true,
+          "observed": true,
+          "match": true
+        }
+      ],
+      "failed_differential_axes": [],
+      "reason": "Comparator fixture is present and was checked for minimum shape."
+    },
+    {
+      "vector_id": "V024",
+      "title": "Runtime Digest Mismatch",
+      "priority_case": false,
+      "cr_fixture_digest": "sha256:f7308d28891e3c27b55e2af84d9d5a6c47919b003c79acc0ea8ee6506ecfac9b",
+      "comparator_fixture_digest": "sha256:27e5a78b887a95d75f42c564de6d4c07f51b1d737b2d1cd5e773a2255f1a47e7",
+      "valis_expected_typed_outcome": "REFUSAL",
+      "comparator_expected_verdict": "REFUSAL",
+      "representability_status": "covered_by_control_surface",
+      "comparator_fixture_status": "NORMALIZED_FIXTURE_PRESENT",
+      "runnable_now": true,
+      "differential_outcome": "MATCH",
+      "differential_detail": "Comparator matches top-level verdict and checked projection/evidence axes.",
+      "differential_axes": [
+        {
+          "axis": "verdict",
+          "expected": "REFUSAL",
+          "observed": "REFUSAL",
+          "match": true
+        },
+        {
+          "axis": "release_allowed",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "consequence_must_be_mediated",
+          "expected": true,
+          "observed": true,
+          "match": true
+        },
+        {
+          "axis": "uncertainty_must_not_widen_authority",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "future_release_allowed_after_transition",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "external_truth_observation_distinction",
+          "expected": true,
+          "observed": true,
+          "match": true
+        },
+        {
+          "axis": "scalar_confidence_insufficient",
+          "expected": true,
+          "observed": true,
+          "match": true
+        }
+      ],
+      "failed_differential_axes": [],
+      "reason": "Comparator fixture is present and was checked for minimum shape."
+    },
+    {
+      "vector_id": "V025",
+      "title": "LIVE_BOUND Authority Revocation",
+      "priority_case": true,
+      "cr_fixture_digest": "sha256:0e80e3b901a4e94f1fa492c949d38b3da36b5dc60ed77c4c6e00f58cbbfa6d72",
+      "comparator_fixture_digest": "sha256:d5c79d39d80af7cdc9575c400284237628d7c6faa85d74ddc78f0afeeae02e8b",
+      "valis_expected_typed_outcome": "REFUSAL",
+      "comparator_expected_verdict": "REFUSAL",
+      "representability_status": "covered_by_control_surface",
+      "comparator_fixture_status": "NORMALIZED_FIXTURE_PRESENT",
+      "runnable_now": true,
+      "differential_outcome": "MATCH",
+      "differential_detail": "Comparator matches top-level verdict and checked projection/evidence axes.",
+      "differential_axes": [
+        {
+          "axis": "verdict",
+          "expected": "REFUSAL",
+          "observed": "REFUSAL",
+          "match": true
+        },
+        {
+          "axis": "release_allowed",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "consequence_must_be_mediated",
+          "expected": true,
+          "observed": true,
+          "match": true
+        },
+        {
+          "axis": "uncertainty_must_not_widen_authority",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "future_release_allowed_after_transition",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "external_truth_observation_distinction",
+          "expected": true,
+          "observed": true,
+          "match": true
+        },
+        {
+          "axis": "scalar_confidence_insufficient",
+          "expected": true,
+          "observed": true,
+          "match": true
+        }
+      ],
+      "failed_differential_axes": [],
+      "reason": "Comparator fixture is present and was checked for minimum shape."
+    },
+    {
+      "vector_id": "V026",
+      "title": "Correlated Counterparty Exposure",
+      "priority_case": false,
+      "cr_fixture_digest": "sha256:380a93401c5469031817bc053951dfdba66039f903e02ba326c43100d755e776",
+      "comparator_fixture_digest": "sha256:7c88b0559f3f896da0fa47221f7960a29e9b154c465e1feca618ec6f3ab33da5",
+      "valis_expected_typed_outcome": "REFUSAL",
+      "comparator_expected_verdict": "REFUSAL",
+      "representability_status": "partially_representable",
+      "comparator_fixture_status": "NORMALIZED_FIXTURE_PRESENT",
+      "runnable_now": true,
+      "differential_outcome": "MATCH",
+      "differential_detail": "Comparator matches top-level verdict and checked projection/evidence axes.",
+      "differential_axes": [
+        {
+          "axis": "verdict",
+          "expected": "REFUSAL",
+          "observed": "REFUSAL",
+          "match": true
+        },
+        {
+          "axis": "release_allowed",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "consequence_must_be_mediated",
+          "expected": true,
+          "observed": true,
+          "match": true
+        },
+        {
+          "axis": "uncertainty_must_not_widen_authority",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "future_release_allowed_after_transition",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "external_truth_observation_distinction",
+          "expected": true,
+          "observed": true,
+          "match": true
+        },
+        {
+          "axis": "scalar_confidence_insufficient",
+          "expected": true,
+          "observed": true,
+          "match": true
+        }
+      ],
+      "failed_differential_axes": [],
+      "reason": "Comparator fixture is present and was checked for minimum shape."
+    },
+    {
+      "vector_id": "V027",
+      "title": "UNKNOWN Effect Plus New Authorization",
+      "priority_case": true,
+      "cr_fixture_digest": "sha256:2ac1aedc9d521604575d16e486de9bee6172f0fc64de6f0280252bc0eaed6bc1",
+      "comparator_fixture_digest": "sha256:646a9a8743ef1345bd8ecaa6db4119fd73cce61e4cb2bdd9efa0dd39d61a7e44",
+      "valis_expected_typed_outcome": "REFUSAL_OR_HOLD",
+      "comparator_expected_verdict": "REFUSAL_OR_HOLD",
+      "representability_status": "partially_representable",
+      "comparator_fixture_status": "NORMALIZED_FIXTURE_PRESENT",
+      "runnable_now": true,
+      "differential_outcome": "MATCH",
+      "differential_detail": "Comparator matches top-level verdict and checked projection/evidence axes.",
+      "differential_axes": [
+        {
+          "axis": "verdict",
+          "expected": "REFUSAL_OR_HOLD",
+          "observed": "REFUSAL_OR_HOLD",
+          "match": true
+        },
+        {
+          "axis": "release_allowed",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "consequence_must_be_mediated",
+          "expected": true,
+          "observed": true,
+          "match": true
+        },
+        {
+          "axis": "uncertainty_must_not_widen_authority",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "future_release_allowed_after_transition",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "external_truth_observation_distinction",
+          "expected": true,
+          "observed": true,
+          "match": true
+        },
+        {
+          "axis": "scalar_confidence_insufficient",
+          "expected": true,
+          "observed": true,
+          "match": true
+        }
+      ],
+      "failed_differential_axes": [],
+      "reason": "Comparator fixture is present and was checked for minimum shape."
+    },
+    {
+      "vector_id": "V028",
+      "title": "Nested Delegation",
+      "priority_case": false,
+      "cr_fixture_digest": "sha256:bd12221edfacd463a3cd7985a40b031651cdcf2d6a19dc0d1c37871891c4a528",
+      "comparator_fixture_digest": "sha256:6458c8d634acd4aa725c7038ee3084f0e00532124f74c796f89942b1c47296bd",
+      "valis_expected_typed_outcome": "REFUSAL",
+      "comparator_expected_verdict": "REFUSAL",
+      "representability_status": "requires_semantic_mapping",
+      "comparator_fixture_status": "NORMALIZED_FIXTURE_PRESENT",
+      "runnable_now": true,
+      "differential_outcome": "MATCH",
+      "differential_detail": "Comparator matches top-level verdict and checked projection/evidence axes.",
+      "differential_axes": [
+        {
+          "axis": "verdict",
+          "expected": "REFUSAL",
+          "observed": "REFUSAL",
+          "match": true
+        },
+        {
+          "axis": "release_allowed",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "consequence_must_be_mediated",
+          "expected": true,
+          "observed": true,
+          "match": true
+        },
+        {
+          "axis": "uncertainty_must_not_widen_authority",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "future_release_allowed_after_transition",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "external_truth_observation_distinction",
+          "expected": true,
+          "observed": true,
+          "match": true
+        },
+        {
+          "axis": "scalar_confidence_insufficient",
+          "expected": true,
+          "observed": true,
+          "match": true
+        }
+      ],
+      "failed_differential_axes": [],
+      "reason": "Comparator fixture is present and was checked for minimum shape."
+    },
+    {
+      "vector_id": "V029",
+      "title": "Late Evidence Correction",
+      "priority_case": true,
+      "cr_fixture_digest": "sha256:ac0c636b8a5d40377a2000659a827dab144cc0294128db53c7259055b3c83010",
+      "comparator_fixture_digest": "sha256:46c4ec8a4b3e89eea60e6766ea2e9357c886fded6eed588e791d37305d78cb41",
+      "valis_expected_typed_outcome": "EVIDENCE_CORRECTION",
+      "comparator_expected_verdict": "EVIDENCE_CORRECTION",
+      "representability_status": "requires_higher_level_endpoint",
+      "comparator_fixture_status": "NORMALIZED_FIXTURE_PRESENT",
+      "runnable_now": true,
+      "differential_outcome": "MATCH",
+      "differential_detail": "Comparator matches top-level verdict and checked projection/evidence axes.",
+      "differential_axes": [
+        {
+          "axis": "verdict",
+          "expected": "EVIDENCE_CORRECTION",
+          "observed": "EVIDENCE_CORRECTION",
+          "match": true
+        },
+        {
+          "axis": "release_allowed",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "consequence_must_be_mediated",
+          "expected": true,
+          "observed": true,
+          "match": true
+        },
+        {
+          "axis": "uncertainty_must_not_widen_authority",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "future_release_allowed_after_transition",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "external_truth_observation_distinction",
+          "expected": true,
+          "observed": true,
+          "match": true
+        },
+        {
+          "axis": "scalar_confidence_insufficient",
+          "expected": true,
+          "observed": true,
+          "match": true
+        }
+      ],
+      "failed_differential_axes": [],
+      "reason": "Comparator fixture is present and was checked for minimum shape."
+    },
+    {
+      "vector_id": "V030",
+      "title": "Locally Safe Globally Forbidden",
+      "priority_case": true,
+      "cr_fixture_digest": "sha256:09150ca490198adf91e2418ad8ef3b37146ba58b76add4dcae4222672838efd0",
+      "comparator_fixture_digest": "sha256:c1887022197b2eeed541815beab3cf5e961910ea0f770a33505f6ed411e05fb7",
+      "valis_expected_typed_outcome": "REFUSAL",
+      "comparator_expected_verdict": "REFUSAL",
+      "representability_status": "requires_distributed_state_test",
+      "comparator_fixture_status": "NORMALIZED_FIXTURE_PRESENT",
+      "runnable_now": true,
+      "differential_outcome": "MATCH",
+      "differential_detail": "Comparator matches top-level verdict and checked projection/evidence axes.",
+      "differential_axes": [
+        {
+          "axis": "verdict",
+          "expected": "REFUSAL",
+          "observed": "REFUSAL",
+          "match": true
+        },
+        {
+          "axis": "release_allowed",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "consequence_must_be_mediated",
+          "expected": true,
+          "observed": true,
+          "match": true
+        },
+        {
+          "axis": "uncertainty_must_not_widen_authority",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "future_release_allowed_after_transition",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "external_truth_observation_distinction",
+          "expected": true,
+          "observed": true,
+          "match": true
+        },
+        {
+          "axis": "scalar_confidence_insufficient",
+          "expected": true,
+          "observed": true,
+          "match": true
+        }
+      ],
+      "failed_differential_axes": [],
+      "reason": "Comparator fixture is present and was checked for minimum shape."
+    },
+    {
+      "vector_id": "V031",
+      "title": "Causal Race Ordering",
+      "priority_case": true,
+      "cr_fixture_digest": "sha256:db2a9f8cfd26b9e9231a0b6e95e5a99701ef697a23f0b08e938f02dbab6a9c6b",
+      "comparator_fixture_digest": "sha256:fd9f6044edf1cb1a18a671de5eb0e4721c06a4e293b662b1e08463ec13b9ca81",
+      "valis_expected_typed_outcome": "REFUSAL_OR_ORDERED",
+      "comparator_expected_verdict": "REFUSAL_OR_ORDERED",
+      "representability_status": "requires_distributed_state_test",
+      "comparator_fixture_status": "NORMALIZED_FIXTURE_PRESENT",
+      "runnable_now": true,
+      "differential_outcome": "MATCH",
+      "differential_detail": "Comparator matches top-level verdict and checked projection/evidence axes.",
+      "differential_axes": [
+        {
+          "axis": "verdict",
+          "expected": "REFUSAL_OR_ORDERED",
+          "observed": "REFUSAL_OR_ORDERED",
+          "match": true
+        },
+        {
+          "axis": "release_allowed",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "consequence_must_be_mediated",
+          "expected": true,
+          "observed": true,
+          "match": true
+        },
+        {
+          "axis": "uncertainty_must_not_widen_authority",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "future_release_allowed_after_transition",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "external_truth_observation_distinction",
+          "expected": true,
+          "observed": true,
+          "match": true
+        },
+        {
+          "axis": "scalar_confidence_insufficient",
+          "expected": true,
+          "observed": true,
+          "match": true
+        }
+      ],
+      "failed_differential_axes": [],
+      "reason": "Comparator fixture is present and was checked for minimum shape."
+    },
+    {
+      "vector_id": "V032",
+      "title": "Shared Dependency Exposure",
+      "priority_case": false,
+      "cr_fixture_digest": "sha256:359c9da6f5f55040953b2a99a3763e4e4b3def254d82a0b37b763051a84d6448",
+      "comparator_fixture_digest": "sha256:72d960af11bea85a4bb116ddd733b5c21249e1a82a16a31d56c9678888cff046",
+      "valis_expected_typed_outcome": "REFUSAL",
+      "comparator_expected_verdict": "REFUSAL",
+      "representability_status": "requires_semantic_mapping",
+      "comparator_fixture_status": "NORMALIZED_FIXTURE_PRESENT",
+      "runnable_now": true,
+      "differential_outcome": "MATCH",
+      "differential_detail": "Comparator matches top-level verdict and checked projection/evidence axes.",
+      "differential_axes": [
+        {
+          "axis": "verdict",
+          "expected": "REFUSAL",
+          "observed": "REFUSAL",
+          "match": true
+        },
+        {
+          "axis": "release_allowed",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "consequence_must_be_mediated",
+          "expected": true,
+          "observed": true,
+          "match": true
+        },
+        {
+          "axis": "uncertainty_must_not_widen_authority",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "future_release_allowed_after_transition",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "external_truth_observation_distinction",
+          "expected": true,
+          "observed": true,
+          "match": true
+        },
+        {
+          "axis": "scalar_confidence_insufficient",
+          "expected": true,
+          "observed": true,
+          "match": true
+        }
+      ],
+      "failed_differential_axes": [],
+      "reason": "Comparator fixture is present and was checked for minimum shape."
+    },
+    {
+      "vector_id": "V033",
+      "title": "Compensation vs Prevention",
+      "priority_case": false,
+      "cr_fixture_digest": "sha256:c141b34dd802eba437e11f57588113fdcba062f9e24ceeceef6857947c56c9d1",
+      "comparator_fixture_digest": "sha256:984ea270484c425c2678f200e17d2658d13b3909321886349cd090d2d7fc287c",
+      "valis_expected_typed_outcome": "EVIDENCE_REQUIRED",
+      "comparator_expected_verdict": "EVIDENCE_REQUIRED",
+      "representability_status": "requires_higher_level_endpoint",
+      "comparator_fixture_status": "NORMALIZED_FIXTURE_PRESENT",
+      "runnable_now": true,
+      "differential_outcome": "MATCH",
+      "differential_detail": "Comparator matches top-level verdict and checked projection/evidence axes.",
+      "differential_axes": [
+        {
+          "axis": "verdict",
+          "expected": "EVIDENCE_REQUIRED",
+          "observed": "EVIDENCE_REQUIRED",
+          "match": true
+        },
+        {
+          "axis": "release_allowed",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "consequence_must_be_mediated",
+          "expected": true,
+          "observed": true,
+          "match": true
+        },
+        {
+          "axis": "uncertainty_must_not_widen_authority",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "future_release_allowed_after_transition",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "external_truth_observation_distinction",
+          "expected": true,
+          "observed": true,
+          "match": true
+        },
+        {
+          "axis": "scalar_confidence_insufficient",
+          "expected": true,
+          "observed": true,
+          "match": true
+        }
+      ],
+      "failed_differential_axes": [],
+      "reason": "Comparator fixture is present and was checked for minimum shape."
+    },
+    {
+      "vector_id": "V034",
+      "title": "Observation Conflicts",
+      "priority_case": true,
+      "cr_fixture_digest": "sha256:e7534269edacbb2ffe63b16a4799849b3f99e456ff69735df2ad6830d1e1c4a1",
+      "comparator_fixture_digest": "sha256:80e9e2209e3d9e2354f130ab03e6ee883656cd6b89ae268dbff3ba7a46af5611",
+      "valis_expected_typed_outcome": "EVIDENCE_CORRECTION_OR_HOLD",
+      "comparator_expected_verdict": "EVIDENCE_CORRECTION_OR_HOLD",
+      "representability_status": "requires_higher_level_endpoint",
+      "comparator_fixture_status": "NORMALIZED_FIXTURE_PRESENT",
+      "runnable_now": true,
+      "differential_outcome": "MATCH",
+      "differential_detail": "Comparator matches top-level verdict and checked projection/evidence axes.",
+      "differential_axes": [
+        {
+          "axis": "verdict",
+          "expected": "EVIDENCE_CORRECTION_OR_HOLD",
+          "observed": "EVIDENCE_CORRECTION_OR_HOLD",
+          "match": true
+        },
+        {
+          "axis": "release_allowed",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "consequence_must_be_mediated",
+          "expected": true,
+          "observed": true,
+          "match": true
+        },
+        {
+          "axis": "uncertainty_must_not_widen_authority",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "future_release_allowed_after_transition",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "external_truth_observation_distinction",
+          "expected": true,
+          "observed": true,
+          "match": true
+        },
+        {
+          "axis": "scalar_confidence_insufficient",
+          "expected": true,
+          "observed": true,
+          "match": true
+        }
+      ],
+      "failed_differential_axes": [],
+      "reason": "Comparator fixture is present and was checked for minimum shape."
+    },
+    {
+      "vector_id": "V035",
+      "title": "Multidimensional Consequence Envelope",
+      "priority_case": true,
+      "cr_fixture_digest": "sha256:b5ce470c5b2e04d4ccb38d053023d477d9c2a8d5dd6f74287fcc3d4611d53df2",
+      "comparator_fixture_digest": "sha256:465aa05066da3b7e46eddfafe63b2552373b772ccae4800f92e5c9f4ab606a3c",
+      "valis_expected_typed_outcome": "REFUSAL_OR_CONSTRAINED_RELEASE",
+      "comparator_expected_verdict": "REFUSAL_OR_CONSTRAINED_RELEASE",
+      "representability_status": "requires_semantic_mapping",
+      "comparator_fixture_status": "NORMALIZED_FIXTURE_PRESENT",
+      "runnable_now": true,
+      "differential_outcome": "MATCH",
+      "differential_detail": "Comparator matches top-level verdict and checked projection/evidence axes.",
+      "differential_axes": [
+        {
+          "axis": "verdict",
+          "expected": "REFUSAL_OR_CONSTRAINED_RELEASE",
+          "observed": "REFUSAL_OR_CONSTRAINED_RELEASE",
+          "match": true
+        },
+        {
+          "axis": "release_allowed",
+          "expected": true,
+          "observed": true,
+          "match": true
+        },
+        {
+          "axis": "consequence_must_be_mediated",
+          "expected": true,
+          "observed": true,
+          "match": true
+        },
+        {
+          "axis": "uncertainty_must_not_widen_authority",
+          "expected": false,
+          "observed": false,
+          "match": true
+        },
+        {
+          "axis": "future_release_allowed_after_transition",
+          "expected": true,
+          "observed": true,
+          "match": true
+        },
+        {
+          "axis": "external_truth_observation_distinction",
+          "expected": true,
+          "observed": true,
+          "match": true
+        },
+        {
+          "axis": "scalar_confidence_insufficient",
+          "expected": true,
+          "observed": true,
+          "match": true
+        }
+      ],
+      "failed_differential_axes": [],
+      "reason": "Comparator fixture is present and was checked for minimum shape."
+    }
+  ],
+  "next_required_artifact": "Normalized conventional-comparator fixtures for V001-V035, including at minimum pre-state, proposed consequence, expected verdict, projected state transition, authority consumption, exposure projection, uncertainty/evidence state, obligations, and future reachability projection.",
+  "claim_boundary": "This report executes the top-level differential comparator experiment against normalized fixtures. It is not production conformance, not independent validation, and not proof of formal irreducibility."
+}

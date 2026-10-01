@@ -1,0 +1,37 @@
+{
+  "report_version": "valis-kore-phase-v-adversarial-sweep-v0.1",
+  "created_at": "2026-09-24T21:56:58.904Z",
+  "verdict": "ADVERSARIAL_SWEEP_SPACE_BUILT",
+  "seed_count": 35,
+  "operator_count": 32,
+  "first_order_case_count": 1120,
+  "pair_count": 595,
+  "pair_interaction_types": 8,
+  "pair_interaction_case_count": 4760,
+  "unique_triple_count": 6545,
+  "unique_four_vector_count": 52360,
+  "recursive_chain_count": 5,
+  "metamorphic_property_count": 8,
+  "metamorphic_property_application_counts": {
+    "less_certain_evidence_must_not_widen_reach": 310,
+    "revocation_must_not_manufacture_authority": 366,
+    "splitting_exposure_must_not_manufacture_capacity": 400,
+    "restart_without_new_legitimizing_information_must_not_widen_reach": 256,
+    "bound_consequence_mutation_must_not_inherit_old_release": 237,
+    "stale_state_must_not_widen_reach": 256,
+    "unknown_must_not_become_nothing_happened": 32,
+    "acceptable_subsets_do_not_imply_acceptable_union": 190
+  },
+  "generated_first_order_digest": "sha256:23da79ed4186f321033e23a3dd698127af5a96444252c2ed9137a23e455ba5e0",
+  "pair_sample_digest": "sha256:183ea5abc9e5ac5ff0fddeba4b6b3ec8013500d67f0fe18363d4f346c7a91566",
+  "recursive_chain_digest": "sha256:e1ca94e83599a9ed9af36bba7b958a0a2dec784e8d02c8f5b52c612cb54beea9",
+  "promotion_rule": {
+    "reducible_failure": "strengthen existing V001-V035 semantic obligation",
+    "irreducible_failure": "candidate V036",
+    "cr_comparator_disagreement": "preserve divergence before changing either system",
+    "shared_semantic_failure": "if CR and comparator agree but violate higher-level invariant, shared semantics are wrong"
+  },
+  "next_execution_gate": "Implement minimization runner over generated cases and preserve smallest counterexamples.",
+  "claim_boundary": "This sweep builds and hashes the adversarial search space from V001-V035 seeds. It is not production conformance, not independent validation, not proof of formal irreducibility, and not exhaustive execution of every higher-order case.",
+  "omitted_detail": "Public artifact omits expanded case bodies; use repo report for full generated first-order cases."
+}

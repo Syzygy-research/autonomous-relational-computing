@@ -1,0 +1,26 @@
+{
+  "name": "cr-benchmark-core",
+  "version": "0.1-candidate-scaffold",
+  "status": {
+    "CORE_SPEC_FROZEN": "NOT_YET",
+    "FIXTURE_RECOVERY_VERIFIED": "0/35",
+    "SCHEMA_VALIDATION": "SCAFFOLD_ONLY",
+    "REFERENCE_RUNNER": "NOT_YET",
+    "BENCHMARK_INTEGRITY_TESTS": "NOT_YET",
+    "RED_TRANCHE": "0/12 runnable",
+    "FULL_CORPUS": "0/35 runnable",
+    "MANIFEST": "VERIFIED_BY_REPO_SCRIPT",
+    "DURABLE_PUBLIC_RELEASE": "NO",
+    "EXTERNAL_REPRODUCTION": "NOT_YET"
+  },
+  "historical_anchors": {
+    "V001": "7caa50d5dbaa1cd945f2201fe0ee3c5d0bdd55b3113f4d98f5930475991d35b2",
+    "V002": "48707e89cea77abdbaf95750bbdde55dd3419bb60d120a4b998802ca1bafb2f9",
+    "V003": "1f19f572e9e7f544c2f11fcf1ce4ae881551e149f42809f56f5b7c3482df083c",
+    "V004": "fbbd44d4206d6e92b31f412e6e3a479ca3f76928c39c7c87c7ea4afc8773e255",
+    "V005": "078f336732669e5423f14b32d1ee90dca8634a42ddcd59ad60799fc1dfddcc5f",
+    "evaluator_program_zip": "f79d5896a175e2cdce9ec6a098a371d1426ba327dbbe327259e742fae9256fb9"
+  },
+  "red_tranche": ["V002", "V003", "V007", "V008", "V009", "V013", "V014", "V021", "V029", "V031", "V033", "V034"],
+  "claim_boundary": "Candidate scaffold only. Exact historical fixture recovery remains open."
+}

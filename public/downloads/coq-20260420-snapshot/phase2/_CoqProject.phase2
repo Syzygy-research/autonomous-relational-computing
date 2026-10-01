@@ -1,0 +1,12 @@
+-R .. VALIS
+Phase2_Syntax.v
+Phase2_Operational.v
+Phase2_Base.v
+Phase2_Relation.v
+Phase2_MultiStep.v
+Phase2_Confluence.v
+Phase2_Termination.v
+Phase2_NormalForm.v
+Phase2_Model_Trivial.v
+Phase2_AlgebraicClosure.v
+Phase1_Phase2_Soundness.v

@@ -1,0 +1,88 @@
+{
+  "registry_version": "recursive-settlement-evidence-registry-v0.1",
+  "generated_at": "2026-09-26T20:50:09.8703373Z",
+  "claim_boundary": "Public evidence registry for Recursive Settlement. Reference/evaluator evidence, synthetic frontier evidence, production conformance, and independent validation remain distinct.",
+  "evidence_classes": [
+    "FORMALLY_ESTABLISHED",
+    "REFERENCE_SEMANTIC",
+    "IMPLEMENTED",
+    "EXPERIMENTALLY_TESTED",
+    "MUTATION_TESTED",
+    "INDEPENDENTLY_REPRODUCED",
+    "PRODUCTION_CONFORMANCE",
+    "CONJECTURE_RESEARCH",
+    "NOT_ESTABLISHED"
+  ],
+  "records": [
+    {
+      "id": "cr-core-phase-v-comparator",
+      "title": "Phase V comparator baseline",
+      "evidence_class": "EXPERIMENTALLY_TESTED",
+      "status": "DIFFERENTIAL_EXPERIMENT_EXECUTED",
+      "summary": "35/35 comparator matches across seven scored semantic axes.",
+      "artifact": "/benchmark/phase-v-freeze-readiness.json",
+      "digest": "sha256:ea9be8b5a65f58579027adc225cbf7cd2d91230586da367cb5ea6155e76920f4",
+      "limitations": "Internal/reference comparator evidence only; not production conformance or independent external validation."
+    },
+    {
+      "id": "cr-core-reference-closure",
+      "title": "CR-Core reference closure execution",
+      "evidence_class": "MUTATION_TESTED",
+      "status": "REFERENCE_CLOSURE_EXECUTED_NO_UNEXPLAINED_FAILURES",
+      "summary": "4,760 pair interaction cases, 9,520 checked pair obligations, 5 recursive chains, 8/8 mutants detected, 0 survivors, 0 unexplained minimized failures.",
+      "artifact": "/benchmark/phase-v-closure-execution.json",
+      "digest": "sha256:720cd454459ef01f916faa244a497107332577657b93be43732b24ea070e4271",
+      "limitations": "Repository-local reference/evaluator closure only; production target undeclared."
+    },
+    {
+      "id": "cr-core-freeze-readiness",
+      "title": "CR-Core reference/evaluator freeze readiness",
+      "evidence_class": "REFERENCE_SEMANTIC",
+      "status": "READY_TO_FREEZE",
+      "summary": "From this point forward, closure is measured by how many minimized failures cannot be explained by the existing V001-V035 semantic basis, not by raw generated test count.",
+      "artifact": "/benchmark/phase-v-freeze-readiness.json",
+      "digest": "sha256:ea9be8b5a65f58579027adc225cbf7cd2d91230586da367cb5ea6155e76920f4",
+      "limitations": "This report is a readiness gate for the Phase V/VI closure campaign. It supports freezing the repository-local CR-Core reference/evaluator semantics within the declared scope. It does not claim production-kernel conformance, external independent validation, universal completeness, or formal irreducibility."
+    },
+    {
+      "id": "frontier-eval-v0-1",
+      "title": "CR Frontier Adversarial Evaluation Pack v0.1",
+      "evidence_class": "MUTATION_TESTED",
+      "status": "FRONTIER_EVAL_REFERENCE_PASS_MUTANTS_DETECTED",
+      "summary": "Synthetic offline frontier pack: 10/10 reference scenarios passed and 14/14 expected mutant exploits detected.",
+      "artifact": "/frontier-eval/frontier-eval-report.json",
+      "digest": "sha256:1f2051ba4ba31add0031c8ae507457cfbaabaf4e8d7addbaf93b1a33067112dc",
+      "limitations": "Not production KORE, not GMAP deployment, not production conformance, not external validation."
+    },
+    {
+      "id": "production-conformance",
+      "title": "Production KORE conformance",
+      "evidence_class": "NOT_ESTABLISHED",
+      "status": "OPEN",
+      "summary": "Production conformance requires a declared production target, exact artifact identity, and unchanged-corpus execution against that target.",
+      "artifact": "",
+      "digest": "",
+      "limitations": "Do not infer production conformance from reference/evaluator evidence."
+    },
+    {
+      "id": "independent-reproduction",
+      "title": "External independent reproduction",
+      "evidence_class": "NOT_ESTABLISHED",
+      "status": "OPEN",
+      "summary": "No external institution/reviewer reproduction is claimed in this registry.",
+      "artifact": "",
+      "digest": "",
+      "limitations": "Internal differential agreement and local reproduction are not external independent validation."
+    },
+    {
+      "id": "coq-proof-snapshot",
+      "title": "VALIS Coq proof snapshot",
+      "evidence_class": "FORMALLY_ESTABLISHED",
+      "status": "INCLUDED_WITH_BOUNDARY",
+      "summary": "Machine-checkable Coq source snapshot for the historical/formal kernel lineage is included with manifest and digests. This supports bounded formal evidence and does not establish production KORE conformance or current CR-Core implementation correspondence.",
+      "artifact": "/downloads/coq-proof-snapshot-manifest.json",
+      "digest": "",
+      "limitations": "Bounded formal model evidence only; no universal safety, external certification, production conformance, underwriting validity, or independent reproduction is claimed."
+    }
+  ]
+}

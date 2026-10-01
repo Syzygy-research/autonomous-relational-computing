@@ -1,0 +1,18 @@
+-R . VALIS
+
+Syntax.v
+Operational.v
+Phase1_DaggerPresentation.v
+Phase2_Projector.v
+Phase2_Skeleton.v
+RelationalCore.v
+HigherOrderCurvature.v
+Entropy.v
+MultiAttractor.v
+StochasticDescent.v
+RelationalPhase2.v
+VALIS/Phase2/Core/RelationalBase.v
+VALIS/Phase2/Geometry/HigherOrderCurvature.v
+VALIS/Phase2/Thermodynamics/EntropyGrowth.v
+VALIS/Phase2/Geometry/RelationalPhaseTransitions.v
+VALIS/Phase2/Automation/Phase2Automation.v

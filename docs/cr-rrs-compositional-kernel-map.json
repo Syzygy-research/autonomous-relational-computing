@@ -1,0 +1,146 @@
+{
+  "version": "cr-rrs-compositional-kernel-map-v0.1",
+  "created_at": "2026-09-27",
+  "claim_boundary": "Implementation-correspondence map only. Does not modify CR-Core, prove global closure, establish production conformance, or claim independent validation.",
+  "candidate_abstractions": [
+    {
+      "id": "ConsequentialDependency",
+      "disposition": "derivable_from_existing_semantics",
+      "evidence": [
+        "frontier-eval/reference/cr-core-synthetic.mjs",
+        "frontier-eval/scenarios/frontier-scenarios.json",
+        "conformance/corpus/MANIFEST.json"
+      ],
+      "boundary": "No single typed ConsequentialDependency object exists in CR-Core. Treat as a classification over existing fields."
+    },
+    {
+      "id": "StateAdequacy",
+      "disposition": "derivable_from_existing_semantics",
+      "evidence": [
+        "frontier-eval/reference/cr-core-synthetic.mjs",
+        "conformance/corpus/V016.json",
+        "conformance/corpus/V017.json",
+        "conformance/corpus/V019.json",
+        "conformance/corpus/V034.json"
+      ],
+      "boundary": "Current evidence supports an obligation, not a theorem."
+    },
+    {
+      "id": "CompositionSoundness",
+      "disposition": "derivable_in_bounded_reference_scope",
+      "evidence": [
+        "conformance/reports/phase-v-closure-execution.json",
+        "frontier-eval/scenarios/frontier-scenarios.json"
+      ],
+      "boundary": "Higher-order reduction correctness remains an open proof obligation."
+    },
+    {
+      "id": "transition_footprint_D_tau",
+      "disposition": "requires_explicit_semantic_addition",
+      "evidence": [
+        "frontier-eval/reference/cr-core-synthetic.mjs"
+      ],
+      "boundary": "No implemented footprint extractor exists."
+    },
+    {
+      "id": "minimal_forbidden_compositions_MF_G",
+      "disposition": "requires_explicit_semantic_addition",
+      "evidence": [
+        "frontier-eval/scenarios/frontier-scenarios.json#FE010",
+        "conformance/corpus/V030.json"
+      ],
+      "boundary": "Current artifacts provide seeds/witnesses, not an MF_G enumerator."
+    },
+    {
+      "id": "global_consequential_closure",
+      "disposition": "research_theorem_target",
+      "evidence": [
+        "conformance/reports/phase-v-closure-execution.json",
+        "docs/valis-scientific-lineage.md"
+      ],
+      "boundary": "Not established; requires mediation and world-correspondence assumptions."
+    }
+  ],
+  "dependency_domains": {
+    "identity_principal": [
+      "FE001",
+      "V011"
+    ],
+    "authority_provenance": [
+      "FE002",
+      "FE008",
+      "V002",
+      "V003",
+      "V004",
+      "V005",
+      "V020",
+      "V022",
+      "V024",
+      "V025",
+      "V028"
+    ],
+    "resource_exposure": [
+      "FE001",
+      "FE003",
+      "FE010",
+      "V010",
+      "V011",
+      "V026",
+      "V035"
+    ],
+    "release_execution": [
+      "FE004",
+      "FE008",
+      "V006"
+    ],
+    "effect_observation_epistemic": [
+      "FE005",
+      "FE006",
+      "V013",
+      "V014",
+      "V027",
+      "V029",
+      "V034"
+    ],
+    "finality_history_restart": [
+      "FE006",
+      "FE009",
+      "V009",
+      "V015",
+      "V021",
+      "V023",
+      "V029",
+      "V033"
+    ],
+    "dependency_freshness_ordering": [
+      "FE007",
+      "V018",
+      "V019",
+      "V031",
+      "V032"
+    ],
+    "composition_global_envelope": [
+      "FE010",
+      "V030",
+      "V032",
+      "V035"
+    ]
+  },
+  "phase_v_summary": {
+    "pair_interactions": 4760,
+    "checked_pair_obligations": 9520,
+    "recursive_chains": 5,
+    "triples_considered": 6545,
+    "four_vector_combinations_considered": 52360,
+    "broader_mutants_detected": 8,
+    "broader_mutants_survived": 0,
+    "production_conformance": "blocked_preconditions_missing"
+  },
+  "frontier_summary": {
+    "scenario_count": 10,
+    "reference_pass_count": 10,
+    "expected_mutant_detection_count": 14,
+    "mutant_detected_count": 14,
+    "mutant_survivor_count": 0
+  }
+}

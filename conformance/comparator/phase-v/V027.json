@@ -1,0 +1,111 @@
+{
+  "vector_id": "V027",
+  "comparator_model_version": "phase-v-conventional-comparator-v0.1-derived-candidate",
+  "derivation_status": "derived_candidate_from_current_cr_corpus_not_independent_claude_fixture_bytes",
+  "source_cr_fixture_digest": "sha256:2ac1aedc9d521604575d16e486de9bee6172f0fc64de6f0280252bc0eaed6bc1",
+  "conventional_model_shape": {
+    "history": "append-only causal history of settled proposals, observations, corrections, and receipts",
+    "evaluator": "prospective evaluation function over proposal plus declared state model",
+    "authority": "authority graph with delegation and non-amplification constraints",
+    "exposure": "exposure hypergraph across principal, counterparty, workflow, dependency, asset, provider, and consequence class dimensions",
+    "dependencies": "dependency DAG with failed and unknown material dependencies failing closed unless policy permits otherwise",
+    "evidence": "typed evidence state, not scalar confidence",
+    "finality": "finality distinct from effect truth and distinct from rollback or compensation",
+    "uncertainty": "less reliable or unknown evidence must not silently expand reachable states"
+  },
+  "pre_state": {
+    "settled_state": {
+      "version": "reconstructed-candidate-state-v0.1",
+      "settled": true,
+      "vector_id": "V027",
+      "authority_model": "declared_by_vector",
+      "exposure_model": "declared_by_vector",
+      "evidence_model": "declared_by_vector"
+    },
+    "causal_history": [],
+    "authority_graph": {
+      "model": "declared_by_vector"
+    },
+    "exposure_hypergraph": {
+      "model": "declared_by_vector"
+    },
+    "dependency_dag": {
+      "material_dependencies": "declared_by_vector_or_empty"
+    },
+    "evidence_state": {
+      "model": "declared_by_vector",
+      "typed_states_required": true
+    },
+    "finality_state": {
+      "finality_is_distinct_from_effect_truth": true
+    }
+  },
+  "proposed_consequence": {
+    "proposal": {
+      "step": "proposal",
+      "vector_id": "V027",
+      "title": "UNKNOWN Effect Plus New Authorization"
+    },
+    "materiality": {
+      "payload_identity_required": true,
+      "authority_context_required": true,
+      "exposure_projection_required": true,
+      "evidence_obligation_required": true
+    }
+  },
+  "expected_verdict": "REFUSAL_OR_HOLD",
+  "projected_state_transition": {
+    "expected_state_projection": {
+      "release_allowed": false,
+      "consequence_must_be_mediated": true,
+      "uncertainty_must_not_widen_authority": false,
+      "historical_bytes_recovered": false
+    },
+    "settlement_state_changes_before_execution": true,
+    "effect_state_may_remain_unknown_after_release": true
+  },
+  "authority_consumption": {
+    "release_allowed": false,
+    "authorization_is_not_inferred_from_authentication": true,
+    "consumed_release_must_not_be_replayed": false
+  },
+  "exposure_projection": {
+    "release_allowed": false,
+    "uncertainty_remains_risk_bearing": false,
+    "dimensions_declared_by_vector": [
+      "principal",
+      "counterparty",
+      "workflow",
+      "dependency",
+      "asset",
+      "provider",
+      "consequence_class"
+    ]
+  },
+  "uncertainty_evidence_state": {
+    "typed_evidence_required": true,
+    "scalar_confidence_is_insufficient": true,
+    "unknown_must_not_restore_capacity": false,
+    "external_truth_distinct_from_system_observation": true
+  },
+  "obligations": [
+    "preserve append-only decision/evidence history",
+    "do not widen reachable states from uncertainty",
+    "bind result to declared comparator model version",
+    "produce artifact_identity",
+    "produce proposal_digest",
+    "produce expected_projection",
+    "produce observed_projection",
+    "produce trace_digest",
+    "produce verdict",
+    "produce divergence_classification_if_any"
+  ],
+  "future_reachability_projection": {
+    "release_allowed_after_transition": false,
+    "consequence_must_remain_mediated": true,
+    "uncertainty_may_expand_reachability": "not asserted by vector",
+    "recovery_requires_new_settlement_when_release_consumed_or_effect_unknown": true
+  },
+  "reason_class": "CONSERVATIVE_UNCERTAINTY",
+  "claim_boundary": "Derived candidate comparator fixture for running Phase V machinery. This is not independent Claude fixture bytes, not production conformance, and not proof of formal irreducibility."
+}

@@ -1,0 +1,54 @@
+{
+  "name": "Recursive Settlement public evaluator publication manifest",
+  "version": "evaluator-baseline-2026-09-27",
+  "baseline_commit": "225983d0fef8caa19539e73ad546aa5527f0c945",
+  "release_commits": [
+    {
+      "commit": "e995bf1",
+      "description": "evaluator release with Coq proof snapshot"
+    },
+    {
+      "commit": "225983d",
+      "description": "mobile masthead presentation fix"
+    }
+  ],
+  "intended_public_materials": [
+    "public/index.html",
+    "public/evaluator/",
+    "public/evaluator-v2-full/",
+    "public/demo/",
+    "public/evidence/",
+    "public/proofs/",
+    "public/insurance/",
+    "public/frontier/",
+    "public/infrastructure/",
+    "public/run-locally/",
+    "public/downloads/coq-20260420-snapshot/",
+    "public/downloads/coq-proof-snapshot-manifest.json",
+    "public/downloads/evaluator-release-receipt-2026-09-27.md",
+    "frontier-eval/",
+    "tools/test-evaluator-model.mjs",
+    "tools/verify-official-evaluator-v3.mjs",
+    "README.md",
+    "EVALUATOR.md",
+    "docs/cr-rrs-compositional-kernel-reconciliation.md",
+    "docs/cr-rrs-theorem-packet-v0.md",
+    "docs/cr-rrs-compositional-kernel-map.json"
+  ],
+  "excluded_or_removed_from_public_surface": [
+    "public/portal/ old invite-only portal route",
+    "public/downloads/live-land.json private/invite-only pin record",
+    "public/cards/ unrelated demo card references",
+    "production KORE internals",
+    "private gateway implementation",
+    "credentials or deployment tokens",
+    "private founder/company operating material"
+  ],
+  "claim_boundary": {
+    "implemented": "public evaluator routes, local launch script, official evaluator tests, frontier/mutant experiment harness",
+    "demonstrated": "10/10 reference frontier scenarios and 14/14 known-bad mutants detected under the current harness",
+    "formalized_bounded": "Coq proof snapshot exposed under /proofs/ with explicit sealed-kernel/exploratory boundary",
+    "conjectural": "broader CR/RRS theory, insurance applicability, production mediation completeness, independent external validation",
+    "production_kore_conformance": "OPEN"
+  }
+}

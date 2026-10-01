@@ -1,0 +1,8 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" /><title>Run Locally | ARC / VALIS</title><meta name="description" content="Clone and run the ARC / VALIS public evaluator locally." /><link rel="stylesheet" href="/munich-home.css" /></head>
+<body><div class="w"><nav><div class="brand">ARC<b>VALIS</b></div><div class="links"><a href="/architecture/">Architecture</a><a href="/evaluator/">Evaluator</a><a href="/evidence/">Evidence</a><a href="/proofs/">Proofs</a><a href="/run-locally/">Run locally</a></div></nav></div><main><section class="hero w"><p class="ey">Run locally</p><h1>Clone, launch, test, and inspect.</h1><p class="lead">The public evaluator repository is intended to be usable without private operational state or verbal explanation.</p><div class="btns"><a class="btn primary" href="https://github.com/Syzygy-research/autonomous-relational-computing" rel="noopener noreferrer">Open public repository</a><a class="btn" href="/downloads/evaluator-release-receipt-2026-09-27.md">Release receipt</a></div></section><section class="section-block"><h2>Commands</h2><pre><code>git clone https://github.com/Syzygy-research/autonomous-relational-computing.git
+cd autonomous-relational-computing
+npm install
+npm run start:evaluator
+npm run test:official-evaluator
+npm run test:evaluator
+npm run experiment:frontier-eval</code></pre><p>Open the local server URL printed by the launch command, usually <code>http://localhost:8787/evaluator/</code>. Localhost is for local reproduction only; public release links must use the production domain.</p></section></main></body></html>

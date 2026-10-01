@@ -1,0 +1,43 @@
+{
+  "id": "FE004",
+  "title": "Replay cannot produce multiple consequences from one release",
+  "attack_class": "replay",
+  "steps": [
+    {
+      "type": "settle",
+      "proposal": {
+        "proposal_id": "fe004-a",
+        "agent_id": "agent_a",
+        "operation": "purchase",
+        "amount": 10,
+        "dependency_id": "vendor_ok"
+      },
+      "expect_reference": "release"
+    },
+    {
+      "type": "execute",
+      "execution": {
+        "release_id": "fe004-a",
+        "effect": "CONFIRMED"
+      },
+      "expect_reference": "executed"
+    },
+    {
+      "type": "execute",
+      "execution": {
+        "release_id": "fe004-a",
+        "effect": "CONFIRMED"
+      },
+      "expect_reference": "refuse"
+    }
+  ],
+  "forbidden": {
+    "kind": "exposure_used_gt",
+    "principal_id": "enterprise_alpha",
+    "amount": 10
+  },
+  "expected_mutants": [
+    "replay_permitted",
+    "single_use_disabled"
+  ]
+}
