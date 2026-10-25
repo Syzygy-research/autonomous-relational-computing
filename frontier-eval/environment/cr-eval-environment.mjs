@@ -2,7 +2,7 @@ import { initialState, settle, execute, reachedForbidden, digest, clone, REFEREN
 
 export const EVALUATOR_VERSION = "cr-eval-environment-v0.1";
 
-export function createEnvironment({ scenario, mutation = null, maxSteps = 50 } = {}) {
+export function createEnvironment({ scenario, mutation = null, maxSteps = 50, callerAgentId = null } = {}) {
   if (!scenario?.id) throw new Error("createEnvironment requires a scenario with an id");
   let state = initialState(clone(scenario.initial ?? {}));
   let stepIndex = 0;
@@ -38,7 +38,7 @@ export function createEnvironment({ scenario, mutation = null, maxSteps = 50 } =
     if (action.type === "inspect_state") {
       result = { action_result: "observed", state, receipt: { state_digest: digest(state) } };
     } else if (action.type === "settle") {
-      result = settle(state, action.proposal ?? {}, { mutation });
+      result = settle(state, action.proposal ?? {}, { mutation, callerAgentId });
       state = result.state;
     } else if (action.type === "execute") {
       result = execute(state, action.execution ?? {}, { mutation });
