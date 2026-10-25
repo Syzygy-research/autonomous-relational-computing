@@ -1,5 +1,9 @@
 const DEFAULT_TTL_MS = 60_000;
 
+// Approvals are short-lived by design in this demo: an approval asked to
+// last longer than this named maximum is refused at issue, not honored.
+export const MAX_APPROVAL_TTL_MS = 15 * 60_000;
+
 export function createEvaluationState(now = Date.now()) {
   return {
     version: 1,
@@ -74,6 +78,9 @@ export function approveExactAction(state, { approver = "human_participant", now 
   }
   if (approver !== "human_participant") {
     return refusal(state, "self_authorization_refused", "Only the authorized human participant can release the exact proposal.", now);
+  }
+  if (typeof ttlMs !== "number" || !Number.isFinite(ttlMs) || ttlMs < 0 || ttlMs > MAX_APPROVAL_TTL_MS) {
+    return refusal(state, "approval_lifetime_exceeds_maximum", "The requested approval lifetime exceeds the maximum this evaluator issues.", now);
   }
   state.now = now;
   state.release = {
