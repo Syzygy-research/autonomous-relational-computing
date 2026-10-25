@@ -81,6 +81,17 @@ const proposal = makeProposal();
   assert.equal(result.code, "stale_binding_refused");
 }
 
+{
+  // An approval lifetime beyond the named maximum is refused at issue:
+  // the demo's own story is short-lived, exact approval.
+  const state = createEvaluationState(now);
+  await bindProposal(state, proposal, now);
+  const result = approveExactAction(state, { now: now + 1, ttlMs: 10 ** 15 });
+  assert.equal(result.ok, false);
+  assert.equal(result.code, "approval_lifetime_exceeds_maximum");
+  assert.equal(state.release, null);
+}
+
 const challengeResults = await runChallengeSuite();
 assert.equal(challengeResults.every((result) => result.passed), true);
 
